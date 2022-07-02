@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>哗啦啦-网页版</title>
+    <link href="css/scorestyles.css" rel="stylesheet" type="text/css">
+    <link href="css/keyboardstyles.css" rel="stylesheet" type="text/css">
+    <link href="css/notekeyboardstyles.css" rel="stylesheet" type="text/css">
+</head>
+
+
+
+<body style="background-color:antiquewhite">
+    <center>
+        <h1 style="color:rgb(93, 51, 8)"><span style="font-family:Kaiti">哗啦啦</span> 2.1 Ver.</h1>
+        <br>哗啦啦打罢了头通鼓，关二爷提刀跨雕鞍；
+        <br>哗啦啦打罢了二通鼓，人有精神马又欢；
+        <br>哗啦啦打罢了三通鼓，蔡阳的人头落在马前。
+        <br>--《珠帘寨》
+        <p></p>
+
+        <div id="Audio"></div>
+
+        
+
+        <!--手动锣鼓版面-->
+        <h2>锣鼓模式</h2>
+        <div id="Keyboard" class="Keyboard" onmouseup="ChangeKeyboardClass(window.event)"></div>
+        <p></p>
+        <h2>月琴模式</h2>
+        <h3>选择调式：1=<input id="notemajorselect" type="text", value="E" size="1" style="font-size: large;"> </h3>
+        <p></p>
+        <div id="NoteKeyboard" class="NoteKeyboard"
+        onmouseup = "ChangeNoteKeyboardClass(window.event)"></div>
+
+        <h2>编辑模式</h2>
+        <div id="ScoreSelectPallete">
+            <div class="ScoreHeader"><h3>选择要添加的锣鼓与板眼，拖入下面的乐池中</h3></div>
+            <div id="ScoreSelectArea" class="ScoreSelectArea"></div>
+            <div class="ScoreBottom"></div>
+        </div>
+        
+        <p></p>
+
+        <div id="ScorePool">
+            <div class="ScoreHeader"><h3>乐池&nbsp;&nbsp;
+                <input id="playbutton" type="button" value="▶" title="播放"
+                style="background-color:chartreuse; border-color:aqua" onclick="DEMO()">
+                <input id="importbutton" type="button" value="导入" title="导入乐池"
+                style="background-color:chartreuse; border-color:aqua" onclick="openFile()">
+                <input id="exportbutton" type="button" value="导出" title="导出乐池"
+                style="background-color:chartreuse; border-color:aqua" onclick="ExportPools()">
+            </h3></div>
+            <div id="Pool1" class="SilentPool" 
+            ondrop="PoolOnDrop()" 
+            ondragleave="PoolOnDragLeave()" 
+            ondragover="PoolOnDragOver()">
+            
+            </div>
+            <div id="Pool2" class="SilentPool" 
+            ondrop="PoolOnDrop()" 
+            ondragleave="PoolOnDragLeave()" 
+            ondragover="PoolOnDragOver()">
+        
+            </div>
+            <div class="ScoreBottom"></div>
+        </div>
+
+        <div id="NoteSelectPallete">
+            <div class="ScoreHeader"><h3>选择要添加的月琴谱，拖入上面的乐池中</h3></div>
+            <div id="NoteSelectArea" class="ScoreSelectArea"></div>
+            <div class="ScoreBottom"></div>
+        </div>
+
+
+        <!--锣鼓经说明文字-->
+        <h2>汉字简化锣鼓经说明&nbsp;&nbsp;<button id="SpreadButton">展开</button></h2>
+        <div id="spread" style="height:0px;overflow:hidden">
+            <h3>单音</h3>
+            <p>匡：大锣独奏
+                <br>倾：大锣轻击
+                <br>七：钹独奏
+                <br>扑：钹闷音
+                <br>台：小锣独奏
+                <br>令：小锣轻击
+                <br>扎：板鼓独奏
+                <br>大：鼓单键击奏
+                <br>多：鼓单键击奏弱音
+                <br>嘟：鼓键轮奏
+                <br>衣：板鼓独奏</p>
+
+            <h3>组合</h3>
+            <p>仓：大锣、小锣、钹齐奏（匡+七+台）
+                <br>才：钹与小锣齐奏（七+台）
+                <br>多罗：鼓单键双击 </p>
+        </div>
+        <p></p>
+
+        <div id="copyright">©2022 Shuoxue Li. All rights reserved.</div>
+    </center>
+
+    <input type="file" name="filename" id="open" style="display:none"/>
+    <script>
+        function openFile(){
+            document.getElementById('open').click()
+            const input = document.querySelector('input[type=file]')
+
+            input.addEventListener('change', ()=>{
+                const reader = new FileReader()
+                reader.readAsText(input.files[0], 'utf8')
+                reader.onload = ()=>{
+                    ImportPools(reader.result)
+                }
+            })
+        }
+        
+        
+    </script>
+    <script id="script-keyboard-config" src="keyboard/config.js"></script>
+    <script id="script-keyboard-funcs" src="keyboard/keyboard_funcs.js"></script>
+    <script id="script-keyboard-control" src="keyboard/control.js"></script>
+    <script id="script-spread" src="keyboard/Spread.js"></script>
+
+    <script src="note/config.js"></script>
+    <script id="script-score-config" src="score/config.js"></script>
+    <script id="script-score-parser" src="score/score_converter.js"></script>
+    <script id="script-score-gui" src="score/funcs.js"></script>
+    <script id="script-score-control" src="score/control.js"></script>
+
+    <script src="notekeyboard/config.js"></script>
+    <script src="notekeyboard/funcs.js"></script>
+    <script src="note/funcs.js"></script>
+    <script src="note/note_converter.js"></script>
+    <script src="notekeyboard/control.js"></script>
+
+
+    
+    <script src="note/control.js"></script>
+
+    <script id="script-maths" src="https://cdn.bootcss.com/mathjax/3.0.5/es5/tex-mml-chtml.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+#NoteKeyboard{
+    width:630px;
+    height:140px;
+    border-radius:5%;
+    position:relative
+}
+
+.NoteKeyboard{background-color:black}
+.ActivatedNoteKeyboard{background-color: rgb(138,0,18)}
+
+.NoteChineseCharacter,
+.ActivatedNoteChineseCharacter {
+    position: absolute;
+    left: 13px;
+    top: 13px;
+    font-size: 28px;
+    font-family: Kaiti
+}
+
+.NoteChineseCharacter {color: aqua}

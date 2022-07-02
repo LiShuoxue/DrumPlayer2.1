@@ -1,0 +1,117 @@
+#ScoreSelectPallete,
+#NoteSelectPallete{
+    background-color: burlywood;
+    width: 630px;
+    height: 160px
+}
+
+.ScoreHeader{
+    height: 30px;
+}
+.ScoreBottom{
+    height:10px;
+}
+.ScoreSelectArea{
+    height: 120px;
+    overflow-y: scroll;
+}
+
+/*按钮类*/
+.SilentScoreSelectionButton,
+.SelectedScoreSelectionButton,
+.ActivatedScoreSelectionButton,
+.DraggingScoreSelectionButton{
+    height: 30px;
+    width: 190px;
+    margin-right: 5;
+    border-style: solid;
+    border-width: 2px;
+    display:inline-block
+}
+
+.SilentScoreSelectionButton{
+    background-color: pink;
+    border-color: burlywood;
+}
+
+.SelectedScoreSelectionButton{
+    background-color:lightgreen;
+    border-color:lime
+}
+
+.ActivatedScoreSelectionButton{
+    background-color: gold;
+    border-color: red
+}
+
+.DraggingScoreSelectionButton{  /*正在拖拽的按钮*/
+    background-color:rgb(86, 233, 233, 0.5);
+    border-color: rgb(222, 184, 135, 0.5)
+}
+
+.noselectiontext{
+    user-select:none;
+}
+
+#ScorePool{
+    background-color:burlywood;
+    width: 80%;
+    height: 230px;
+}
+
+.SilentPool,
+.SelectedPool{
+    width: 91%;
+    height: 80px;
+    margin-bottom: 25px;
+    border-color:red;
+    overflow-x: scroll;
+    position: relative;
+}
+
+.SilentPool{
+    background-color:aquamarine;
+}
+
+.SelectedPool{
+    background-color:lightgreen
+}
+
+.ScorePrompt,
+.NotePrompt{
+    width: 280px;
+    margin-top: 10px;
+    text-align: center;
+    
+    background-color: rgb(223, 179, 212);
+    border-radius: 10px;
+}
+
+.ScorePrompt{height: 120px;}
+.NotePrompt{height: 140px;}
+
+.SilentPoolButton,
+.ActivatedPoolButton,
+.SelectedPoolButton{
+    height:40px;
+    margin-top: 11px;
+    border-radius: 10%;
+    position: absolute;
+    border-style: solid;
+}
+
+.SilentPoolButton{
+    background-color:cornsilk;
+    border-color:brown;
+    border-width: 1px;
+}
+
+.ActivatedPoolButton{
+    background-color: rgb(141, 233, 233);
+    border-color: yellow;
+}
+
+.SelectedPoolButton{
+    background-color:palevioletred;
+    border-color: red;
+}

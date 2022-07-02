@@ -1,0 +1,86 @@
+#Keyboard{
+    width: 630px;
+    height: 200px;
+    border-radius: 5%;
+    position: relative
+}
+
+.Keyboard{background-color: black;}
+.ActivatedKeyboard{background-color: rgb(138,0,18);}
+
+.SilentKey,
+.ActivatedKey{
+    width: 50px;
+    height: 50px;
+    border-radius: 30%;
+    float: left;
+    position:absolute
+}
+
+.SilentKey{
+    background-color: #001122;
+    border-style: solid;
+    border-color: cyan;
+}
+
+.ActivatedKey{
+    background-color: chartreuse;
+    border-style: solid;
+    border-color: red;
+}
+
+.LRBlank{
+    width: 7.5px;
+    height: 90px;
+}
+
+.EnglishCharacter,
+.ActivatedEnglishCharacter,
+.EnglishCharacterNoChinese,
+.ActivatedEnglishCharacterNoChinese {
+    position: absolute;
+    font-family: Arial;
+    font-size: 12px;
+    left: 7px;
+    top: 7px;
+}
+
+.ChineseCharacter,
+.ActivatedChineseCharacter {
+    position: absolute;
+    left: 13px;
+    top: 13px;
+    font-size: 28px;
+    font-family: Kaiti
+}
+
+.EnglishCharacter,
+.EnglishCharacterNoChinese {
+    color: aqua
+}
+
+.ChineseCharacter {
+    color: aqua
+}
+
+.ActivatedEnglishCharacter,
+.ActivatedEnglishCharacterNoChineses {
+    font-weight: bold
+}
+
+.ActivatedChineseCharacter {
+    font-weight: bolder
+}
+
+#SpreadButton {
+    font-size: 20px;
+    background-color: lawngreen;
+    border-radius: 5%;
+    border-color: yellow
+}
+
+#copyright {
+    background-color: gold;
+    width: 640px;
+    border-radius: 30%;
+}
