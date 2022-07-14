@@ -1,8 +1,11 @@
-创建Sphinx + GitHub + ReadtheDocs托管文档
+DrumPlayer（哗啦啦）2.1
 =====================================================
+
+简介 Introduction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
+   :caption: User Guide
 
-   DrumPlayer
+   user/quickstart
