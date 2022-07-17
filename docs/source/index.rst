@@ -7,12 +7,7 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: 哗啦啦2.1
-
-   drumplayer/index
-
-.. toctree::
-   :maxdepth: 2
+   :glob:
    :caption: 自编唱段
 
    auto/index
