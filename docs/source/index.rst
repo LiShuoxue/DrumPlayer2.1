@@ -1,14 +1,18 @@
-哗啦啦2.1
-=====================================================
+氍毹寄意
+====================
 
-简介 Introduction
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+记录和戏曲相关的分享与创作
 
-“哗啦啦”是web编程的京剧电子锣鼓/月琴小程序，它具有操作简便，可玩性强的特点。
+@LyThacHoc
 
 .. toctree::
    :maxdepth: 2
-   :caption: User Guide
+   :caption: 哗啦啦2.1
 
-   user/quickstart
-   user/edit
+   drumplayer/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: 自编唱段
+
+   auto/index
