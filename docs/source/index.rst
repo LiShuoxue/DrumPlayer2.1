@@ -5,10 +5,3 @@
 
 @LyThacHoc
 
-.. toctree::
-   :maxdepth: 2
-   :caption: 目录
-   :numbered:
-
-   锣鼓小程序“哗啦啦” <drumplayer/index>
-   自编唱段 <auto/index>
