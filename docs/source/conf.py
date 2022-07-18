@@ -4,6 +4,8 @@
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 
+import sphinx_rtd_theme
+
 extensions = [
         'recommonmark',
         'sphinx_markdown_tables',
@@ -16,6 +18,7 @@ extensions = [
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # The master toctree document.
 master_doc = 'index'
