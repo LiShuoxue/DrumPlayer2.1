@@ -7,7 +7,8 @@
 
 .. toctree::
    :maxdepth: 2
-   :glob:
-   :caption: 自编唱段
+   :caption: 目录
+   :numbered:
 
-   auto/index
+   锣鼓小程序“哗啦啦” <drumplayer/index>
+   自编唱段 <auto/index>
