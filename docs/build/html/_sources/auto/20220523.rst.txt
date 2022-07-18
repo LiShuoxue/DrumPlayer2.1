@@ -1,0 +1,16 @@
+20220523
+=================
+
+作于北京疫情严重的期间。
+
+.. figure:: pics/0523-1.jpg
+
+.. figure:: pics/0523-2.jpg
+
+.. figure:: pics/0523-3.jpg
+
+.. figure:: pics/0523-4.jpg
+
+.. figure:: pics/0523-5.jpg
+
+.. figure:: pics/0523-6.jpg
