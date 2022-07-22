@@ -17,12 +17,12 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = '氍毹寄意'
+project = 'LyThacHoc'
 copyright = '2022, Shuoxue Li'
 author = 'Shuoxue Li'
 
 # The full version, including alpha/beta/rc tags
-release = '2.1'
+# release = '2.1'
 
 
 # -- General configuration ---------------------------------------------------
@@ -63,9 +63,11 @@ html_theme = "sphinx_rtd_theme"
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+
+# html_style="_static/css/my_theme.css"
+html_css_files = ["my_theme.css"]
 source_suffix = ['.rst', '.md']
 html_theme_options = { 
     'logo_only': True, 
-    # "headbgcolor": "#ff6a13" # Caltech Color
 }
-html_logo = '_static/logo.jpg'
+html_logo = '_static/logo.png'

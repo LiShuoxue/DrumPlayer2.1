@@ -4,9 +4,10 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>多电子波函数的表述 &mdash; 氍毹寄意 2.1 文档</title>
+  <title>多电子波函数的表述 &mdash; LyThacHoc  文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -16,7 +17,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
@@ -30,7 +31,7 @@
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
             <a href="../index.html">
-            <img src="../_static/logo.jpg" class="logo" alt="Logo"/>
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -43,7 +44,16 @@
               <p class="caption" role="heading"><span class="caption-text">学海无涯</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">量子化学</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">多体问题的二次量子化表述</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">多体问题的二次量子化表述</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">自旋在二次量子化中的表达</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">与自旋无关的算符表达式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">纯自旋算符</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">自旋张量算符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">自旋匹配波函数</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="hfpro.html">Hartree-Fock方法的进一步认识</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ci.html">组态相互作用方法</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mcscf.html">多参考态方法</a></li>
@@ -63,7 +73,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">氍毹寄意</a>
+          <a href="../index.html">LyThacHoc</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -82,32 +92,74 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  
-<style>
-/* CSS overrides for sphinx_rtd_theme */
-
-/* 24px margin */
-.nbinput.nblast.container,
-.nboutput.nblast.container {
-    margin-bottom: 19px;  /* padding has already 5px */
-}
-
-/* ... except between code cells! */
-.nblast.container + .nbinput.container {
-    margin-top: -19px;
-}
-
-.admonition > p:before {
-    margin-right: 4px;  /* make room for the exclamation icon */
-}
-
-/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
-.math {
-    text-align: unset;
-}
-</style>
-<section id="id1">
+  <section id="id1">
 <h1>多电子波函数的表述<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<section id="id2">
+<h2>自旋在二次量子化中的表达<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>在考虑轨道自旋之后，单体算符可以写成如下的形式</p>
+<div class="math notranslate nohighlight" id="equation-one-elec-op">
+<span class="eqno">(1)<a class="headerlink" href="#equation-one-elec-op" title="公式的永久链接">¶</a></span>\[\hat f = \sum\limits_{p\sigma q\tau} f_{p\sigma,q\tau} \hat a^\dagger_{p\sigma} \hat a_{q\tau}\]</div>
+<p>其中矩阵元</p>
+<div class="math notranslate nohighlight" id="equation-one-elec-op-element">
+<span class="eqno">(2)<a class="headerlink" href="#equation-one-elec-op-element" title="公式的永久链接">¶</a></span>\[f_{p\sigma,q\tau} = \int \phi_p^*(\pmb r) f(\pmb r, m_s) \phi_q(\pmb r)  \sigma^*(m_s) \tau(m_s) \mathrm d \pmb r  \mathrm d m_s\]</div>
+<section id="id3">
+<h3>与自旋无关的算符表达式<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>若是单体算符 <span class="math notranslate nohighlight">\(f(\pmb r, m_s)\)</span> 和自旋无关，则上式可以表达成含有 <span class="math notranslate nohighlight">\(\delta_{\sigma \tau}\)</span> 的形式。最后我们可以定义和自旋无关的算符形式 <span class="math notranslate nohighlight">\(\hat f = \sum\limits_{pq} f_{pq} \hat E_{pq}\)</span> ，其中的单重态激发算符 <span class="math notranslate nohighlight">\(\hat E_{pq}\)</span> 定义为：</p>
+<div class="math notranslate nohighlight" id="equation-singlet-ex-op">
+<span class="eqno">(3)<a class="headerlink" href="#equation-singlet-ex-op" title="公式的永久链接">¶</a></span>\[\hat E_{pq} = \hat a^\dagger_{p\alpha} \hat a_{q\alpha} + \hat a^\dagger_{p\beta} \hat a_{q\beta}\]</div>
+<p>同理，对于二体算符有类似的结论：</p>
+<div class="math notranslate nohighlight" id="equation-two-elec-op">
+<span class="eqno">(4)<a class="headerlink" href="#equation-two-elec-op" title="公式的永久链接">¶</a></span>\[\hat g = \dfrac{1}{2} g_{pqrs} \hat e_{pqrs}\]</div>
+<p>其中二体激发算符</p>
+<div class="math notranslate nohighlight" id="equation-two-elec-ex-op">
+<span class="eqno">(5)<a class="headerlink" href="#equation-two-elec-ex-op" title="公式的永久链接">¶</a></span>\[\hat e_{pqrs} = \hat E_{pq} \hat E_{rs} - \delta_{qr} \hat E_{ps} = \sum\limits_{\sigma \tau} \hat a^\dagger_{p\sigma} \hat a^\dagger_{r\tau} \hat a_{s\tau} \hat a_{q\sigma}\]</div>
+<p>一般的非相对论Hamilton量因此可以写成：</p>
+<div class="math notranslate nohighlight" id="equation-nr-hamilton">
+<span class="eqno">(6)<a class="headerlink" href="#equation-nr-hamilton" title="公式的永久链接">¶</a></span>\[\hat H = \sum\limits_{pq} h_{pq} \hat H_{pq} + \dfrac{1}{2} \sum\limits_{pqrs} g_{pqrs} \hat e_{pqrs} + \hat h_{nuc}\]</div>
+</section>
+<section id="id4">
+<h3>纯自旋算符<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>单纯和电子自旋坐标相关而与空间坐标无关的算符具有如下的形式：</p>
+<div class="math notranslate nohighlight" id="equation-spin-op">
+<span class="eqno">(7)<a class="headerlink" href="#equation-spin-op" title="公式的永久链接">¶</a></span>\[\hat f = \sum\limits_{\sigma \tau} \int \sigma^*(m_s) f(m_s) \tau(m_s) \mathrm d m_s \sum\limits_p \hat a^\dagger_{p\sigma} \hat a_{p\tau}\]</div>
+<p>其中最重要的例子是自旋升降算符和z分量算符，它们的二次量子化表达式分别为：</p>
+<div class="math notranslate nohighlight" id="equation-spin-ops">
+<span class="eqno">(8)<a class="headerlink" href="#equation-spin-ops" title="公式的永久链接">¶</a></span>\[\begin{split}\hat S_+ = \sum\limits_p \hat a^\dagger_{p\alpha} \hat a_{p\beta} \\
+\hat S_- = \sum\limits_p \hat a^\dagger_{P\beta} \hat a_{p\alpha} \\
+\hat S_z = \dfrac{1}{2} (\hat a^\dagger_{p\alpha} \hat a_{q\alpha} - \hat a^\dagger_{p\beta} \hat a_{q\beta})\end{split}\]</div>
+<div class="quiz admonition">
+<p class="admonition-title">小练习</p>
+<p>尝试根据 <a class="reference internal" href="#equation-spin-op">(7)</a> 中的关系，证明 <a class="reference internal" href="#equation-spin-ops">(8)</a> 中 <span class="math notranslate nohighlight">\(\hat S_+\)</span> 的形式。</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>自旋升降算符满足如下的重要对易关系：</p>
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}[\hat S_+, \hat S_-] = 2 \hat S_z \\\end{split}\]</div>
+<p>总自旋平方算符 <span class="math notranslate nohighlight">\(\hat S^2\)</span> 和 <span class="math notranslate nohighlight">\(\hat S_+, \hat S_-, \hat S_z\)</span> 的关系为：</p>
+<div class="math notranslate nohighlight">
+\[\hat S^2 = \hat S_- \hat S_+ + \hat S_z (\hat S_z + 1)\]</div>
+</section>
+</section>
+<section id="id5">
+<h2>自旋张量算符<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p><strong>自旋张量算符(Spin Tensor Operator)</strong> 是如下的 <span class="math notranslate nohighlight">\(2S+1\)</span> 个算符 <span class="math notranslate nohighlight">\(\hat T^{S,M}\)</span> 的集合。它们和自旋算符满足如下的对易关系：</p>
+<div class="math notranslate nohighlight" id="equation-spin-ten-op-commute">
+<span class="eqno">(9)<a class="headerlink" href="#equation-spin-ten-op-commute" title="公式的永久链接">¶</a></span>\[\begin{split}[\hat S_{\pm}, \hat T^{S,M}] = \sqrt{S(S+1) - M(M \pm 1)} \hat T^{S,M\pm 1} \\
+[\hat S_z, \hat T^{S,M}] = M\hat T^{S,M}\end{split}\]</div>
+<p>特别地，当 <span class="math notranslate nohighlight">\(S=0, M=0\)</span> 时，张量算符 <span class="math notranslate nohighlight">\(\hat T^{0,0}\)</span> 与 <span class="math notranslate nohighlight">\(\hat S^\pm, \hat S_z\)</span> 均对易。</p>
+<p>我们把 <span class="math notranslate nohighlight">\(S=0\)</span> 的算符称作 <em>单重态算符</em> ，将 <span class="math notranslate nohighlight">\(S=\dfrac{1}{2}\)</span> 的称作 <em>二重态算符</em> ，以此类推。</p>
+<div class="quiz admonition">
+<p class="admonition-title">小练习</p>
+<p>尝试说明产生算符 <span class="math notranslate nohighlight">\(\{\hat a^\dagger_{p\alpha}, \hat a^\dagger_{p\beta}\}\)</span> 或湮灭算符 <span class="math notranslate nohighlight">\(\{-\hat a_{p\beta}, \hat a_{p\alpha}\}\)</span> 分别构成一组二重态张量算符。</p>
+<p>该结论在后续推导涉及自选匹配的结论时非常有用。</p>
+</div>
+</section>
+<section id="id6">
+<h2>自旋匹配波函数<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>对于非相对论的Hamilton量</p>
+</section>
 </section>
 
 
