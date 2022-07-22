@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>耦合簇方法 &mdash; 氍毹寄意 2.1 文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="哗啦啦2.1" href="../drumplayer/index.html" />
+    <link rel="prev" title="多参考态方法" href="mcscf.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html">
+            <img src="../_static/logo.jpg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">学海无涯</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">量子化学</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="secondquant.html">多体问题的二次量子化表述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hfpro.html">Hartree-Fock方法的进一步认识</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ci.html">组态相互作用方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mcscf.html">多参考态方法</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">耦合簇方法</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">引言</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">指数拟设的波函数形式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schrodinger">投影Schrödinger方程</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">氍毹寄意</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../drumplayer/index.html">锣鼓小程序“哗啦啦”</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto/index.html">自编唱段</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">氍毹寄意</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">量子化学学习笔记</a> &raquo;</li>
+      <li>耦合簇方法</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/qchem/cc.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<section id="id1">
+<h1>耦合簇方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<section id="id2">
+<h2>引言<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>截断的CI方法往往会面临大小一致性被破坏的问题。如何获取能反映电子相关的更好post-HF方法？</p>
+<p>考虑Full-CI的相关能：</p>
+<div class="math notranslate nohighlight" id="equation-ecorr-fci">
+<span class="eqno">(1)<a class="headerlink" href="#equation-ecorr-fci" title="公式的永久链接">¶</a></span>\[E_{corr} = \dfrac{1}{4} \sum\limits_{abij} c_{ab}^{ij} \langle \mathrm{HF} | \hat H | \Psi_{ab}^{rs} \rangle\]</div>
+<p>它可以写成单个相关能 <span class="math notranslate nohighlight">\(e_{ab}\)</span> 的叠加形式，其中</p>
+<div class="math notranslate nohighlight" id="equation-eab-iepa">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eab-iepa" title="公式的永久链接">¶</a></span>\[e_{ab} = \dfrac{1}{4} \sum\limits_{ij} c_{ab}^{ij} \langle \mathrm{HF} | \hat H | \Psi_{ab}^{rs} \rangle\]</div>
+<p>对于每个系数 <span class="math notranslate nohighlight">\(c_{ab}^{ij}\)</span> 可以分别做只考虑 <span class="math notranslate nohighlight">\(a\)</span> 和 <span class="math notranslate nohighlight">\(b\)</span> 双激发的波函数做CI计算优化而来。因此该方法称作 <strong>独立电子对近似(Independent Electron Pair Approximation, IEPA)</strong>。</p>
+<p>IEPA是满足大小一致性的近似方法，但是存在诸多理论缺点，比如在不同表象变换之下相关能也不同。因此我们需要将不同的电子对耦合起来，这样能更准确地引入激发，描述波函数的性质。考虑Full-CI之下的距离无穷远双 <span class="math notranslate nohighlight">\(\mathrm{H_2}\)</span> 分子波函数，它正好能被描述成</p>
+<div class="math notranslate nohighlight">
+\[| \mathrm{FCI} \rangle = [| 1_1 \bar 1_1 \rangle + c_{1_1 \bar 1_1}^{2_1 \bar 2_1} | 2_1 \bar 2_1 \rangle] [| 1_2 \bar 1_2 \rangle + c_{1_2 \bar 1_2}^{2_2 \bar 2_2} | 2_2 \bar 2_2 \rangle]\]</div>
+<p>即四激发的Full-CI系数能写作两个双激发系数的乘积形式。但是在一般的情形之下，该式子不成立（四激发的波函数需要考虑18项双激发系数乘积）。但是我们依然可以从这个看似复杂的表达式中拟设出一个便于运算的波函数形式，及围绕它展开的 <strong>耦合簇理论(Coupled-Cluster Theory)</strong>。</p>
+</section>
+<section id="id3">
+<h2>指数拟设的波函数形式<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>在说明CC的波函数形式之前首先介绍激发算符的形式：</p>
+<div class="math notranslate nohighlight" id="equation-excitation-operator">
+<span class="eqno">(3)<a class="headerlink" href="#equation-excitation-operator" title="公式的永久链接">¶</a></span>\[\begin{split}\hat \tau_I^A = \hat a_A^\dagger \hat a_J \\ \hat \tau_{IJ}^{AB} = \hat a_A ^\dagger \hat a_I \hat a_B^\dagger \hat a_J\end{split}\]</div>
+<p>分别为 <span class="math notranslate nohighlight">\(A \to I\)</span> 和 <span class="math notranslate nohighlight">\(AB \to IJ\)</span> 的激发算符。更高的激发算符定义类似。</p>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>不同激发算符满足如下的对易关系：</p>
+</div>
+<div class="math notranslate nohighlight" id="equation-excitation-operator-commute">
+<span class="eqno">(4)<a class="headerlink" href="#equation-excitation-operator-commute" title="公式的永久链接">¶</a></span>\[\begin{split}[\hat \tau_\mu, \hat \tau_\nu] = 0 \\ \hat \tau_\mu^2 = 0\end{split}\]</div>
+<p>此外我们还定义激发算符作用在HF波函数之后的Slater行列式：</p>
+<div class="math notranslate nohighlight">
+\[| \mu \rangle \equiv \hat \tau_\mu | \mathrm{HF} \rangle\]</div>
+<p>根据激发算符的概念，我们可以将耦合簇波函数写成考虑不同激发及其耦合的乘积形式</p>
+<div class="math notranslate nohighlight" id="equation-cc-wfn-prod">
+<span class="eqno">(5)<a class="headerlink" href="#equation-cc-wfn-prod" title="公式的永久链接">¶</a></span>\[| \mathrm{CC} \rangle = [\prod\limits_{\mu} (1 + t_\mu \hat \tau_\mu)] | \mathrm{HF} \rangle\]</div>
+<p>其中每个激发对应的 <span class="math notranslate nohighlight">\(t_{\mu}\)</span> 称作 <strong>振幅(Amplitude)</strong>。</p>
+<p>由于 <a class="reference internal" href="#equation-excitation-operator-commute">(4)</a> 中的关系， <a class="reference internal" href="#equation-cc-wfn-prod">(5)</a> 可以写成如下的 <strong>指数拟设(Exponential Ansatz)</strong> 形式</p>
+<div class="math notranslate nohighlight" id="equation-cc-wfn-exp">
+<span class="eqno">(6)<a class="headerlink" href="#equation-cc-wfn-exp" title="公式的永久链接">¶</a></span>\[|\mathrm{CC}\rangle = \exp(\hat T) | \mathrm{HF} \rangle\]</div>
+<p>其中 <em>团簇算符(Cluster Operator)</em> <span class="math notranslate nohighlight">\(\hat T\)</span> 定义为激发算符的总和：</p>
+<div class="math notranslate nohighlight">
+\[\hat T = \sum\limits_\mu t_\mu \hat \tau_\mu\]</div>
+<p><span class="math notranslate nohighlight">\(\hat T\)</span> 可根据激发数目写成 <span class="math notranslate nohighlight">\(\hat T_1, \hat T_2 \cdots\)</span> 等形式，且相互间满足对易关系。</p>
+<p>从指数拟设的结果可以看出，哪怕对 <span class="math notranslate nohighlight">\(\hat T\)</span> 做了截断，总的波函数一定包含了更高激发的信息。但是对波函数的假设仍然基于单Slater行列式的Hartree-Fock结果相对合理的条件。对于多组态的CC方法尚无定论。</p>
+</section>
+<section id="schrodinger">
+<h2>投影Schrödinger方程<a class="headerlink" href="#schrodinger" title="永久链接至标题">¶</a></h2>
+<p>按照一般变分法求解Schrödinger方程的方法，我们自然会考虑将振幅看做参数，然后以类似于CI方程的形式求解，但是这样显然会引入所有的Full-CI行列式和高阶的振幅参数。回忆CI求解中，变分方程等价于如下形式的 <em>投影Schrödinger方程</em></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\langle \mu | \hat H | \mathrm{CC} \rangle = E \langle \mu | \mathrm{CC} \rangle \\ E = \langle \mathrm{HF} | \hat H | \mathrm{CC} \rangle\end{split}\]</div>
+<p>而在CC中我们可以采用这样的方程代替变分方程，只不过在CC中二者是不等价的。但在事实上，投影Schrödinger方程解得的能量与其能量期望值基本一致。而投影方程在指数拟设的波函数之下有更易解的形式，称为 <em>连接耦合簇方程(Linked Coupled-Cluster Equation)</em> ：</p>
+<div class="math notranslate nohighlight" id="equation-linked-cc-eq">
+<span class="eqno">(7)<a class="headerlink" href="#equation-linked-cc-eq" title="公式的永久链接">¶</a></span>\[\begin{split}\langle \mathrm{HF} | \exp(-\hat T) \hat H \exp(\hat T) | \mathrm{HF} \rangle = E \\ \langle \mu | \exp(-\hat T) \hat H \exp(\hat T) | \mathrm{HF} \rangle = 0\end{split}\]</div>
+<p><a class="reference internal" href="#equation-linked-cc-eq">(7)</a> 中，第一式称作能量方程，第二式称作 <em>振幅方程(Amplitude Equation)</em> 。</p>
+<p>连接CC方程比起原始形式具有很多优势。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="mcscf.html" class="btn btn-neutral float-left" title="多参考态方法" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../drumplayer/index.html" class="btn btn-neutral float-right" title="哗啦啦2.1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, Shuoxue Li.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

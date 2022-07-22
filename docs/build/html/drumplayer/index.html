@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1. 哗啦啦2.1 &mdash; 氍毹寄意 2.1 文档</title>
+  <title>哗啦啦2.1 &mdash; 氍毹寄意 2.1 文档</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -16,11 +16,12 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="1.1.1. 快速入门" href="user/quickstart.html" />
-    <link rel="prev" title="氍毹寄意" href="../index.html" /> 
+    <link rel="next" title="快速入门" href="user/quickstart.html" />
+    <link rel="prev" title="耦合簇方法" href="../qchem/cc.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -40,16 +41,20 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../qchem/index.html">量子化学</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">目录</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. 锣鼓小程序“哗啦啦”</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#introduction">1.1. 简介 Introduction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="user/quickstart.html">1.1.1. 快速入门</a></li>
-<li class="toctree-l3"><a class="reference internal" href="user/edit.html">1.1.2. 编辑模式详解</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">锣鼓小程序“哗啦啦”</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">简介 Introduction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user/quickstart.html">快速入门</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user/edit.html">编辑模式详解</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../auto/index.html">2. 自编唱段</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto/index.html">自编唱段</a></li>
 </ul>
 
         </div>
@@ -66,7 +71,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">1. </span>哗啦啦2.1</li>
+      <li>哗啦啦2.1</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/drumplayer/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -76,16 +81,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="id1">
-<h1><span class="section-number">1. </span>哗啦啦2.1<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<section id="id1">
+<h1>哗啦啦2.1<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <section id="introduction">
-<h2><span class="section-number">1.1. </span>简介 Introduction<a class="headerlink" href="#introduction" title="永久链接至标题">¶</a></h2>
+<h2>简介 Introduction<a class="headerlink" href="#introduction" title="永久链接至标题">¶</a></h2>
 <p>“哗啦啦”是web编程的京剧电子锣鼓/月琴小程序，它具有操作简便，可玩性强的特点。</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="user/quickstart.html">1.1.1. 快速入门</a></li>
-<li class="toctree-l1"><a class="reference internal" href="user/edit.html">1.1.2. 编辑模式详解</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/quickstart.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/edit.html">编辑模式详解</a></li>
 </ul>
 </div>
 </section>
@@ -95,8 +124,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../index.html" class="btn btn-neutral float-left" title="氍毹寄意" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="user/quickstart.html" class="btn btn-neutral float-right" title="1.1.1. 快速入门" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../qchem/cc.html" class="btn btn-neutral float-left" title="耦合簇方法" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="user/quickstart.html" class="btn btn-neutral float-right" title="快速入门" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

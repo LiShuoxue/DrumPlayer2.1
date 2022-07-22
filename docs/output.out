@@ -1,0 +1,1565 @@
+
+
+******** <class 'pyscf.scf.hf.RHF'> ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level_shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+diis_start_cycle = 1
+diis_space = 8
+SCF conv_tol = 1e-09
+SCF conv_tol_grad = None
+SCF max_cycles = 50
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /home/shuoxueli/DrumPlayer2.1/docs/tmpnvz96hh7
+max_memory 4000 MB (current use 69 MB)
+Set gradient conv threshold to 3.16228e-05
+Nelec from initial guess = 9.987285859101277
+E1 = -121.59359705574579  E_coul = 36.548850021752614
+init E= -75.8564886162471
+cond(S) = 108.39050774643833
+    CPU time for initialize scf      0.36 sec, wall time      0.07 sec
+  HOMO = -0.476818251418643  LUMO = 0.100626554688217
+  mo_energy =
+[-20.80200182  -1.62252073  -0.75293231  -0.58959821  -0.47681825
+   0.10062655   0.19850864   0.70563722   0.77432915   1.05707716
+   1.07750098   1.14663841   1.3805696    1.44362884   1.63110804
+   1.75602818   1.91328522   2.37520959   2.40849296   3.12935746
+   3.18230846   3.36289922   3.71850599   3.99991297]
+E1 = -124.13003623006958  E_coul = 38.95396209235421
+cycle= 1 E= -75.9878157199693  delta_E= -0.131  |g|= 0.448  |ddm|= 1.31
+    CPU time for cycle= 1      0.00 sec, wall time      0.00 sec
+diis-norm(errvec)=0.81476
+diis-c [-0.66383447  1.        ]
+  HOMO = -0.41263862205445  LUMO = 0.186492856349359
+  mo_energy =
+[-20.31125659  -1.27064404  -0.65368388  -0.48905675  -0.41263862
+   0.18649286   0.25631452   0.79488383   0.85376065   1.21090571
+   1.27200045   1.29899542   1.46177852   1.47027692   1.67383537
+   1.91801158   1.91981544   2.47804792   2.51443777   3.36014605
+   3.41320594   3.57990961   3.9331385    4.22027429]
+E1 = -122.48753837269277  E_coul = 37.28156573641028
+cycle= 2 E= -76.0177142185364  delta_E= -0.0299  |g|= 0.228  |ddm|= 0.37
+    CPU time for cycle= 2      0.11 sec, wall time      0.02 sec
+diis-norm(errvec)=0.393358
+diis-c [-0.02586839  0.31007462  0.68992538]
+  HOMO = -0.500118779032043  LUMO = 0.180696264253247
+  mo_energy =
+[-20.57737172  -1.34784502  -0.71046748  -0.57391151  -0.50011878
+   0.18069626   0.25076647   0.77858604   0.84332428   1.15692445
+   1.19466061   1.24635416   1.43584203   1.4657014    1.66484365
+   1.85937311   1.92515667   2.43739239   2.47502419   3.27510855
+   3.32732848   3.4989317    3.85312397   4.13556695]
+E1 = -123.19942033107156  E_coul = 37.98460557742418
+cycle= 3 E= -76.0265563359013  delta_E= -0.00884  |g|= 0.0275  |ddm|= 0.133
+    CPU time for cycle= 3      0.09 sec, wall time      0.01 sec
+diis-norm(errvec)=0.0531401
+diis-c [-0.00176071 -0.01001984  0.06103158  0.94898826]
+  HOMO = -0.491455052480573  LUMO = 0.185421223643547
+  mo_energy =
+[-20.54917122  -1.33572826  -0.69919397  -0.56601441  -0.49145505
+   0.18542122   0.25553963   0.78801237   0.85387899   1.16409828
+   1.2018011    1.25327942   1.44339994   1.47585783   1.67354683
+   1.86758567   1.93411106   2.45048489   2.48876834   3.28613171
+   3.33839621   3.51047625   3.86472298   4.14758733]
+E1 = -123.13641073270507  E_coul = 37.92140290204964
+cycle= 4 E= -76.0267494129093  delta_E= -0.000193  |g|= 0.00608  |ddm|= 0.0186
+    CPU time for cycle= 4      0.00 sec, wall time      0.01 sec
+diis-norm(errvec)=0.0119231
+diis-c [-3.12032754e-05 -1.30615671e-02 -4.64571887e-02 -2.04336368e-01
+  1.26385512e+00]
+  HOMO = -0.492842760048076  LUMO = 0.185530840329218
+  mo_energy =
+[-20.55056979  -1.33630145  -0.69884952  -0.56646872  -0.49284276
+   0.18553084   0.25615905   0.78866082   0.85431295   1.16378861
+   1.20061025   1.25348632   1.44395007   1.47653136   1.67413975
+   1.86733653   1.93488764   2.45118972   2.4890398    3.28572983
+   3.33809031   3.51027953   3.86461419   4.14749621]
+E1 = -123.1395618637617  E_coul = 37.92453813488557
+cycle= 5 E= -76.02676531113  delta_E= -1.59e-05  |g|= 0.000819  |ddm|= 0.00727
+    CPU time for cycle= 5      0.11 sec, wall time      0.01 sec
+diis-norm(errvec)=0.00153209
+diis-c [-6.51099286e-07  3.49247145e-03  1.14520327e-02  3.65398563e-02
+ -3.22725928e-01  1.27124157e+00]
+  HOMO = -0.493097138320914  LUMO = 0.185438304231417
+  mo_energy =
+[-20.55063034  -1.33641989  -0.69878492  -0.56662144  -0.49309714
+   0.1854383    0.25614583   0.78848789   0.85412429   1.16363186
+   1.20037763   1.25342268   1.44383128   1.47639448   1.67401443
+   1.86722988   1.93472209   2.45103679   2.488879     3.28557811
+   3.33790121   3.51009217   3.86442248   4.14729674]
+E1 = -123.13905976742163  E_coul = 37.92403568781715
+cycle= 6 E= -76.0267656618584  delta_E= -3.51e-07  |g|= 0.000143  |ddm|= 0.00121
+    CPU time for cycle= 6      0.00 sec, wall time      0.00 sec
+diis-norm(errvec)=0.000266447
+diis-c [-6.85775859e-09 -9.53960607e-04 -3.01114378e-03 -1.07953583e-02
+  8.96804414e-02 -4.54689222e-01  1.37976924e+00]
+  HOMO = -0.493136291083581  LUMO = 0.185437456998324
+  mo_energy =
+[-20.55060324  -1.33642563  -0.69876032  -0.5666439   -0.49313629
+   0.18543746   0.25616486   0.78850575   0.8541295    1.16362844
+   1.20035351   1.25343865   1.44383208   1.47639821   1.67401878
+   1.86723247   1.93472957   2.45105404   2.48888844   3.2855745
+   3.33789741   3.51009264   3.86441975   4.14729849]
+E1 = -123.13894858059507  E_coul = 37.923924489848524
+cycle= 7 E= -76.0267656730004  delta_E= -1.11e-08  |g|= 1.36e-05  |ddm|= 0.000254
+    CPU time for cycle= 7      0.17 sec, wall time      0.03 sec
+diis-norm(errvec)=2.61197e-05
+diis-c [-2.99367948e-10  1.56174530e-04  5.09016088e-04  1.91617776e-03
+ -1.49842496e-02  8.08785619e-02 -3.08145114e-01  1.23966943e+00]
+  HOMO = -0.493133359781255  LUMO = 0.185436800465717
+  mo_energy =
+[-20.55059767  -1.33642238  -0.69875373  -0.56664234  -0.49313336
+   0.1854368    0.2561651    0.78850453   0.85412823   1.16362797
+   1.20035318   1.25344021   1.44383251   1.47639801   1.67401879
+   1.86723303   1.93472951   2.45105434   2.48888859   3.28557554
+   3.33789842   3.51009395   3.86442045   4.14729982]
+E1 = -123.13894490438982  E_coul = 37.9239208135332
+cycle= 8 E= -76.0267656731105  delta_E= -1.1e-10  |g|= 3.42e-06  |ddm|= 2.36e-05
+    CPU time for cycle= 8      0.11 sec, wall time      0.01 sec
+  HOMO = -0.493133091115078  LUMO = 0.185436723638504
+  mo_energy =
+[-20.55059867  -1.33642251  -0.69875436  -0.56664301  -0.49313309
+   0.18543672   0.25616512   0.78850477   0.85412804   1.16362802
+   1.20035378   1.25344035   1.44383262   1.47639786   1.67401875
+   1.86723315   1.93472933   2.45105419   2.48888843   3.28557569
+   3.33789854   3.51009408   3.86442053   4.14729994]
+E1 = -123.13894764738231  E_coul = 37.92392355651816
+Extra cycle  E= -76.026765673118  delta_E= -7.53e-12  |g|= 1.57e-06  |ddm|= 5.17e-06
+    CPU time for scf_cycle      0.95 sec, wall time      0.18 sec
+    CPU time for SCF      0.95 sec, wall time      0.18 sec
+converged SCF energy = -76.026765673118
+
+WARN: CCSD detected DF being used in the HF object. MO integrals are computed based on the DF 3-index tensors.
+It's recommended to use dfccsd.CCSD for the DF-CCSD calculations
+
+******** <class 'pyscf.df.df.DF'> ********
+auxbasis = weigend
+max_memory = 4000
+_cderi_to_save = /home/shuoxueli/DrumPlayer2.1/docs/tmpu_m9g55c
+num shells = 25, num cGTOs = 71
+size of aux basis 71
+    CPU time for 2c2e      0.00 sec, wall time      0.00 sec
+shranges = [(0, 11, 300)]
+int3c2e [1/1], AO [0:11], nrow = 300
+    CPU time for cholesky_eri      0.11 sec, wall time      0.02 sec
+    CPU time for jk      0.23 sec, wall time      0.03 sec
+    CPU time for df vj and vk      0.23 sec, wall time      0.03 sec
+E1 = -123.13894764738231  E_coul = 37.924753586715056
+    CPU time for CCSD integral transformation      0.33 sec, wall time      0.05 sec
+Init t2, MP2 energy = -76.2299530219192  E_corr(MP2) -0.204017378998105
+    CPU time for init mp2      0.08 sec, wall time      0.00 sec
+-4.1655567883935873e-13
+1.049160758270773e-14
+    CPU time for vvvv [0:5]      0.00 sec, wall time      0.01 sec
+    CPU time for vvvv [5:10]      0.05 sec, wall time      0.01 sec
+    CPU time for vvvv [10:15]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [15:19]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv      0.05 sec, wall time      0.03 sec
+max_memory 3921 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for vovv [0:19]      0.23 sec, wall time      0.03 sec
+    CPU time for ovvv      0.38 sec, wall time      0.03 sec
+max_memory 3920 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for voov [0:19]      0.66 sec, wall time      0.11 sec
+    CPU time for update t1 t2      1.08 sec, wall time      0.17 sec
+1.3875706139643285e-12
+4.440892098500626e-15
+E1 = -123.13894764738231  E_coul = 37.92392355651816
+    CPU time for CCSD integral transformation      0.03 sec, wall time      0.01 sec
+Init t2, MP2 energy = -76.2307856571462  E_corr(MP2) -0.204019984028207
+    CPU time for init mp2      0.00 sec, wall time      0.00 sec
+5.433436180979356e-07
+-1.6739868546888914e-08
+    CPU time for vvvv [0:5]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [5:10]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [10:15]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [15:19]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv      0.00 sec, wall time      0.00 sec
+max_memory 3919 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for vovv [0:19]      0.02 sec, wall time      0.00 sec
+    CPU time for ovvv      0.02 sec, wall time      0.01 sec
+max_memory 3919 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for voov [0:19]      0.02 sec, wall time      0.01 sec
+    CPU time for update t1 t2      0.03 sec, wall time      0.03 sec
+-7.608581728962838e-07
+-5.114383938575884e-08
+-3.2116897474843142e-09
+    CPU time for vvvv [0:5]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [5:10]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [10:15]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [15:19]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv      0.00 sec, wall time      0.00 sec
+max_memory 3918 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for vovv [0:19]      0.00 sec, wall time      0.01 sec
+    CPU time for ovvv      0.02 sec, wall time      0.01 sec
+max_memory 3918 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for voov [0:19]      0.00 sec, wall time      0.01 sec
+    CPU time for update t1 t2      0.02 sec, wall time      0.02 sec
+-3.6186142415850497e-09
+-9.282744858826741e-07
+-1.7659243845002948e-07
+
+******** <class '__main__.CCSD'> ********
+CC2 = 0
+CCSD nocc = 5, nmo = 24
+max_cycle = 50
+direct = 0
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 4000 MB (current use 81 MB)
+total FLOPs 19180500.0
+E1 = -123.13894764738231  E_coul = 37.92392355651816
+    CPU time for CCSD integral transformation      0.00 sec, wall time      0.01 sec
+Init t2, MP2 energy = -76.2307856571462  E_corr(MP2) -0.204019984028207
+    CPU time for init mp2      0.00 sec, wall time      0.00 sec
+Init E_corr(CCSD) = -0.204019984029269
+    CPU time for vvvv [0:5]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [5:10]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [10:15]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [15:19]      0.02 sec, wall time      0.00 sec
+    CPU time for vvvv      0.02 sec, wall time      0.01 sec
+max_memory 3918 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for vovv [0:19]      0.00 sec, wall time      0.00 sec
+    CPU time for ovvv      0.00 sec, wall time      0.01 sec
+max_memory 3917 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for voov [0:19]      0.03 sec, wall time      0.01 sec
+    CPU time for update t1 t2      0.05 sec, wall time      0.03 sec
+DIIS for step 0
+cycle = 1  E_corr(CCSD) = -0.208967843758357  dE = -0.00494785973  norm(t1,t2) = 0.0215092
+    CPU time for CCSD iter      0.05 sec, wall time      0.03 sec
+    CPU time for vvvv [0:5]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [5:10]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [10:15]      0.02 sec, wall time      0.00 sec
+    CPU time for vvvv [15:19]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv      0.02 sec, wall time      0.01 sec
+max_memory 3917 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for vovv [0:19]      0.00 sec, wall time      0.00 sec
+    CPU time for ovvv      0.00 sec, wall time      0.01 sec
+max_memory 3917 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for voov [0:19]      0.02 sec, wall time      0.01 sec
+    CPU time for update t1 t2      0.03 sec, wall time      0.03 sec
+diis-c [-5.59757752e-05  1.00000000e+00]
+DIIS for step 1
+cycle = 2  E_corr(CCSD) = -0.212173682289124  dE = -0.00320583853  norm(t1,t2) = 0.0074817
+    CPU time for CCSD iter      0.03 sec, wall time      0.03 sec
+    CPU time for vvvv [0:5]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [5:10]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [10:15]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [15:19]      0.05 sec, wall time      0.00 sec
+    CPU time for vvvv      0.05 sec, wall time      0.00 sec
+max_memory 3916 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for vovv [0:19]      0.00 sec, wall time      0.01 sec
+    CPU time for ovvv      0.00 sec, wall time      0.01 sec
+max_memory 3916 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for voov [0:19]      0.02 sec, wall time      0.01 sec
+    CPU time for update t1 t2      0.06 sec, wall time      0.02 sec
+diis-c [-2.40544579e-06 -4.80794575e-01  1.48079457e+00]
+DIIS for step 2
+cycle = 3  E_corr(CCSD) = -0.213228680564774  dE = -0.00105499828  norm(t1,t2) = 0.00283777
+    CPU time for CCSD iter      0.06 sec, wall time      0.03 sec
+    CPU time for vvvv [0:5]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [5:10]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [10:15]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [15:19]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv      0.00 sec, wall time      0.01 sec
+max_memory 3916 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for vovv [0:19]      0.00 sec, wall time      0.00 sec
+    CPU time for ovvv      0.02 sec, wall time      0.01 sec
+max_memory 3915 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for voov [0:19]      0.02 sec, wall time      0.01 sec
+    CPU time for update t1 t2      0.03 sec, wall time      0.02 sec
+diis-c [-1.48400942e-07 -5.11577626e-02  2.97744711e-03  1.04818032e+00]
+DIIS for step 3
+cycle = 4  E_corr(CCSD) = -0.213362958465469  dE = -0.000134277901  norm(t1,t2) = 0.000525357
+    CPU time for CCSD iter      0.03 sec, wall time      0.03 sec
+    CPU time for vvvv [0:5]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [5:10]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [10:15]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [15:19]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv      0.00 sec, wall time      0.01 sec
+max_memory 3915 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for vovv [0:19]      0.02 sec, wall time      0.00 sec
+    CPU time for ovvv      0.02 sec, wall time      0.01 sec
+max_memory 3915 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for voov [0:19]      0.00 sec, wall time      0.01 sec
+    CPU time for update t1 t2      0.05 sec, wall time      0.03 sec
+diis-c [-1.15861936e-08  6.21762308e-02 -1.40829222e-01 -2.90919715e-01
+  1.36957271e+00]
+DIIS for step 4
+cycle = 5  E_corr(CCSD) = -0.213345818512992  dE = 1.71399525e-05  norm(t1,t2) = 0.000178662
+    CPU time for CCSD iter      0.05 sec, wall time      0.03 sec
+    CPU time for vvvv [0:5]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [5:10]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [10:15]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [15:19]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv      0.00 sec, wall time      0.00 sec
+max_memory 3914 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for vovv [0:19]      0.00 sec, wall time      0.01 sec
+    CPU time for ovvv      0.02 sec, wall time      0.01 sec
+max_memory 3914 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for voov [0:19]      0.02 sec, wall time      0.02 sec
+    CPU time for update t1 t2      0.03 sec, wall time      0.03 sec
+diis-c [-1.04066452e-09 -1.92391706e-02  4.34592240e-02  1.23272631e-01
+ -6.56077782e-01  1.50858510e+00]
+DIIS for step 5
+cycle = 6  E_corr(CCSD) = -0.213342245835261  dE = 3.57267773e-06  norm(t1,t2) = 5.08334e-05
+    CPU time for CCSD iter      0.03 sec, wall time      0.03 sec
+    CPU time for vvvv [0:5]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [5:10]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [10:15]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [15:19]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv      0.00 sec, wall time      0.00 sec
+max_memory 3914 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for vovv [0:19]      0.02 sec, wall time      0.01 sec
+    CPU time for ovvv      0.02 sec, wall time      0.01 sec
+max_memory 3913 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for voov [0:19]      0.00 sec, wall time      0.01 sec
+    CPU time for update t1 t2      0.02 sec, wall time      0.02 sec
+diis-c [-6.14728392e-11 -1.72189481e-03  1.06425476e-03  2.11776534e-02
+ -4.27431396e-02 -2.95164692e-01  1.31738782e+00]
+DIIS for step 6
+cycle = 7  E_corr(CCSD) = -0.213343849269329  dE = -1.60343407e-06  norm(t1,t2) = 1.57002e-05
+    CPU time for CCSD iter      0.03 sec, wall time      0.03 sec
+    CPU time for vvvv [0:5]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [5:10]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [10:15]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [15:19]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv      0.00 sec, wall time      0.01 sec
+max_memory 3913 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for vovv [0:19]      0.00 sec, wall time      0.00 sec
+    CPU time for ovvv      0.00 sec, wall time      0.01 sec
+max_memory 3913 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for voov [0:19]      0.02 sec, wall time      0.01 sec
+    CPU time for update t1 t2      0.02 sec, wall time      0.03 sec
+diis-c [-4.64249613e-12  1.23832034e+00  1.81259367e-04  7.73287176e-04
+  3.08609622e-03  4.21209455e-02 -2.84481931e-01]
+DIIS for step 7
+cycle = 8  E_corr(CCSD) = -0.213343257314684  dE = 5.91954645e-07  norm(t1,t2) = 2.96024e-06
+    CPU time for CCSD iter      0.02 sec, wall time      0.03 sec
+    CPU time for vvvv [0:5]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [5:10]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [10:15]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv [15:19]      0.02 sec, wall time      0.00 sec
+    CPU time for vvvv      0.02 sec, wall time      0.01 sec
+max_memory 3912 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for vovv [0:19]      0.00 sec, wall time      0.00 sec
+    CPU time for ovvv      0.00 sec, wall time      0.01 sec
+max_memory 3912 MB,  nocc,nvir = 5,19  blksize = 19
+    CPU time for voov [0:19]      0.02 sec, wall time      0.01 sec
+    CPU time for update t1 t2      0.03 sec, wall time      0.03 sec
+diis-c [-1.64382808e-13 -2.16142838e-01  1.24318509e+00 -1.36292879e-04
+ -2.38342812e-03  1.57755612e-02 -4.02980899e-02]
+DIIS for step 8
+cycle = 9  E_corr(CCSD) = -0.213343246513692  dE = 1.08009921e-08  norm(t1,t2) = 7.97748e-07
+    CPU time for CCSD iter      0.03 sec, wall time      0.03 sec
+    CPU time for CCSD      0.33 sec, wall time      0.26 sec
+CCSD converged
+E(CCSD) = -76.24010891963172  E_corr = -0.2133432465136919
+-1.2315416852981542e-08
+5.452064941735557e-07
+
+******** <class '__main__.CCSD'> ********
+CC2 = 0
+CCSD nocc = 5, nmo = 24
+max_cycle = 50
+direct = 1
+conv_tol = 1e-07
+conv_tol_normt = 1e-05
+diis_space = 6
+diis_start_cycle = 0
+diis_start_energy_diff = 1e+09
+max_memory 1 MB (current use 87 MB)
+total FLOPs 19180500.0
+E1 = -123.13894764738231  E_coul = 37.92392355651816
+step1: tmpfile /home/shuoxueli/DrumPlayer2.1/docs/tmp73q9vu8r  0.288 MB
+step1: (ij,kl) = (120,300), mem cache 2000 MB, iobuf 800 MB
+    CPU time for Initializing ao2mo.outcore.half_e1      0.02 sec, wall time      0.00 sec
+step 1 [1/1], AO [0:66], len(buf) = 300
+      fill iobuf micro [1/1], AO [0:66], len(aobuf) = 300
+    CPU time for gen AO/transform MO [1/1]      0.00 sec, wall time      0.01 sec
+blksize 24
+    CPU time for transforming oopp      0.02 sec, wall time      0.02 sec
+    CPU time for transforming ovpp [0:19]      0.02 sec, wall time      0.00 sec
+    CPU time for transforming oppp      0.03 sec, wall time      0.02 sec
+    CPU time for CCSD integral transformation      0.03 sec, wall time      0.02 sec
+Init t2, MP2 energy = -76.2307856571462  E_corr(MP2) -0.204019984028207
+    CPU time for init mp2      0.00 sec, wall time      0.00 sec
+Init E_corr(CCSD) = -0.204019984029269
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv      0.02 sec, wall time      0.02 sec
+max_memory -87 MB,  nocc,nvir = 5,19  blksize = 4
+    CPU time for vovv [0:4]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [4:8]      0.02 sec, wall time      0.00 sec
+    CPU time for vovv [8:12]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [12:16]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [16:19]      0.00 sec, wall time      0.00 sec
+    CPU time for ovvv      0.02 sec, wall time      0.01 sec
+max_memory 0 MB,  nocc,nvir = 5,19  blksize = 4
+    CPU time for voov [0:4]      0.02 sec, wall time      0.01 sec
+    CPU time for voov [4:8]      0.00 sec, wall time      0.01 sec
+    CPU time for voov [8:12]      0.03 sec, wall time      0.01 sec
+    CPU time for voov [12:16]      0.00 sec, wall time      0.01 sec
+    CPU time for voov [16:19]      0.02 sec, wall time      0.01 sec
+    CPU time for update t1 t2      0.09 sec, wall time      0.08 sec
+DIIS for step 0
+cycle = 1  E_corr(CCSD) = -0.208967843758358  dE = -0.00494785973  norm(t1,t2) = 0.0215092
+    CPU time for CCSD iter      0.09 sec, wall time      0.08 sec
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.06 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv      0.06 sec, wall time      0.02 sec
+max_memory -87 MB,  nocc,nvir = 5,19  blksize = 4
+    CPU time for vovv [0:4]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [4:8]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [8:12]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [12:16]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [16:19]      0.00 sec, wall time      0.00 sec
+    CPU time for ovvv      0.02 sec, wall time      0.01 sec
+max_memory 0 MB,  nocc,nvir = 5,19  blksize = 4
+    CPU time for voov [0:4]      0.02 sec, wall time      0.01 sec
+    CPU time for voov [4:8]      0.00 sec, wall time      0.01 sec
+    CPU time for voov [8:12]      0.03 sec, wall time      0.01 sec
+    CPU time for voov [12:16]      0.00 sec, wall time      0.01 sec
+    CPU time for voov [16:19]      0.02 sec, wall time      0.01 sec
+    CPU time for update t1 t2      0.14 sec, wall time      0.08 sec
+diis-c [-5.59757752e-05  1.00000000e+00]
+DIIS for step 1
+cycle = 2  E_corr(CCSD) = -0.212173682289124  dE = -0.00320583853  norm(t1,t2) = 0.0074817
+    CPU time for CCSD iter      0.14 sec, wall time      0.08 sec
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.08 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv      0.09 sec, wall time      0.02 sec
+max_memory -88 MB,  nocc,nvir = 5,19  blksize = 4
+    CPU time for vovv [0:4]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [4:8]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [8:12]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [12:16]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [16:19]      0.00 sec, wall time      0.00 sec
+    CPU time for ovvv      0.00 sec, wall time      0.01 sec
+max_memory 0 MB,  nocc,nvir = 5,19  blksize = 4
+    CPU time for voov [0:4]      0.02 sec, wall time      0.01 sec
+    CPU time for voov [4:8]      0.00 sec, wall time      0.01 sec
+    CPU time for voov [8:12]      0.03 sec, wall time      0.01 sec
+    CPU time for voov [12:16]      0.02 sec, wall time      0.01 sec
+    CPU time for voov [16:19]      0.00 sec, wall time      0.01 sec
+    CPU time for update t1 t2      0.16 sec, wall time      0.08 sec
+diis-c [-2.40544579e-06 -4.80794575e-01  1.48079457e+00]
+DIIS for step 2
+cycle = 3  E_corr(CCSD) = -0.213228680564774  dE = -0.00105499828  norm(t1,t2) = 0.00283777
+    CPU time for CCSD iter      0.16 sec, wall time      0.08 sec
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.03 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv      0.05 sec, wall time      0.02 sec
+max_memory -88 MB,  nocc,nvir = 5,19  blksize = 4
+    CPU time for vovv [0:4]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [4:8]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [8:12]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [12:16]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [16:19]      0.00 sec, wall time      0.00 sec
+    CPU time for ovvv      0.00 sec, wall time      0.01 sec
+max_memory 0 MB,  nocc,nvir = 5,19  blksize = 4
+    CPU time for voov [0:4]      0.02 sec, wall time      0.01 sec
+    CPU time for voov [4:8]      0.02 sec, wall time      0.01 sec
+    CPU time for voov [8:12]      0.00 sec, wall time      0.01 sec
+    CPU time for voov [12:16]      0.02 sec, wall time      0.01 sec
+    CPU time for voov [16:19]      0.00 sec, wall time      0.01 sec
+    CPU time for update t1 t2      0.09 sec, wall time      0.08 sec
+diis-c [-1.48400942e-07 -5.11577626e-02  2.97744711e-03  1.04818032e+00]
+DIIS for step 3
+cycle = 4  E_corr(CCSD) = -0.213362958465469  dE = -0.000134277901  norm(t1,t2) = 0.000525357
+    CPU time for CCSD iter      0.11 sec, wall time      0.08 sec
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.11 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv      0.11 sec, wall time      0.02 sec
+max_memory -89 MB,  nocc,nvir = 5,19  blksize = 4
+    CPU time for vovv [0:4]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [4:8]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [8:12]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [12:16]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [16:19]      0.02 sec, wall time      0.00 sec
+    CPU time for ovvv      0.02 sec, wall time      0.01 sec
+max_memory 0 MB,  nocc,nvir = 5,19  blksize = 4
+    CPU time for voov [0:4]      0.00 sec, wall time      0.01 sec
+    CPU time for voov [4:8]      0.02 sec, wall time      0.01 sec
+    CPU time for voov [8:12]      0.00 sec, wall time      0.01 sec
+    CPU time for voov [12:16]      0.02 sec, wall time      0.01 sec
+    CPU time for voov [16:19]      0.00 sec, wall time      0.01 sec
+    CPU time for update t1 t2      0.17 sec, wall time      0.08 sec
+diis-c [-1.15861936e-08  6.21762308e-02 -1.40829222e-01 -2.90919715e-01
+  1.36957271e+00]
+DIIS for step 4
+cycle = 5  E_corr(CCSD) = -0.213345818512992  dE = 1.71399525e-05  norm(t1,t2) = 0.000178662
+    CPU time for CCSD iter      0.17 sec, wall time      0.08 sec
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv      0.02 sec, wall time      0.02 sec
+max_memory -89 MB,  nocc,nvir = 5,19  blksize = 4
+    CPU time for vovv [0:4]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [4:8]      0.02 sec, wall time      0.00 sec
+    CPU time for vovv [8:12]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [12:16]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [16:19]      0.00 sec, wall time      0.00 sec
+    CPU time for ovvv      0.02 sec, wall time      0.01 sec
+max_memory 0 MB,  nocc,nvir = 5,19  blksize = 4
+    CPU time for voov [0:4]      0.02 sec, wall time      0.01 sec
+    CPU time for voov [4:8]      0.00 sec, wall time      0.01 sec
+    CPU time for voov [8:12]      0.02 sec, wall time      0.01 sec
+    CPU time for voov [12:16]      0.00 sec, wall time      0.01 sec
+    CPU time for voov [16:19]      0.02 sec, wall time      0.01 sec
+    CPU time for update t1 t2      0.08 sec, wall time      0.08 sec
+diis-c [-1.04066452e-09 -1.92391706e-02  4.34592240e-02  1.23272631e-01
+ -6.56077782e-01  1.50858510e+00]
+DIIS for step 5
+cycle = 6  E_corr(CCSD) = -0.213342245835261  dE = 3.57267773e-06  norm(t1,t2) = 5.08334e-05
+    CPU time for CCSD iter      0.08 sec, wall time      0.08 sec
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv      0.02 sec, wall time      0.02 sec
+max_memory -90 MB,  nocc,nvir = 5,19  blksize = 4
+    CPU time for vovv [0:4]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [4:8]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [8:12]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [12:16]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [16:19]      0.00 sec, wall time      0.00 sec
+    CPU time for ovvv      0.02 sec, wall time      0.01 sec
+max_memory 0 MB,  nocc,nvir = 5,19  blksize = 4
+    CPU time for voov [0:4]      0.02 sec, wall time      0.01 sec
+    CPU time for voov [4:8]      0.00 sec, wall time      0.01 sec
+    CPU time for voov [8:12]      0.02 sec, wall time      0.01 sec
+    CPU time for voov [12:16]      0.02 sec, wall time      0.01 sec
+    CPU time for voov [16:19]      0.00 sec, wall time      0.01 sec
+    CPU time for update t1 t2      0.08 sec, wall time      0.08 sec
+diis-c [-6.14728392e-11 -1.72189481e-03  1.06425476e-03  2.11776534e-02
+ -4.27431396e-02 -2.95164692e-01  1.31738782e+00]
+DIIS for step 6
+cycle = 7  E_corr(CCSD) = -0.213343849269328  dE = -1.60343407e-06  norm(t1,t2) = 1.57002e-05
+    CPU time for CCSD iter      0.08 sec, wall time      0.08 sec
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv      0.03 sec, wall time      0.02 sec
+max_memory -90 MB,  nocc,nvir = 5,19  blksize = 4
+    CPU time for vovv [0:4]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [4:8]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [8:12]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [12:16]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [16:19]      0.00 sec, wall time      0.00 sec
+    CPU time for ovvv      0.02 sec, wall time      0.02 sec
+max_memory 0 MB,  nocc,nvir = 5,19  blksize = 4
+    CPU time for voov [0:4]      0.00 sec, wall time      0.01 sec
+    CPU time for voov [4:8]      0.02 sec, wall time      0.01 sec
+    CPU time for voov [8:12]      0.00 sec, wall time      0.01 sec
+    CPU time for voov [12:16]      0.02 sec, wall time      0.01 sec
+    CPU time for voov [16:19]      0.02 sec, wall time      0.01 sec
+    CPU time for update t1 t2      0.09 sec, wall time      0.08 sec
+diis-c [-4.64249613e-12  1.23832034e+00  1.81259367e-04  7.73287176e-04
+  3.08609622e-03  4.21209455e-02 -2.84481931e-01]
+DIIS for step 7
+cycle = 8  E_corr(CCSD) = -0.213343257314684  dE = 5.91954645e-07  norm(t1,t2) = 2.96024e-06
+    CPU time for CCSD iter      0.09 sec, wall time      0.09 sec
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.03 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv      0.05 sec, wall time      0.03 sec
+max_memory -90 MB,  nocc,nvir = 5,19  blksize = 4
+    CPU time for vovv [0:4]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [4:8]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [8:12]      0.02 sec, wall time      0.00 sec
+    CPU time for vovv [12:16]      0.00 sec, wall time      0.00 sec
+    CPU time for vovv [16:19]      0.00 sec, wall time      0.00 sec
+    CPU time for ovvv      0.02 sec, wall time      0.02 sec
+max_memory 0 MB,  nocc,nvir = 5,19  blksize = 4
+    CPU time for voov [0:4]      0.02 sec, wall time      0.01 sec
+    CPU time for voov [4:8]      0.00 sec, wall time      0.01 sec
+    CPU time for voov [8:12]      0.02 sec, wall time      0.01 sec
+    CPU time for voov [12:16]      0.02 sec, wall time      0.01 sec
+    CPU time for voov [16:19]      0.02 sec, wall time      0.01 sec
+    CPU time for update t1 t2      0.12 sec, wall time      0.11 sec
+diis-c [-1.64382808e-13 -2.16142838e-01  1.24318509e+00 -1.36292879e-04
+ -2.38342812e-03  1.57755612e-02 -4.02980899e-02]
+DIIS for step 8
+cycle = 9  E_corr(CCSD) = -0.213343246513692  dE = 1.08009914e-08  norm(t1,t2) = 7.97748e-07
+    CPU time for CCSD iter      0.12 sec, wall time      0.11 sec
+    CPU time for CCSD      1.05 sec, wall time      0.77 sec
+CCSD converged
+E(CCSD) = -76.24010891963172  E_corr = -0.2133432465136922
+-1.2315417158292874e-08
+5.452064959499126e-07
+
+******** <class 'pyscf.cc.eom_rccsd.EOMIP'> ********
+max_space = 20
+max_cycle = 50
+conv_tol = 1e-07
+partition = None
+max_memory 1 MB (current use 91 MB)
+E1 = -123.13894764738231  E_coul = 37.923923556518154
+step1: tmpfile /home/shuoxueli/DrumPlayer2.1/docs/tmps66l_u77  0.288 MB
+step1: (ij,kl) = (120,300), mem cache 2000 MB, iobuf 800 MB
+    CPU time for Initializing ao2mo.outcore.half_e1      0.00 sec, wall time      0.00 sec
+step 1 [1/1], AO [0:66], len(buf) = 300
+      fill iobuf micro [1/1], AO [0:66], len(aobuf) = 300
+    CPU time for gen AO/transform MO [1/1]      0.03 sec, wall time      0.01 sec
+blksize 24
+    CPU time for transforming oopp      0.03 sec, wall time      0.02 sec
+    CPU time for transforming ovpp [0:19]      0.00 sec, wall time      0.00 sec
+    CPU time for transforming oppp      0.03 sec, wall time      0.03 sec
+    CPU time for CCSD integral transformation      0.08 sec, wall time      0.03 sec
+    CPU time for EOM-CCSD shared one-electron intermediates      0.00 sec, wall time      0.00 sec
+    CPU time for EOM-CCSD shared two-electron intermediates      0.00 sec, wall time      0.01 sec
+    CPU time for EOM-CCSD IP intermediates      0.02 sec, wall time      0.01 sec
+tol 1e-07  toloose 0.000316228
+max_cycle 50  max_space 28  max_memory 2000  incore True
+davidson 0 3  |r|= 0.392  e= [0.55041476 0.62680237 0.76276497]  max|de|= 0.763  lindep=    1
+davidson 1 6  |r|= 0.0532  e= [0.43322411 0.51835474 0.67703215]  max|de|= -0.117  lindep= 0.985
+davidson 2 9  |r|= 0.0169  e= [0.43323816 0.51865556 0.67826306]  max|de|= 0.00123  lindep= 0.958
+davidson 3 12  |r|= 0.0034  e= [0.43352311 0.5188254  0.67830785]  max|de|= 0.000285  lindep= 0.925
+davidson 4 15  |r|= 0.000597  e= [0.43354733 0.51875713 0.67828121]  max|de|= -6.83e-05  lindep= 0.958
+davidson 5 18  |r|= 0.000115  e= [0.43355923 0.51876257 0.67828796]  max|de|= 1.19e-05  lindep= 0.968
+root 2 converged  |r|= 1.42e-05  e= 0.6782879580094706  max|de|= -1.99e-09
+Throwing out eigenvector 2 with norm=1.42e-05
+davidson 6 21  |r|= 1.8e-05  e= [0.4335604  0.51876666 0.67828796]  max|de|= 4.09e-06  lindep= 0.973
+root 0 converged  |r|= 4.2e-07  e= 0.4335604229241694  max|de|= 1.85e-08
+Throwing out eigenvector 0 with norm=4.2e-07
+Throwing out eigenvector 2 with norm=1.42e-05
+davidson 7 23  |r|= 1.42e-05  e= [0.43356042 0.51876617 0.67828796]  max|de|= -4.89e-07  lindep= 0.974
+Throwing out eigenvector 0 with norm=4.2e-07
+Throwing out eigenvector 2 with norm=1.42e-05
+davidson 8 24  |r|= 1.42e-05  e= [0.43356042 0.51876599 0.67828796]  max|de|= -1.79e-07  lindep= 0.969
+root 1 converged  |r|= 1.17e-07  e= 0.5187659782655606  max|de|= -1.22e-08
+converged 9 25  |r|= 1.42e-05  e= [0.43356042 0.51876598 0.67828796]  max|de|= -1.22e-08
+EOM-CCSD root 0 E = 0.4335604229241681  qpwt = 0.962042  conv = True
+EOM-CCSD root 1 E = 0.5187659782655606  qpwt = 0.96388  conv = True
+EOM-CCSD root 2 E = 0.6782879580094726  qpwt = 0.972402  conv = True
+    CPU time for EOM-CCSD      0.28 sec, wall time      0.13 sec
+8.832213183040949e-09
+-2.319534342376528e-09
+1.0152864104995274e-09
+E1 = -123.13894764738231  E_coul = 37.923923556518154
+step1: tmpfile /home/shuoxueli/DrumPlayer2.1/docs/tmpiluh9s62  0.288 MB
+step1: (ij,kl) = (120,300), mem cache 2000 MB, iobuf 800 MB
+    CPU time for Initializing ao2mo.outcore.half_e1      0.00 sec, wall time      0.00 sec
+step 1 [1/1], AO [0:66], len(buf) = 300
+      fill iobuf micro [1/1], AO [0:66], len(aobuf) = 300
+    CPU time for gen AO/transform MO [1/1]      0.08 sec, wall time      0.01 sec
+blksize 24
+    CPU time for transforming oopp      0.08 sec, wall time      0.02 sec
+    CPU time for transforming ovpp [0:19]      0.05 sec, wall time      0.01 sec
+    CPU time for transforming oppp      0.12 sec, wall time      0.03 sec
+    CPU time for CCSD integral transformation      0.12 sec, wall time      0.03 sec
+    CPU time for EOM-CCSD EE intermediates      0.12 sec, wall time      0.05 sec
+
+******** <class 'pyscf.cc.eom_rccsd.EOMEESinglet'> ********
+max_space = 20
+max_cycle = 50
+conv_tol = 1e-07
+partition = None
+max_memory 1 MB (current use 92 MB)
+tol 1e-07  toloose 0.000316228
+max_cycle 50  max_space 20  max_memory 2000  incore True
+    CPU time for vvvv-tau      0.05 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.05 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 0 1  |r|= 0.431  e= [0.42134471]  max|de|= 0.421  lindep=    1
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 1 2  |r|= 0.118  e= [0.30321535]  max|de|= -0.118  lindep= 0.961
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 2 3  |r|= 0.026  e= [0.29987153]  max|de|= -0.00334  lindep= 0.977
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.06 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 3 4  |r|= 0.0107  e= [0.30056931]  max|de|= 0.000698  lindep= 0.94
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 4 5  |r|= 0.00251  e= [0.30062183]  max|de|= 5.25e-05  lindep= 0.952
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 5 6  |r|= 0.000595  e= [0.30058657]  max|de|= -3.53e-05  lindep= 0.923
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.01 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.05 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 6 7  |r|= 0.000161  e= [0.30057285]  max|de|= -1.37e-05  lindep= 0.935
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.05 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.08 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 7 8  |r|= 3.07e-05  e= [0.3005716]  max|de|= -1.25e-06  lindep= 0.959
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+root 0 converged  |r|= 5.73e-06  e= 0.3005716530786966  max|de|= 5.52e-08
+converged 8 9  |r|= 5.73e-06  e= [0.30057165]  max|de|= 5.52e-08
+EOM-CCSD root 0 E = 0.3005716530786966  qpwt = 0.959675  conv = True
+    CPU time for EOM-CCSD      0.69 sec, wall time      0.37 sec
+
+******** <class 'pyscf.cc.eom_rccsd.EOMEETriplet'> ********
+max_space = 20
+max_cycle = 50
+conv_tol = 1e-07
+partition = None
+max_memory 1 MB (current use 93 MB)
+tol 1e-07  toloose 0.000316228
+max_cycle 50  max_space 20  max_memory 2000  incore True
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 0 1  |r|= 0.496  e= [0.39767575]  max|de|= 0.398  lindep=    1
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.11 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 1 2  |r|= 0.131  e= [0.28154673]  max|de|= -0.116  lindep= 0.976
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.01 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.11 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.01 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 2 3  |r|= 0.0298  e= [0.27600241]  max|de|= -0.00554  lindep= 0.951
+    CPU time for vvvv-tau      0.11 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.09 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.03 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 3 4  |r|= 0.0118  e= [0.27576155]  max|de|= -0.000241  lindep= 0.958
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.02 sec, wall time      0.01 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.02 sec, wall time      0.01 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 4 5  |r|= 0.00215  e= [0.27571906]  max|de|= -4.25e-05  lindep= 0.956
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 5 6  |r|= 0.000466  e= [0.2757163]  max|de|= -2.76e-06  lindep= 0.975
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.03 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.08 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.03 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.02 sec, wall time      0.00 sec
+davidson 6 7  |r|= 0.0001  e= [0.27571613]  max|de|= -1.75e-07  lindep= 0.937
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 7 8  |r|= 2.26e-05  e= [0.27571596]  max|de|= -1.72e-07  lindep= 0.929
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.01 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.01 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+root 0 converged  |r|= 4.43e-06  e= 0.27571593011222895  max|de|= -2.56e-08
+converged 8 9  |r|= 4.43e-06  e= [0.27571593]  max|de|= -2.56e-08
+EOM-CCSD root 0 E = 0.2757159301122289  qpwt = 0.957992  conv = True
+    CPU time for EOM-CCSD      1.12 sec, wall time      0.58 sec
+
+******** <class 'pyscf.cc.eom_rccsd.EOMEESpinFlip'> ********
+max_space = 20
+max_cycle = 50
+conv_tol = 1e-07
+partition = None
+max_memory 1 MB (current use 93 MB)
+tol 1e-07  toloose 0.000316228
+max_cycle 50  max_space 20  max_memory 2000  incore True
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.05 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv-tau mo2ao      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.01 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.08 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 0 1  |r|= 0.496  e= [0.39767575]  max|de|= 0.398  lindep=    1
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.03 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv-tau mo2ao      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.03 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.05 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 1 2  |r|= 0.133  e= [0.28164224]  max|de|= -0.116  lindep= 0.972
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.11 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv-tau mo2ao      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.09 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 2 3  |r|= 0.0297  e= [0.27598846]  max|de|= -0.00565  lindep= 0.965
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.09 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.02 sec, wall time      0.00 sec
+    CPU time for vvvv-tau mo2ao      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.05 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 3 4  |r|= 0.0119  e= [0.27576059]  max|de|= -0.000228  lindep= 0.933
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.05 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.08 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv-tau mo2ao      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.05 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 4 5  |r|= 0.00232  e= [0.27571842]  max|de|= -4.22e-05  lindep= 0.953
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.01 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.11 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv-tau mo2ao      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.05 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 5 6  |r|= 0.000539  e= [0.27571646]  max|de|= -1.96e-06  lindep= 0.935
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.02 sec, wall time      0.00 sec
+    CPU time for vvvv-tau mo2ao      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 6 7  |r|= 0.000142  e= [0.27571613]  max|de|= -3.3e-07  lindep= 0.912
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv-tau mo2ao      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.01 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+davidson 7 8  |r|= 2.91e-05  e= [0.27571597]  max|de|= -1.62e-07  lindep= 0.951
+    CPU time for vvvv-tau      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.06 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+    CPU time for vvvv-tau mo2ao      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [0:3,0:3]      0.00 sec, wall time      0.01 sec
+    CPU time for AO-vvvv [3:4,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [3:4,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [4:6,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,0:3]      0.02 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [6:10,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,0:3]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,3:4]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,4:6]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,6:10]      0.00 sec, wall time      0.00 sec
+    CPU time for AO-vvvv [10:11,10:11]      0.00 sec, wall time      0.00 sec
+root 0 converged  |r|= 5.27e-06  e= 0.2757159293388609  max|de|= -3.91e-08
+converged 8 9  |r|= 5.27e-06  e= [0.27571593]  max|de|= -3.91e-08
+EOM-CCSD root 0 E = 0.2757159293388609  qpwt = 0.957992  conv = True
+    CPU time for EOM-CCSD      1.38 sec, wall time      0.60 sec
+-1.0249755766356117e-08
+-1.0249755766356117e-08
+-9.476387730078528e-09
+-2.0103811615435063e-08
