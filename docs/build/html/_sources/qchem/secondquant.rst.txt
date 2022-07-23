@@ -72,19 +72,22 @@
 .. admonition:: 小练习
     :class: quiz
 
-    尝试根据 :eq:`spin-op` 中的关系，证明 :eq:`spin-ops` 中 :math:`\hat S_+` 的形式。
+    尝试证明 :eq:`spin-ops` 中 :math:`\hat S_+` 的形式。
+
+    **解答：** 根据 :eq:`spin-op` 可知只有在 :math:`\sigma = \alpha, \tau = \beta` 的条件之下，对应的系数才不为0。因此立刻有 :math:`\hat S_+ = \sum\limits_p \hat a_{p\alpha} \hat a_{p\beta}` 。同理可以得出 :math:`\hat S_-, \hat S_z` 的形式。
 
 .. important::
     
     自旋升降算符满足如下的重要对易关系：
 
-.. math::
+    .. math::
 
-    [\hat S_+, \hat S_-] = 2 \hat S_z \\
+        [\hat S_+, \hat S_-] = 2 \hat S_z \\
 
 总自旋平方算符 :math:`\hat S^2` 和 :math:`\hat S_+, \hat S_-, \hat S_z` 的关系为：
 
 .. math::
+    :label: total-spin-op
 
     \hat S^2 = \hat S_- \hat S_+ + \hat S_z (\hat S_z + 1)
 
@@ -103,14 +106,54 @@
 
 我们把 :math:`S=0` 的算符称作 *单重态算符* ，将 :math:`S=\dfrac{1}{2}` 的称作 *二重态算符* ，以此类推。
 
+.. admonition:: 例子
+    :class: example
+
+    激发算符 :math:`\hat E_{pq}` 和非相对论Hamilton量 :eq:`nr-hamilton` 均为单重态张量算符。
+
+
 .. admonition:: 小练习
     :class: quiz
 
     尝试说明产生算符 :math:`\{\hat a^\dagger_{p\alpha}, \hat a^\dagger_{p\beta}\}` 或湮灭算符 :math:`\{-\hat a_{p\beta}, \hat a_{p\alpha}\}` 分别构成一组二重态张量算符。
 
-    该结论在后续推导涉及自选匹配的结论时非常有用。
-    
+.. important::
+
+    对于 **闭壳层波函数** :math:`| \mathrm{cs} \rangle` ，一个张量算符作用之后便仍然是 :math:`\hat S_z, \hat S^2` 的本征值，如式 :eq:`eigv-tenop-on-cs` 所示。它正是自旋匹配波函数的形式。
+
+    .. math::
+        :label: eigv-tenop-on-cs
+
+        \hat S_z \hat T^{S,M} | \mathrm{cs} \rangle = M \hat T^{S,M} | \mathrm{cs} \rangle \\ \hat S^2 \hat T^{S,M} | \mathrm{cs} \rangle = S(S+1) \hat T^{S,M} | \mathrm{cs} \rangle
+
+
 自旋匹配波函数
 ---------------------
 
-对于非相对论的Hamilton量
+一般的非相对论的Hamilton量 :eq:`nr-hamilton` 作为单重态算符，它和 :math:`\hat S_z` 与 :math:`\hat S^2` 相互对易。因此我们希望在求解其本征波函数时，使得波函数是自旋匹配的单重态。而在处理其它和自旋有关的Hamilton量时，我们也希望获得其它自旋多重态的波函数，因为它们不仅可以反映出体系的自旋对称性，更能构建一组新的基来简化Hamilton矩阵元的计算。
+
+表记方式
+^^^^^^^^^^^^^^^^
+
+单个Slater行列式一般而言不是 :math:`\hat S^2` 的本征态，因此我们寻求多个Slater行列式的线性组合来得到 **自旋匹配组态函数(Configuration Sate Function, CSF)** 。对于多电子体系，我们可以通过前 :math:`(N-1)` 电子耦合出的构型产生出 :math:`N` 个电子的构型。这个顺序可以用于方便表示CSF，以 :math:`N = 1 \sim 3` 的电子数为例：
+
+.. admonition:: 例子
+    :class: example
+
+    * 一个电子， :math:`S = \frac{1}{2}` ；
+
+    * 两个电子的自旋耦合， :math:`S = \frac{1}{2} \pm \frac{1}{2}` ，因此可以表示为 :math:`| \frac{1}{2}, 0\rangle^c` 以及 :math:`| \frac{1}{2}, 1\rangle^c` ，其中上标 :math:`c` 表示该波函数为CSF；
+
+    * 三个电子的情况，由于 :math:`S > 0` ，因此耦合出来仅有三种情况，分别标记为 :math:`| \frac{1}{2}, 1, \frac{3}{2} \rangle^c,\, | \frac{1}{2}, 1, \frac{1}{2} \rangle^c,\, | \frac{1}{2}, 0, \frac{1}{2} \rangle^c` 。
+
+一般而言，我们可以用向量 :math:`\pmb T` 来描述多电子的组态，其每一个分量分别表示电子在一步步添加过程中的 :math:`S` 值。同理我们可以根据每次加上电子后 :math:`\pmb T` 的变化量来描述，此时向量 :math:`\pmb t` 的分量满足 :math:`t_1 = T_1, t_i = T_i - T_{i-1} (i>1)` 。由于 :math:`S` 每次只能增加 :math:`\pm \frac{1}{2}` ，因此我们可以用“+”或“-”来表达它。例如 :math:`| \frac{1}{2}, 1, \frac{1}{2} \rangle^c` 可以写成 :math:`| ++- \rangle^c` ， :math:`| \frac{1}{2}, 0, \frac{1}{2} \rangle^c` 可以写成 :math:`| +-+\rangle^c` 等。
+
+同理对于Slater行列式，我们也可以用向量 :math:`| \pmb P \rangle^d` 或者 :math:`| \pmb p \rangle^d` （其中上标"d"表示determinant）来进行表示。CSF和Slater行列式分别可以用算符作用在闭壳层Slater行列式的办法产生：
+
+.. math::
+    :label: csf-slater-from-cs
+
+    | \pmb t \rangle^c = \hat O_N^{S,M} (\pmb t) | \mathrm{cs} \rangle \\
+    | \pmb p \rangle^d = \hat a_{1p_1}^\dagger \cdots \hat a_{Np_N}^\dagger | \mathrm{cs} \rangle
+
+式中 :math:`\hat O_N^{S,M} (\pmb t)` 表示张量算符和标记CSF的向量 :math:`\pmb t` 有关。

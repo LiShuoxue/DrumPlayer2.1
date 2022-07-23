@@ -1,196 +1,400 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="zh-CN" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>多电子波函数的表述 &mdash; LyThacHoc  文档</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/my_theme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/translations.js"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="../_static/js/theme.js"></script>
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>多电子波函数的表述 &#8212; LyThacHoc  文档</title>
+<script>
+  document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+  document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
+</script>
+
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=92025949c220c2e29695" rel="stylesheet">
+
+
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="Hartree-Fock方法的进一步认识" href="hfpro.html" />
-    <link rel="prev" title="量子化学学习笔记" href="index.html" /> 
-</head>
+    <link rel="prev" title="量子化学学习笔记" href="index.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="docsearch:language" content="zh_CN">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+    <div class="bd-header-announcement container-fluid" id="banner">
+      
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/logo.png" class="logo" alt="Logo"/>
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">学海无涯</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">量子化学</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">多体问题的二次量子化表述</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">自旋在二次量子化中的表达</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id3">与自旋无关的算符表达式</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id4">纯自旋算符</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">自旋张量算符</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">自旋匹配波函数</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="hfpro.html">Hartree-Fock方法的进一步认识</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ci.html">组态相互作用方法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mcscf.html">多参考态方法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cc.html">耦合簇方法</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">氍毹寄意</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../drumplayer/index.html">锣鼓小程序“哗啦啦”</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../auto/index.html">自编唱段</a></li>
-</ul>
+    </div>
 
-        </div>
+    
+    <nav class="bd-header navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="bd-header__inner container-xl">
+
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="fas fa-bars"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  量子化学
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../drumplayer/index.html">
+  锣鼓小程序“哗啦啦”
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../auto/index.html">
+  自编唱段
+ </a>
+</li>
+
+    
+</ul>
       </div>
-    </nav>
+      
+    </div>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">LyThacHoc</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="index.html">量子化学学习笔记</a> &raquo;</li>
-      <li>多电子波函数的表述</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/qchem/secondquant.rst.txt" rel="nofollow"> View page source</a>
-      </li>
-  </ul>
-  <hr/>
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <span id="theme-switch" class="btn btn-sm btn-outline-primary navbar-btn rounded-circle">
+    <a class="theme-switch" data-mode="light"><i class="fas fa-sun"></i></a>
+    <a class="theme-switch" data-mode="dark"><i class="far fa-moon"></i></a>
+    <a class="theme-switch" data-mode="auto"><i class="fas fa-adjust"></i></a>
+</span>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+    </nav>
+    
+
+    <div class="bd-container container-xl">
+      <div class="bd-container__inner row">
+          
+
+<!-- Only show if we have sidebars configured, else just a small margin  -->
+<div class="bd-sidebar-primary col-12 col-md-3 bd-sidebar">
+  <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Content
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   多体问题的二次量子化表述
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hfpro.html">
+   Hartree-Fock方法的进一步认识
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ci.html">
+   组态相互作用方法
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mcscf.html">
+   多参考态方法
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cc.html">
+   耦合簇方法
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+  </div>
+  <div class="sidebar-end-items">
+  </div>
+</div>
+
+
+          
+
+
+<div class="bd-sidebar-secondary d-none d-xl-block col-xl-2 bd-toc">
+  
+    
+    <div class="toc-item">
+      
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   自旋在二次量子化中的表达
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     与自旋无关的算符表达式
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     纯自旋算符
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   自旋张量算符
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   自旋匹配波函数
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     表记方式
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+    </div>
+    
+    <div class="toc-item">
+      
+    </div>
+    
+  
+</div>
+
+
+          
+          
+          <div class="bd-content col-12 col-md-9 col-xl-7">
+              
+              <article class="bd-article" role="main">
+                
   <section id="id1">
-<h1>多电子波函数的表述<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<h1>多电子波函数的表述<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
 <section id="id2">
-<h2>自旋在二次量子化中的表达<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>自旋在二次量子化中的表达<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
 <p>在考虑轨道自旋之后，单体算符可以写成如下的形式</p>
 <div class="math notranslate nohighlight" id="equation-one-elec-op">
-<span class="eqno">(1)<a class="headerlink" href="#equation-one-elec-op" title="公式的永久链接">¶</a></span>\[\hat f = \sum\limits_{p\sigma q\tau} f_{p\sigma,q\tau} \hat a^\dagger_{p\sigma} \hat a_{q\tau}\]</div>
+<span class="eqno">(1)<a class="headerlink" href="#equation-one-elec-op" title="公式的永久链接">#</a></span>\[\hat f = \sum\limits_{p\sigma q\tau} f_{p\sigma,q\tau} \hat a^\dagger_{p\sigma} \hat a_{q\tau}\]</div>
 <p>其中矩阵元</p>
 <div class="math notranslate nohighlight" id="equation-one-elec-op-element">
-<span class="eqno">(2)<a class="headerlink" href="#equation-one-elec-op-element" title="公式的永久链接">¶</a></span>\[f_{p\sigma,q\tau} = \int \phi_p^*(\pmb r) f(\pmb r, m_s) \phi_q(\pmb r)  \sigma^*(m_s) \tau(m_s) \mathrm d \pmb r  \mathrm d m_s\]</div>
+<span class="eqno">(2)<a class="headerlink" href="#equation-one-elec-op-element" title="公式的永久链接">#</a></span>\[f_{p\sigma,q\tau} = \int \phi_p^*(\pmb r) f(\pmb r, m_s) \phi_q(\pmb r)  \sigma^*(m_s) \tau(m_s) \mathrm d \pmb r  \mathrm d m_s\]</div>
 <section id="id3">
-<h3>与自旋无关的算符表达式<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<h3>与自旋无关的算符表达式<a class="headerlink" href="#id3" title="永久链接至标题">#</a></h3>
 <p>若是单体算符 <span class="math notranslate nohighlight">\(f(\pmb r, m_s)\)</span> 和自旋无关，则上式可以表达成含有 <span class="math notranslate nohighlight">\(\delta_{\sigma \tau}\)</span> 的形式。最后我们可以定义和自旋无关的算符形式 <span class="math notranslate nohighlight">\(\hat f = \sum\limits_{pq} f_{pq} \hat E_{pq}\)</span> ，其中的单重态激发算符 <span class="math notranslate nohighlight">\(\hat E_{pq}\)</span> 定义为：</p>
 <div class="math notranslate nohighlight" id="equation-singlet-ex-op">
-<span class="eqno">(3)<a class="headerlink" href="#equation-singlet-ex-op" title="公式的永久链接">¶</a></span>\[\hat E_{pq} = \hat a^\dagger_{p\alpha} \hat a_{q\alpha} + \hat a^\dagger_{p\beta} \hat a_{q\beta}\]</div>
+<span class="eqno">(3)<a class="headerlink" href="#equation-singlet-ex-op" title="公式的永久链接">#</a></span>\[\hat E_{pq} = \hat a^\dagger_{p\alpha} \hat a_{q\alpha} + \hat a^\dagger_{p\beta} \hat a_{q\beta}\]</div>
 <p>同理，对于二体算符有类似的结论：</p>
 <div class="math notranslate nohighlight" id="equation-two-elec-op">
-<span class="eqno">(4)<a class="headerlink" href="#equation-two-elec-op" title="公式的永久链接">¶</a></span>\[\hat g = \dfrac{1}{2} g_{pqrs} \hat e_{pqrs}\]</div>
+<span class="eqno">(4)<a class="headerlink" href="#equation-two-elec-op" title="公式的永久链接">#</a></span>\[\hat g = \dfrac{1}{2} g_{pqrs} \hat e_{pqrs}\]</div>
 <p>其中二体激发算符</p>
 <div class="math notranslate nohighlight" id="equation-two-elec-ex-op">
-<span class="eqno">(5)<a class="headerlink" href="#equation-two-elec-ex-op" title="公式的永久链接">¶</a></span>\[\hat e_{pqrs} = \hat E_{pq} \hat E_{rs} - \delta_{qr} \hat E_{ps} = \sum\limits_{\sigma \tau} \hat a^\dagger_{p\sigma} \hat a^\dagger_{r\tau} \hat a_{s\tau} \hat a_{q\sigma}\]</div>
+<span class="eqno">(5)<a class="headerlink" href="#equation-two-elec-ex-op" title="公式的永久链接">#</a></span>\[\hat e_{pqrs} = \hat E_{pq} \hat E_{rs} - \delta_{qr} \hat E_{ps} = \sum\limits_{\sigma \tau} \hat a^\dagger_{p\sigma} \hat a^\dagger_{r\tau} \hat a_{s\tau} \hat a_{q\sigma}\]</div>
 <p>一般的非相对论Hamilton量因此可以写成：</p>
 <div class="math notranslate nohighlight" id="equation-nr-hamilton">
-<span class="eqno">(6)<a class="headerlink" href="#equation-nr-hamilton" title="公式的永久链接">¶</a></span>\[\hat H = \sum\limits_{pq} h_{pq} \hat H_{pq} + \dfrac{1}{2} \sum\limits_{pqrs} g_{pqrs} \hat e_{pqrs} + \hat h_{nuc}\]</div>
+<span class="eqno">(6)<a class="headerlink" href="#equation-nr-hamilton" title="公式的永久链接">#</a></span>\[\hat H = \sum\limits_{pq} h_{pq} \hat H_{pq} + \dfrac{1}{2} \sum\limits_{pqrs} g_{pqrs} \hat e_{pqrs} + \hat h_{nuc}\]</div>
 </section>
 <section id="id4">
-<h3>纯自旋算符<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<h3>纯自旋算符<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h3>
 <p>单纯和电子自旋坐标相关而与空间坐标无关的算符具有如下的形式：</p>
 <div class="math notranslate nohighlight" id="equation-spin-op">
-<span class="eqno">(7)<a class="headerlink" href="#equation-spin-op" title="公式的永久链接">¶</a></span>\[\hat f = \sum\limits_{\sigma \tau} \int \sigma^*(m_s) f(m_s) \tau(m_s) \mathrm d m_s \sum\limits_p \hat a^\dagger_{p\sigma} \hat a_{p\tau}\]</div>
+<span class="eqno">(7)<a class="headerlink" href="#equation-spin-op" title="公式的永久链接">#</a></span>\[\hat f = \sum\limits_{\sigma \tau} \int \sigma^*(m_s) f(m_s) \tau(m_s) \mathrm d m_s \sum\limits_p \hat a^\dagger_{p\sigma} \hat a_{p\tau}\]</div>
 <p>其中最重要的例子是自旋升降算符和z分量算符，它们的二次量子化表达式分别为：</p>
 <div class="math notranslate nohighlight" id="equation-spin-ops">
-<span class="eqno">(8)<a class="headerlink" href="#equation-spin-ops" title="公式的永久链接">¶</a></span>\[\begin{split}\hat S_+ = \sum\limits_p \hat a^\dagger_{p\alpha} \hat a_{p\beta} \\
+<span class="eqno">(8)<a class="headerlink" href="#equation-spin-ops" title="公式的永久链接">#</a></span>\[\begin{split}\hat S_+ = \sum\limits_p \hat a^\dagger_{p\alpha} \hat a_{p\beta} \\
 \hat S_- = \sum\limits_p \hat a^\dagger_{P\beta} \hat a_{p\alpha} \\
 \hat S_z = \dfrac{1}{2} (\hat a^\dagger_{p\alpha} \hat a_{q\alpha} - \hat a^\dagger_{p\beta} \hat a_{q\beta})\end{split}\]</div>
 <div class="quiz admonition">
 <p class="admonition-title">小练习</p>
-<p>尝试根据 <a class="reference internal" href="#equation-spin-op">(7)</a> 中的关系，证明 <a class="reference internal" href="#equation-spin-ops">(8)</a> 中 <span class="math notranslate nohighlight">\(\hat S_+\)</span> 的形式。</p>
+<p>尝试证明 <a class="reference internal" href="#equation-spin-ops">(8)</a> 中 <span class="math notranslate nohighlight">\(\hat S_+\)</span> 的形式。</p>
+<p><strong>解答：</strong> 根据 <a class="reference internal" href="#equation-spin-op">(7)</a> 可知只有在 <span class="math notranslate nohighlight">\(\sigma = \alpha, \tau = \beta\)</span> 的条件之下，对应的系数才不为0。因此立刻有 <span class="math notranslate nohighlight">\(\hat S_+ = \sum\limits_p \hat a_{p\alpha} \hat a_{p\beta}\)</span> 。同理可以得出 <span class="math notranslate nohighlight">\(\hat S_-, \hat S_z\)</span> 的形式。</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">重要</p>
 <p>自旋升降算符满足如下的重要对易关系：</p>
-</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}[\hat S_+, \hat S_-] = 2 \hat S_z \\\end{split}\]</div>
+</div>
 <p>总自旋平方算符 <span class="math notranslate nohighlight">\(\hat S^2\)</span> 和 <span class="math notranslate nohighlight">\(\hat S_+, \hat S_-, \hat S_z\)</span> 的关系为：</p>
-<div class="math notranslate nohighlight">
-\[\hat S^2 = \hat S_- \hat S_+ + \hat S_z (\hat S_z + 1)\]</div>
+<div class="math notranslate nohighlight" id="equation-total-spin-op">
+<span class="eqno">(9)<a class="headerlink" href="#equation-total-spin-op" title="公式的永久链接">#</a></span>\[\hat S^2 = \hat S_- \hat S_+ + \hat S_z (\hat S_z + 1)\]</div>
 </section>
 </section>
 <section id="id5">
-<h2>自旋张量算符<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<h2>自旋张量算符<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h2>
 <p><strong>自旋张量算符(Spin Tensor Operator)</strong> 是如下的 <span class="math notranslate nohighlight">\(2S+1\)</span> 个算符 <span class="math notranslate nohighlight">\(\hat T^{S,M}\)</span> 的集合。它们和自旋算符满足如下的对易关系：</p>
 <div class="math notranslate nohighlight" id="equation-spin-ten-op-commute">
-<span class="eqno">(9)<a class="headerlink" href="#equation-spin-ten-op-commute" title="公式的永久链接">¶</a></span>\[\begin{split}[\hat S_{\pm}, \hat T^{S,M}] = \sqrt{S(S+1) - M(M \pm 1)} \hat T^{S,M\pm 1} \\
+<span class="eqno">(10)<a class="headerlink" href="#equation-spin-ten-op-commute" title="公式的永久链接">#</a></span>\[\begin{split}[\hat S_{\pm}, \hat T^{S,M}] = \sqrt{S(S+1) - M(M \pm 1)} \hat T^{S,M\pm 1} \\
 [\hat S_z, \hat T^{S,M}] = M\hat T^{S,M}\end{split}\]</div>
 <p>特别地，当 <span class="math notranslate nohighlight">\(S=0, M=0\)</span> 时，张量算符 <span class="math notranslate nohighlight">\(\hat T^{0,0}\)</span> 与 <span class="math notranslate nohighlight">\(\hat S^\pm, \hat S_z\)</span> 均对易。</p>
 <p>我们把 <span class="math notranslate nohighlight">\(S=0\)</span> 的算符称作 <em>单重态算符</em> ，将 <span class="math notranslate nohighlight">\(S=\dfrac{1}{2}\)</span> 的称作 <em>二重态算符</em> ，以此类推。</p>
+<div class="example admonition">
+<p class="admonition-title">例子</p>
+<p>激发算符 <span class="math notranslate nohighlight">\(\hat E_{pq}\)</span> 和非相对论Hamilton量 <a class="reference internal" href="#equation-nr-hamilton">(6)</a> 均为单重态张量算符。</p>
+</div>
 <div class="quiz admonition">
 <p class="admonition-title">小练习</p>
 <p>尝试说明产生算符 <span class="math notranslate nohighlight">\(\{\hat a^\dagger_{p\alpha}, \hat a^\dagger_{p\beta}\}\)</span> 或湮灭算符 <span class="math notranslate nohighlight">\(\{-\hat a_{p\beta}, \hat a_{p\alpha}\}\)</span> 分别构成一组二重态张量算符。</p>
-<p>该结论在后续推导涉及自选匹配的结论时非常有用。</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>对于 <strong>闭壳层波函数</strong> <span class="math notranslate nohighlight">\(| \mathrm{cs} \rangle\)</span> ，一个张量算符作用之后便仍然是 <span class="math notranslate nohighlight">\(\hat S_z, \hat S^2\)</span> 的本征值，如式 <a class="reference internal" href="#equation-eigv-tenop-on-cs">(11)</a> 所示。它正是自旋匹配波函数的形式。</p>
+<div class="math notranslate nohighlight" id="equation-eigv-tenop-on-cs">
+<span class="eqno">(11)<a class="headerlink" href="#equation-eigv-tenop-on-cs" title="公式的永久链接">#</a></span>\[\begin{split}\hat S_z \hat T^{S,M} | \mathrm{cs} \rangle = M \hat T^{S,M} | \mathrm{cs} \rangle \\ \hat S^2 \hat T^{S,M} | \mathrm{cs} \rangle = S(S+1) \hat T^{S,M} | \mathrm{cs} \rangle\end{split}\]</div>
 </div>
 </section>
 <section id="id6">
-<h2>自旋匹配波函数<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
-<p>对于非相对论的Hamilton量</p>
+<h2>自旋匹配波函数<a class="headerlink" href="#id6" title="永久链接至标题">#</a></h2>
+<p>一般的非相对论的Hamilton量 <a class="reference internal" href="#equation-nr-hamilton">(6)</a> 作为单重态算符，它和 <span class="math notranslate nohighlight">\(\hat S_z\)</span> 与 <span class="math notranslate nohighlight">\(\hat S^2\)</span> 相互对易。因此我们希望在求解其本征波函数时，使得波函数是自旋匹配的单重态。而在处理其它和自旋有关的Hamilton量时，我们也希望获得其它自旋多重态的波函数，因为它们不仅可以反映出体系的自旋对称性，更能构建一组新的基来简化Hamilton矩阵元的计算。</p>
+<section id="id7">
+<h3>表记方式<a class="headerlink" href="#id7" title="永久链接至标题">#</a></h3>
+<p>单个Slater行列式一般而言不是 <span class="math notranslate nohighlight">\(\hat S^2\)</span> 的本征态，因此我们寻求多个Slater行列式的线性组合来得到 <strong>自旋匹配组态函数(Configuration Sate Function, CSF)</strong> 。对于多电子体系，我们可以通过前 <span class="math notranslate nohighlight">\((N-1)\)</span> 电子耦合出的构型产生出 <span class="math notranslate nohighlight">\(N\)</span> 个电子的构型。这个顺序可以用于方便表示CSF，以 <span class="math notranslate nohighlight">\(N = 1 \sim 3\)</span> 的电子数为例：</p>
+<div class="example admonition">
+<p class="admonition-title">例子</p>
+<ul class="simple">
+<li><p>一个电子， <span class="math notranslate nohighlight">\(S = \frac{1}{2}\)</span> ；</p></li>
+<li><p>两个电子的自旋耦合， <span class="math notranslate nohighlight">\(S = \frac{1}{2} \pm \frac{1}{2}\)</span> ，因此可以表示为 <span class="math notranslate nohighlight">\(| \frac{1}{2}, 0\rangle^c\)</span> 以及 <span class="math notranslate nohighlight">\(| \frac{1}{2}, 1\rangle^c\)</span> ，其中上标 <span class="math notranslate nohighlight">\(c\)</span> 表示该波函数为CSF；</p></li>
+<li><p>三个电子的情况，由于 <span class="math notranslate nohighlight">\(S &gt; 0\)</span> ，因此耦合出来仅有三种情况，分别标记为 <span class="math notranslate nohighlight">\(| \frac{1}{2}, 1, \frac{3}{2} \rangle^c,\, | \frac{1}{2}, 1, \frac{1}{2} \rangle^c,\, | \frac{1}{2}, 0, \frac{1}{2} \rangle^c\)</span> 。</p></li>
+</ul>
+</div>
+<p>一般而言，我们可以用向量 <span class="math notranslate nohighlight">\(\pmb T\)</span> 来描述多电子的组态，其每一个分量分别表示电子在一步步添加过程中的 <span class="math notranslate nohighlight">\(S\)</span> 值。同理我们可以根据每次加上电子后 <span class="math notranslate nohighlight">\(\pmb T\)</span> 的变化量来描述，此时向量 <span class="math notranslate nohighlight">\(\pmb t\)</span> 的分量满足 <span class="math notranslate nohighlight">\(t_1 = T_1, t_i = T_i - T_{i-1} (i&gt;1)\)</span> 。由于 <span class="math notranslate nohighlight">\(S\)</span> 每次只能增加 <span class="math notranslate nohighlight">\(\pm \frac{1}{2}\)</span> ，因此我们可以用“+”或“-”来表达它。例如 <span class="math notranslate nohighlight">\(| \frac{1}{2}, 1, \frac{1}{2} \rangle^c\)</span> 可以写成 <span class="math notranslate nohighlight">\(| ++- \rangle^c\)</span> ， <span class="math notranslate nohighlight">\(| \frac{1}{2}, 0, \frac{1}{2} \rangle^c\)</span> 可以写成 <span class="math notranslate nohighlight">\(| +-+\rangle^c\)</span> 等。</p>
+<p>同理对于Slater行列式，我们也可以用向量 <span class="math notranslate nohighlight">\(| \pmb P \rangle^d\)</span> 或者 <span class="math notranslate nohighlight">\(| \pmb p \rangle^d\)</span> （其中上标”d”表示determinant）来进行表示。CSF和Slater行列式分别可以用算符作用在闭壳层Slater行列式的办法产生：</p>
+<div class="math notranslate nohighlight" id="equation-csf-slater-from-cs">
+<span class="eqno">(12)<a class="headerlink" href="#equation-csf-slater-from-cs" title="公式的永久链接">#</a></span>\[\begin{split}| \pmb t \rangle^c = \hat O_N^{S,M} (\pmb t) | \mathrm{cs} \rangle \\
+| \pmb p \rangle^d = \hat a_{1p_1}^\dagger \cdots \hat a_{Np_N}^\dagger | \mathrm{cs} \rangle\end{split}\]</div>
+<p>式中 <span class="math notranslate nohighlight">\(\hat O_N^{S,M} (\pmb t)\)</span> 表示张量算符和标记CSF的向量 <span class="math notranslate nohighlight">\(\pmb t\)</span> 有关。</p>
+</section>
 </section>
 </section>
 
 
-           </div>
+              </article>
+              
+
+              
+              <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="index.html" title="上一页 页">
+      <i class="fas fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">上一页</p>
+          <p class="prev-next-title">量子化学学习笔记</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="hfpro.html" title="下一页 页">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">下一页</p>
+      <p class="prev-next-title">Hartree-Fock方法的进一步认识</p>
+  </div>
+  <i class="fas fa-angle-right"></i>
+  </a>
+</div>
+              </footer>
+              
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="量子化学学习笔记" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="hfpro.html" class="btn btn-neutral float-right" title="Hartree-Fock方法的进一步认识" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          
+      </div>
     </div>
 
-  <hr/>
+  
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=92025949c220c2e29695"></script>
 
-  <div role="contentinfo">
-    <p>&#169; 版权所有 2022, Shuoxue Li.</p>
+<footer class="bd-footer"><div class="bd-footer__inner container">
+  
+  <div class="footer-item">
+    <p class="copyright">
+    &copy; Copyright 2022, Shuoxue Li.<br>
+</p>
   </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
+  
+  <div class="footer-item">
+    <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+</p>
+  </div>
+  
+</div>
 </footer>
-        </div>
-      </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+  </body>
 </html>

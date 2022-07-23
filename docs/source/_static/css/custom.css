@@ -1,0 +1,11 @@
+:root {
+    --pst-font-size-base: 18px;
+}
+
+html[data-theme="light"] {
+    --pst-color-primary: #8b0012;
+}
+
+html[data-theme="dark"] {
+    --pst-color-primary: #FF6A13;
+}

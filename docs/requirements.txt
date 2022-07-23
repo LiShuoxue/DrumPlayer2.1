@@ -9,3 +9,5 @@ sphinxemoji
 
 # crate-docs-theme
 sphinx-rtd-theme
+
+pydata_sphinx_theme

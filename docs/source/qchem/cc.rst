@@ -47,10 +47,10 @@ IEPA是满足大小一致性的近似方法，但是存在诸多理论缺点，�
 
     不同激发算符满足如下的对易关系：
 
-.. math::
-    :label: excitation-operator-commute
-    
-    [\hat \tau_\mu, \hat \tau_\nu] = 0 \\ \hat \tau_\mu^2 = 0
+    .. math::
+        :label: excitation-operator-commute
+        
+        [\hat \tau_\mu, \hat \tau_\nu] = 0 \\ \hat \tau_\mu^2 = 0
 
 此外我们还定义激发算符作用在HF波函数之后的Slater行列式：
 
