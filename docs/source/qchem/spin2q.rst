@@ -1,7 +1,7 @@
-多电子波函数的表述
+自旋与二次量子化
 ==========================
 
-自旋在二次量子化中的表达
+二次量子化语言对自旋的表达
 ----------------------------
 
 在考虑轨道自旋之后，单体算符可以写成如下的形式
@@ -167,7 +167,7 @@ CSF组合系数的确定
     :label: tenop-decomp
 
     \hat O_N^{S,M}(\pmb t) | \mathrm{cs} \rangle = \sum\limits_{\sigma 
-    in \{-1/2,1/2\}} C_{t_N\sigma}^{S,M} \hat O_{N-1}^{S-t_N, M-\sigma} (\pmb t) \hat a_{N\sigma}^\dagger | \mathrm{cs} \rangle
+    \in \{-1/2,1/2\}} C_{t_N\sigma}^{S,M} \hat O_{N-1}^{S-t_N, M-\sigma} (\pmb t) \hat a_{N\sigma}^\dagger | \mathrm{cs} \rangle
 
 其中组合系数
 

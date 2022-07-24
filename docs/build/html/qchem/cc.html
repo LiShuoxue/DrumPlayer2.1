@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>耦合簇方法 &#8212; LyThacHoc  文档</title>
+    <title>5. 耦合簇方法 &#8212; LyThacHoc  文档</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -39,7 +39,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="哗啦啦2.1" href="../drumplayer/index.html" />
-    <link rel="prev" title="多参考态方法" href="mcscf.html" />
+    <link rel="prev" title="4. 多参考态方法" href="mcscf.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="zh_CN">
   </head>
@@ -146,28 +146,28 @@
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="secondquant.html">
-   多体问题的二次量子化表述
+  <a class="reference internal" href="spin2q.html">
+   1. 自旋与二次量子化
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="hfpro.html">
-   Hartree-Fock方法的进一步认识
+   2. Hartree-Fock方法的进一步认识
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="ci.html">
-   组态相互作用方法
+   3. 组态相互作用方法
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="mcscf.html">
-   多参考态方法
+   4. 多参考态方法
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   耦合簇方法
+   5. 耦合簇方法
   </a>
  </li>
 </ul>
@@ -196,27 +196,27 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   引言
+   5.1. 引言
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id3">
-   指数拟设的波函数形式
+   5.2. 指数拟设的波函数
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#cc">
-   CC方程的求解
+   5.3. CC方程的求解
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#schrodinger">
-     投影Schrödinger方程
+     5.3.1. 投影Schrödinger方程
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id4">
-     求解振幅方程的方法
+     5.3.2. 求解振幅方程的方法
     </a>
    </li>
   </ul>
@@ -241,9 +241,9 @@
               <article class="bd-article" role="main">
                 
   <section id="id1">
-<h1>耦合簇方法<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
+<h1><span class="section-number">5. </span>耦合簇方法<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
 <section id="id2">
-<h2>引言<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
+<h2><span class="section-number">5.1. </span>引言<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
 <p>截断的CI方法往往会面临大小一致性被破坏的问题。如何获取能反映电子相关的更好post-HF方法？</p>
 <p>考虑Full-CI的相关能：</p>
 <div class="math notranslate nohighlight" id="equation-ecorr-fci">
@@ -258,7 +258,7 @@
 <p>即四激发的Full-CI系数能写作两个双激发系数的乘积形式。但是在一般的情形之下，该式子不成立（四激发的波函数需要考虑18项双激发系数乘积）。但是我们依然可以从这个看似复杂的表达式中拟设出一个便于运算的波函数形式，及围绕它展开的 <strong>耦合簇理论(Coupled-Cluster Theory)</strong>。</p>
 </section>
 <section id="id3">
-<h2>指数拟设的波函数形式<a class="headerlink" href="#id3" title="永久链接至标题">#</a></h2>
+<h2><span class="section-number">5.2. </span>指数拟设的波函数<a class="headerlink" href="#id3" title="永久链接至标题">#</a></h2>
 <p>在说明CC的波函数形式之前首先介绍激发算符的形式：</p>
 <div class="math notranslate nohighlight" id="equation-excitation-operator">
 <span class="eqno">(3)<a class="headerlink" href="#equation-excitation-operator" title="公式的永久链接">#</a></span>\[\begin{split}\hat \tau_I^A = \hat a_A^\dagger \hat a_J \\ \hat \tau_{IJ}^{AB} = \hat a_A ^\dagger \hat a_I \hat a_B^\dagger \hat a_J\end{split}\]</div>
@@ -286,9 +286,9 @@
 <p>从指数拟设的结果可以看出，哪怕对 <span class="math notranslate nohighlight">\(\hat T\)</span> 做了截断，总的波函数一定包含了更高激发的信息。但是对波函数的假设仍然基于单Slater行列式的Hartree-Fock结果相对合理的条件。对于多组态的CC方法尚无定论。</p>
 </section>
 <section id="cc">
-<h2>CC方程的求解<a class="headerlink" href="#cc" title="永久链接至标题">#</a></h2>
+<h2><span class="section-number">5.3. </span>CC方程的求解<a class="headerlink" href="#cc" title="永久链接至标题">#</a></h2>
 <section id="schrodinger">
-<h3>投影Schrödinger方程<a class="headerlink" href="#schrodinger" title="永久链接至标题">#</a></h3>
+<h3><span class="section-number">5.3.1. </span>投影Schrödinger方程<a class="headerlink" href="#schrodinger" title="永久链接至标题">#</a></h3>
 <p>按照一般变分法求解Schrödinger方程的方法，我们自然会考虑将振幅看做参数，然后以类似于CI方程的形式求解，但是这样显然会引入所有的Full-CI行列式和高阶的振幅参数。回忆CI求解中，变分方程等价于如下形式的 <em>投影Schrödinger方程</em></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\langle \mu | \hat H | \mathrm{CC} \rangle = E \langle \mu | \mathrm{CC} \rangle \\ E = \langle \mathrm{HF} | \hat H | \mathrm{CC} \rangle\end{split}\]</div>
@@ -317,7 +317,7 @@
 <p>连接CC方程比起原始形式具有很多优势，例如它能运用BCH公式简化运算。</p>
 </section>
 <section id="id4">
-<h3>求解振幅方程的方法<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h3>
+<h3><span class="section-number">5.3.2. </span>求解振幅方程的方法<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h3>
 <p>振幅方程是解决函数零点问题，可以通过牛顿法迭代 <span class="math notranslate nohighlight">\(\Omega_\mu(\pmb t) = \langle \mu | \exp(-\hat T) \hat H \exp(\hat T) | \mathrm{HF} \rangle\)</span> 求解。根据BCH公式可知 <span class="math notranslate nohighlight">\(\Omega_\mu(\pmb t)\)</span> 对 <span class="math notranslate nohighlight">\(\pmb t\)</span> 的一阶导为：</p>
 <div class="math notranslate nohighlight" id="equation-ampf-1-deriv">
 <span class="eqno">(9)<a class="headerlink" href="#equation-ampf-1-deriv" title="公式的永久链接">#</a></span>\[\Omega_{\mu \nu}^{(1)} (\pmb t) = \langle \mu | \exp(-\hat T) [\hat H, \hat \tau_\nu] \exp(\hat T) | \mathrm{HF} \rangle\]</div>
@@ -341,7 +341,7 @@
       <i class="fas fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">上一页</p>
-          <p class="prev-next-title">多参考态方法</p>
+          <p class="prev-next-title"><span class="section-number">4. </span>多参考态方法</p>
       </div>
   </a>
   <a class='right-next' id="next-link" href="../drumplayer/index.html" title="下一页 页">

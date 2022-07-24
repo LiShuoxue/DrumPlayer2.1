@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Hartree-Fock方法的进一步认识 &#8212; LyThacHoc  文档</title>
+    <title>2. Hartree-Fock方法的进一步认识 &#8212; LyThacHoc  文档</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -38,8 +38,8 @@
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="组态相互作用方法" href="ci.html" />
-    <link rel="prev" title="多电子波函数的表述" href="secondquant.html" />
+    <link rel="next" title="3. 组态相互作用方法" href="ci.html" />
+    <link rel="prev" title="1. 自旋与二次量子化" href="spin2q.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="zh_CN">
   </head>
@@ -146,28 +146,28 @@
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="secondquant.html">
-   多体问题的二次量子化表述
+  <a class="reference internal" href="spin2q.html">
+   1. 自旋与二次量子化
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Hartree-Fock方法的进一步认识
+   2. Hartree-Fock方法的进一步认识
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="ci.html">
-   组态相互作用方法
+   3. 组态相互作用方法
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="mcscf.html">
-   多参考态方法
+   4. 多参考态方法
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="cc.html">
-   耦合簇方法
+   5. 耦合簇方法
   </a>
  </li>
 </ul>
@@ -195,9 +195,21 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   Hartree-Fock的波函数
+  <a class="reference internal nav-link" href="#rhf">
+   2.1. RHF的一般讨论
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     2.1.1. 轨道与能量的参数化
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     2.1.2. 冗余参数
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -219,7 +231,7 @@
               <article class="bd-article" role="main">
                 
   <section id="hartree-fock">
-<h1>Hartree-Fock方法的进一步认识<a class="headerlink" href="#hartree-fock" title="永久链接至标题">#</a></h1>
+<h1><span class="section-number">2. </span>Hartree-Fock方法的进一步认识<a class="headerlink" href="#hartree-fock" title="永久链接至标题">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
 <p>轨道记号说明：</p>
@@ -249,20 +261,53 @@
 </tbody>
 </table>
 </div>
+<section id="rhf">
+<h2><span class="section-number">2.1. </span>RHF的一般讨论<a class="headerlink" href="#rhf" title="永久链接至标题">#</a></h2>
 <section id="id1">
-<h2>Hartree-Fock的波函数<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h2>
+<h3><span class="section-number">2.1.1. </span>轨道与能量的参数化<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h3>
 <p><strong>限制性哈特里-福克理论(Restricted Hartree-Fock Theory, RHF)</strong> 中的电子态是一个单Slater行列式或者单个CSF。对能量求极值的过程等效于对原先的CSF做以如下的轨道旋转变换：</p>
 <div class="math notranslate nohighlight" id="equation-csf-ot">
 <span class="eqno">(1)<a class="headerlink" href="#equation-csf-ot" title="公式的永久链接">#</a></span>\[| \mathrm{CSF} (\pmb \kappa) \rangle = \exp(-\hat \kappa) | \mathrm{CSF} \rangle\]</div>
-<p>其中 <span class="math notranslate nohighlight">\(\hat \kappa\)</span> 是单电子反厄米算符</p>
+<p>其中 <span class="math notranslate nohighlight">\(\hat \kappa\)</span> 是由一组参数 <span class="math notranslate nohighlight">\(\pmb \kappa\)</span> 确定的单电子反厄米算符</p>
 <div class="math notranslate nohighlight" id="equation-kappa-op">
-<span class="eqno">(2)<a class="headerlink" href="#equation-kappa-op" title="公式的永久链接">#</a></span>\[\hat \kappa = \sum\limits_{p, q} \kappa_{pq} (\hat E_{pq} - \hat E_{qp})\]</div>
+<span class="eqno">(2)<a class="headerlink" href="#equation-kappa-op" title="公式的永久链接">#</a></span>\[\hat \kappa = \sum\limits_{p, q} \kappa_{pq} (\hat E_{pq} - \hat E_{qp}) = \sum\limits_{p, q} \kappa_{pq} \hat E_{pq}^-\]</div>
 <p>根据 <a class="reference internal" href="#equation-csf-ot">(1)</a> ，RHF能量可以表达为：</p>
 <div class="math notranslate nohighlight" id="equation-rhf-e-general">
 <span class="eqno">(3)<a class="headerlink" href="#equation-rhf-e-general" title="公式的永久链接">#</a></span>\[E(\pmb \kappa) = \langle \mathrm{CSF} | \exp(\hat \kappa) \hat H \exp(- \hat \kappa) | \mathrm{CSF} \rangle\]</div>
-<p>根据BCH公式对 <a class="reference internal" href="#equation-rhf-e-general">(3)</a> 展开，RHF能量对参数 <span class="math notranslate nohighlight">\(\pmb \kappa\)</span> 求一阶导和二阶导的结果分别为</p>
+<p>根据BCH公式对 <a class="reference internal" href="#equation-rhf-e-general">(3)</a> 在 <span class="math notranslate nohighlight">\(\pmb \kappa = \pmb 0\)</span> 处展开，RHF能量对参数 <span class="math notranslate nohighlight">\(\pmb \kappa\)</span> 求一阶导和二阶导的结果分别为</p>
+<div class="math notranslate nohighlight" id="equation-rhf-e-1deriv">
+<span class="eqno">(4)<a class="headerlink" href="#equation-rhf-e-1deriv" title="公式的永久链接">#</a></span>\[E^{(1)}_{pq} = \dfrac{\partial E(\pmb \kappa)}{\partial \kappa_{pq}} = \langle \mathrm{CSF} | [\hat E_{pq}^-, \hat H] | \mathrm{CSF} \rangle\]</div>
+<div class="math notranslate nohighlight" id="equation-rhf-e-2deriv">
+<span class="eqno">(5)<a class="headerlink" href="#equation-rhf-e-2deriv" title="公式的永久链接">#</a></span>\[E^{(2)}_{pq,rs} = \dfrac{\partial^2 E(\pmb \kappa)}{\partial \kappa_{pq} \partial \kappa_{rs}} = \dfrac{1}{2} (\langle \mathrm{CSF} | [\hat E_{pq}^-, [\hat E_{rs}^-, \hat H]] | \mathrm{CSF} \rangle + \langle \mathrm{CSF} | [\hat E_{rs}^-, [\hat E_{pq}^-, \hat H]] | \mathrm{CSF} \rangle)\]</div>
+<p>在实数轨道的条件之下，能量一阶导可以被简化为：</p>
+<div class="math notranslate nohighlight" id="equation-rhf-e-1deriv-real">
+<span class="eqno">(6)<a class="headerlink" href="#equation-rhf-e-1deriv-real" title="公式的永久链接">#</a></span>\[E^{(1)}_{pq} = 2 \langle \mathrm{CSF} | [\hat E_{pq}, \hat H] | \mathrm{CSF} \rangle\]</div>
+</section>
+<section id="id2">
+<h3><span class="section-number">2.1.2. </span>冗余参数<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h3>
+<p>我们定义满足</p>
+<div class="math notranslate nohighlight" id="equation-rdparam-def">
+<span class="eqno">(7)<a class="headerlink" href="#equation-rdparam-def" title="公式的永久链接">#</a></span>\[\hat E^-_{pq} | \mathrm{CSF} \rangle = 0\]</div>
+<p>所对应的 <span class="math notranslate nohighlight">\(\kappa_{pq}\)</span> 为 <strong>冗余参数(Redundant Parameter)</strong> 。</p>
+<div class="example admonition">
+<p class="admonition-title">例子</p>
+<p>对于闭壳层波函数而言，“占据-占据” 和 “未占据-未占据”的下标组合对应的参数为冗余参数，理由如下：</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\hat E_{ab}^-\)</span> ：从未占据轨道抽出电子的操作会得到0；</p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat E_{ij}^-\)</span> ：从一个占据轨道抽出电子填到另一个已占据轨道的操作也会得到0；</p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat E_{mm}^- = 0\)</span></p></li>
+</ul>
+<p>但是，“占据-未占据”的下标组合 <span class="math notranslate nohighlight">\(\hat E_{ai}^-\)</span> 对应的就不是冗余参数。</p>
+</div>
+<div class="quiz admonition">
+<p class="admonition-title">小练习</p>
+<p>说明对于三线态波函数，“单占据-单占据”组合是冗余参数，而对于单线态不是。</p>
+</div>
+<p>为何要引入冗余参数呢？因为它的重要性质是， <strong>RHF能量对于它的一阶导为0</strong> 。因为</p>
 <div class="math notranslate nohighlight">
-\[\dfrac{E(\pmb \kappa)}{\kappa} =\]</div>
+\[E_{pq}^{(1)} = 2 \langle [\hat E_{pq}, \hat H]  \rangle_{\mathrm{CSF}}  = -2 \langle \hat H \hat E^-_{pq}\rangle_{\mathrm{CSF}} = 0\]</div>
+<p>因此在轨道旋转当中，优化RHF能量仅需要变换非冗余参数即可，换言之， <strong>优化非冗余参数是解决RHF方程的充要条件</strong> 。虽然冗余参数不改变波函数和能量的性质，但是冗余参数的任意性可以服务于获得更有物理意义的正则化分子轨道，这就是下一节要说的，所谓 <strong>正则HF理论(Canonical Hartree-Fock Theory)</strong> 的基础。</p>
+</section>
 </section>
 </section>
 
@@ -274,17 +319,17 @@
               <footer class="bd-footer-article">
                   <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="secondquant.html" title="上一页 页">
+  <a class='left-prev' id="prev-link" href="spin2q.html" title="上一页 页">
       <i class="fas fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">上一页</p>
-          <p class="prev-next-title">多电子波函数的表述</p>
+          <p class="prev-next-title"><span class="section-number">1. </span>自旋与二次量子化</p>
       </div>
   </a>
   <a class='right-next' id="next-link" href="ci.html" title="下一页 页">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">下一页</p>
-      <p class="prev-next-title">组态相互作用方法</p>
+      <p class="prev-next-title"><span class="section-number">3. </span>组态相互作用方法</p>
   </div>
   <i class="fas fa-angle-right"></i>
   </a>

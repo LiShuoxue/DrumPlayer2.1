@@ -8,8 +8,9 @@
 .. toctree::
    :maxdepth: 2
    :caption: Content
+   :numbered:
    
-   多体问题的二次量子化表述 <secondquant>
+   自旋与二次量子化 <spin2q>
    Hartree-Fock方法的进一步认识 <hfpro>
    组态相互作用方法 <ci>
    多参考态方法 <mcscf>

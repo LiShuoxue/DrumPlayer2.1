@@ -6,20 +6,24 @@
 Curriculum Vitae
 --------------------------
 
-.. sidebar::
+.. sidebar:: Photo
 
    .. image:: ./_static/personal.jpg
-      :width: 3in
-      :height: 2.7in
+      :align: center
+      :scale: 20%
 
 **Education**:
 
-* 2022-Present, Graduate of Physical Chemistry
+* 2022-Present
+   - Graduate of Physical Chemistry
    - Division of Chemistry and Chemical Engineering, Caltech, Pasadena, California, US
 
-* 2018-2022, BSc of Chemistry
+* 2018-2022
+   - BSc of Chemistry
    - College of Chemistry and Molecular Engineering, Peking University, Beijing, China
    - Academic Advisor: `Prof. Hong Jiang <https://www.chem.pku.edu.cn/jianghgroup/>`_ 
+   - GPA: 3.83 / 4.00
+   - *Chemistry Star* Honor
 
 学海无涯
 -------------
@@ -40,4 +44,4 @@ Curriculum Vitae
    :maxdepth: 2
 
    锣鼓小程序“哗啦啦” <drumplayer/index>
-   自编唱段 <auto/index>
+   各种整活 <auto/index>
