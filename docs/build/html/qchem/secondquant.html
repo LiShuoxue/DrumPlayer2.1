@@ -65,8 +65,8 @@
   
   
   
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
-    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
+    <img src="../_static/logo_white.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/logo_black.png" class="logo__image only-dark" alt="Logo image">
   
   
 </a>
@@ -226,6 +226,11 @@
      表记方式
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#csf">
+     CSF组合系数的确定
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -285,7 +290,7 @@
 <div class="quiz admonition">
 <p class="admonition-title">小练习</p>
 <p>尝试证明 <a class="reference internal" href="#equation-spin-ops">(8)</a> 中 <span class="math notranslate nohighlight">\(\hat S_+\)</span> 的形式。</p>
-<p><strong>解答：</strong> 根据 <a class="reference internal" href="#equation-spin-op">(7)</a> 可知只有在 <span class="math notranslate nohighlight">\(\sigma = \alpha, \tau = \beta\)</span> 的条件之下，对应的系数才不为0。因此立刻有 <span class="math notranslate nohighlight">\(\hat S_+ = \sum\limits_p \hat a_{p\alpha} \hat a_{p\beta}\)</span> 。同理可以得出 <span class="math notranslate nohighlight">\(\hat S_-, \hat S_z\)</span> 的形式。</p>
+<p><strong>提示：</strong> 根据 <a class="reference internal" href="#equation-spin-op">(7)</a> 可知只有在 <span class="math notranslate nohighlight">\(\sigma = \alpha, \tau = \beta\)</span> 的条件之下，对应的系数才不为0。因此立刻有 <span class="math notranslate nohighlight">\(\hat S_+ = \sum\limits_p \hat a_{p\alpha} \hat a_{p\beta}\)</span> 。同理可以得出 <span class="math notranslate nohighlight">\(\hat S_-, \hat S_z\)</span> 的形式。</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">重要</p>
@@ -341,6 +346,21 @@
 <span class="eqno">(12)<a class="headerlink" href="#equation-csf-slater-from-cs" title="公式的永久链接">#</a></span>\[\begin{split}| \pmb t \rangle^c = \hat O_N^{S,M} (\pmb t) | \mathrm{cs} \rangle \\
 | \pmb p \rangle^d = \hat a_{1p_1}^\dagger \cdots \hat a_{Np_N}^\dagger | \mathrm{cs} \rangle\end{split}\]</div>
 <p>式中 <span class="math notranslate nohighlight">\(\hat O_N^{S,M} (\pmb t)\)</span> 表示张量算符和标记CSF的向量 <span class="math notranslate nohighlight">\(\pmb t\)</span> 有关。</p>
+</section>
+<section id="csf">
+<h3>CSF组合系数的确定<a class="headerlink" href="#csf" title="永久链接至标题">#</a></h3>
+<p>我们希望通过求出Slater行列式和CSF的内积 <span class="math notranslate nohighlight">\(d_i = ^d \langle ^i \pmb p | \pmb t \rangle^c\)</span> 得到CSF中每个Slater行列式的贡献。由于我们在构建N电子CSF时从(N-1)电子的CSF组态出发，因此我们需要使用如下的张量算符分解公式：</p>
+<div class="math notranslate nohighlight" id="equation-tenop-decomp">
+<span class="eqno">(13)<a class="headerlink" href="#equation-tenop-decomp" title="公式的永久链接">#</a></span>\[\hat O_N^{S,M}(\pmb t) | \mathrm{cs} \rangle = \sum\limits_{\sigma
+in \{-1/2,1/2\}} C_{t_N\sigma}^{S,M} \hat O_{N-1}^{S-t_N, M-\sigma} (\pmb t) \hat a_{N\sigma}^\dagger | \mathrm{cs} \rangle\]</div>
+<p>其中组合系数</p>
+<div class="math notranslate nohighlight" id="equation-comb-coeff">
+<span class="eqno">(14)<a class="headerlink" href="#equation-comb-coeff" title="公式的永久链接">#</a></span>\[C_{1/2,\sigma}^{S,M} = \sqrt{\dfrac{S+2\sigma M}{2S}} ,\, C_{-1/2,\sigma}^{S,M} = -2\sigma \sqrt{\dfrac{S+1-2\sigma M}{2(S+1)}}\]</div>
+<div class="quiz admonition">
+<p class="admonition-title">小练习</p>
+<p>证明 <a class="reference internal" href="#equation-comb-coeff">(14)</a> 的两式。</p>
+<p><strong>提示：</strong> 使用张量算符和自旋升降算符的对易关系 <a class="reference internal" href="#equation-spin-ten-op-commute">(10)</a> 可以得到组合系数之间的迭代关系。</p>
+</div>
 </section>
 </section>
 </section>

@@ -65,8 +65,8 @@
   
   
   
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
-    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
+    <img src="../_static/logo_white.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/logo_black.png" class="logo__image only-dark" alt="Logo image">
   
   
 </a>
@@ -205,9 +205,21 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#schrodinger">
-   投影Schrödinger方程
+  <a class="reference internal nav-link" href="#cc">
+   CC方程的求解
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#schrodinger">
+     投影Schrödinger方程
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     求解振幅方程的方法
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -273,8 +285,10 @@
 <p><span class="math notranslate nohighlight">\(\hat T\)</span> 可根据激发数目写成 <span class="math notranslate nohighlight">\(\hat T_1, \hat T_2 \cdots\)</span> 等形式，且相互间满足对易关系。</p>
 <p>从指数拟设的结果可以看出，哪怕对 <span class="math notranslate nohighlight">\(\hat T\)</span> 做了截断，总的波函数一定包含了更高激发的信息。但是对波函数的假设仍然基于单Slater行列式的Hartree-Fock结果相对合理的条件。对于多组态的CC方法尚无定论。</p>
 </section>
+<section id="cc">
+<h2>CC方程的求解<a class="headerlink" href="#cc" title="永久链接至标题">#</a></h2>
 <section id="schrodinger">
-<h2>投影Schrödinger方程<a class="headerlink" href="#schrodinger" title="永久链接至标题">#</a></h2>
+<h3>投影Schrödinger方程<a class="headerlink" href="#schrodinger" title="永久链接至标题">#</a></h3>
 <p>按照一般变分法求解Schrödinger方程的方法，我们自然会考虑将振幅看做参数，然后以类似于CI方程的形式求解，但是这样显然会引入所有的Full-CI行列式和高阶的振幅参数。回忆CI求解中，变分方程等价于如下形式的 <em>投影Schrödinger方程</em></p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\langle \mu | \hat H | \mathrm{CC} \rangle = E \langle \mu | \mathrm{CC} \rangle \\ E = \langle \mathrm{HF} | \hat H | \mathrm{CC} \rangle\end{split}\]</div>
@@ -282,7 +296,36 @@
 <div class="math notranslate nohighlight" id="equation-linked-cc-eq">
 <span class="eqno">(7)<a class="headerlink" href="#equation-linked-cc-eq" title="公式的永久链接">#</a></span>\[\begin{split}\langle \mathrm{HF} | \exp(-\hat T) \hat H \exp(\hat T) | \mathrm{HF} \rangle = E \\ \langle \mu | \exp(-\hat T) \hat H \exp(\hat T) | \mathrm{HF} \rangle = 0\end{split}\]</div>
 <p><a class="reference internal" href="#equation-linked-cc-eq">(7)</a> 中，第一式称作能量方程，第二式称作 <em>振幅方程(Amplitude Equation)</em> 。</p>
-<p>连接CC方程比起原始形式具有很多优势。</p>
+<div class="prove admonition">
+<p class="admonition-title">证明</p>
+<p>能量方程很容易从原始的Schrödinger方程得到；对于振幅方程的求解，我们首先定义矩阵</p>
+<div class="math notranslate nohighlight" id="equation-t-matrix">
+<span class="eqno">(8)<a class="headerlink" href="#equation-t-matrix" title="公式的永久链接">#</a></span>\[T^\pm_{\mu\nu} = \langle \mu | \exp(\pm \hat T ) | \nu \rangle\]</div>
+<p>按激发数目排列指标，T为非奇异的下三角矩阵，理由如下：</p>
+<ul class="simple">
+<li><p>若 <span class="math notranslate nohighlight">\(\mu = \nu\)</span> ，则矩阵元为1；</p></li>
+<li><p>若 <span class="math notranslate nohighlight">\(\mu\)</span> 的激发数目不大于 <span class="math notranslate nohighlight">\(\nu\)</span> 的激发数目且两者不等，则显然矩阵元为0。</p></li>
+</ul>
+<p>之后我们定义辅助量 <span class="math notranslate nohighlight">\(A_\mu\)</span> ：</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A_\mu = \sum\limits_{\nu} T^+_{\mu\nu} \langle \nu | \exp(-\hat T) \hat H \exp(\hat T) | \mathrm{HF} \rangle \\
+= \sum\limits_{\nu} \langle \mu | \exp(\pm \hat T ) | \nu \rangle \langle \nu | \exp(-\hat T) \hat H \exp(\hat T) | \mathrm{HF} \rangle \\
+= \langle \mu | \hat H \exp(\hat T) | \mathrm{HF} \rangle - \langle \mu | \exp(\hat T) | \mathrm{HF} \rangle \langle \mathrm{HF} | \exp(-\hat T) \hat H \exp(\hat T) | \mathrm{HF} \rangle \\ = \langle \mu | \hat H \exp(\hat T) | \mathrm{HF} \rangle - E \langle \mu | \exp(\hat T) | \mathrm{HF} \rangle \\ = 0\end{split}\]</div>
+<p>第二个等号是因为 <span class="math notranslate nohighlight">\(| \mathrm{HF} \rangle\)</span> 和所有的激发行列式共同组成完备基，即 <span class="math notranslate nohighlight">\(\sum\limits_\nu | \nu \rangle \langle \nu | + | \mathrm{HF} \rangle \langle \mathrm{HF} | = \hat I\)</span> 。</p>
+<p>由于T矩阵的非奇异性， <span class="math notranslate nohighlight">\(A_\mu = 0\)</span> 与 <span class="math notranslate nohighlight">\(\langle \mu | \exp(-\hat T) \hat H \exp(\hat T) | \mathrm{HF} \rangle = 0\)</span> 的条件等价。</p>
+</div>
+<p>连接CC方程比起原始形式具有很多优势，例如它能运用BCH公式简化运算。</p>
+</section>
+<section id="id4">
+<h3>求解振幅方程的方法<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h3>
+<p>振幅方程是解决函数零点问题，可以通过牛顿法迭代 <span class="math notranslate nohighlight">\(\Omega_\mu(\pmb t) = \langle \mu | \exp(-\hat T) \hat H \exp(\hat T) | \mathrm{HF} \rangle\)</span> 求解。根据BCH公式可知 <span class="math notranslate nohighlight">\(\Omega_\mu(\pmb t)\)</span> 对 <span class="math notranslate nohighlight">\(\pmb t\)</span> 的一阶导为：</p>
+<div class="math notranslate nohighlight" id="equation-ampf-1-deriv">
+<span class="eqno">(9)<a class="headerlink" href="#equation-ampf-1-deriv" title="公式的永久链接">#</a></span>\[\Omega_{\mu \nu}^{(1)} (\pmb t) = \langle \mu | \exp(-\hat T) [\hat H, \hat \tau_\nu] \exp(\hat T) | \mathrm{HF} \rangle\]</div>
+<p>振幅的迭代步长可以由矩阵方程</p>
+<div class="math notranslate nohighlight">
+\[\pmb \Omega^{(1)} (\pmb t^{(n)}) \Delta \pmb t^{(n)} = - \pmb \Omega(t^{(n)})\]</div>
+<p>来获得。但是它仍然非常复杂。因此我们希望从 <span class="math notranslate nohighlight">\(\pmb \Omega^{(1)}\)</span> 的结构出发简化迭代步骤。考虑在Hartree-Fock分子轨道表象之下， <span class="math notranslate nohighlight">\(\pmb \Omega^{(1)}\)</span> 可以表示成</p>
+</section>
 </section>
 </section>
 

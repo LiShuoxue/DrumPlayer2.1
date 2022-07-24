@@ -74,7 +74,7 @@
 
     尝试证明 :eq:`spin-ops` 中 :math:`\hat S_+` 的形式。
 
-    **解答：** 根据 :eq:`spin-op` 可知只有在 :math:`\sigma = \alpha, \tau = \beta` 的条件之下，对应的系数才不为0。因此立刻有 :math:`\hat S_+ = \sum\limits_p \hat a_{p\alpha} \hat a_{p\beta}` 。同理可以得出 :math:`\hat S_-, \hat S_z` 的形式。
+    **提示：** 根据 :eq:`spin-op` 可知只有在 :math:`\sigma = \alpha, \tau = \beta` 的条件之下，对应的系数才不为0。因此立刻有 :math:`\hat S_+ = \sum\limits_p \hat a_{p\alpha} \hat a_{p\beta}` 。同理可以得出 :math:`\hat S_-, \hat S_z` 的形式。
 
 .. important::
     
@@ -157,3 +157,28 @@
     | \pmb p \rangle^d = \hat a_{1p_1}^\dagger \cdots \hat a_{Np_N}^\dagger | \mathrm{cs} \rangle
 
 式中 :math:`\hat O_N^{S,M} (\pmb t)` 表示张量算符和标记CSF的向量 :math:`\pmb t` 有关。
+
+CSF组合系数的确定
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+我们希望通过求出Slater行列式和CSF的内积 :math:`d_i = ^d \langle ^i \pmb p | \pmb t \rangle^c` 得到CSF中每个Slater行列式的贡献。由于我们在构建N电子CSF时从(N-1)电子的CSF组态出发，因此我们需要使用如下的张量算符分解公式：
+
+.. math::
+    :label: tenop-decomp
+
+    \hat O_N^{S,M}(\pmb t) | \mathrm{cs} \rangle = \sum\limits_{\sigma 
+    in \{-1/2,1/2\}} C_{t_N\sigma}^{S,M} \hat O_{N-1}^{S-t_N, M-\sigma} (\pmb t) \hat a_{N\sigma}^\dagger | \mathrm{cs} \rangle
+
+其中组合系数
+
+.. math::
+    :label: comb-coeff
+
+    C_{1/2,\sigma}^{S,M} = \sqrt{\dfrac{S+2\sigma M}{2S}} ,\, C_{-1/2,\sigma}^{S,M} = -2\sigma \sqrt{\dfrac{S+1-2\sigma M}{2(S+1)}}
+
+.. admonition:: 小练习
+    :class: quiz
+
+    证明 :eq:`comb-coeff` 的两式。
+
+    **提示：** 使用张量算符和自旋升降算符的对易关系 :eq:`spin-ten-op-commute` 可以得到组合系数之间的迭代关系。

@@ -3,6 +3,24 @@
 
 @LyThacHoc
 
+Curriculum Vitae
+--------------------------
+
+.. sidebar::
+
+   .. image:: ./_static/personal.jpg
+      :width: 3in
+      :height: 2.7in
+
+**Education**:
+
+* 2022-Present, Graduate of Physical Chemistry
+   - Division of Chemistry and Chemical Engineering, Caltech, Pasadena, California, US
+
+* 2018-2022, BSc of Chemistry
+   - College of Chemistry and Molecular Engineering, Peking University, Beijing, China
+   - Academic Advisor: `Prof. Hong Jiang <https://www.chem.pku.edu.cn/jianghgroup/>`_ 
+
 学海无涯
 -------------
 

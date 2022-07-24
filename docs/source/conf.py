@@ -72,7 +72,9 @@ html_css_files = [
 ]
 
 source_suffix = ['.rst', '.md']
-html_theme_options = { 
-    'logo_only': True, 
+html_theme_options = {
+   "logo": {
+      "image_light": "logo_white.png",
+      "image_dark": "logo_black.png",
+   }
 }
-html_logo = '_static/logo.png'

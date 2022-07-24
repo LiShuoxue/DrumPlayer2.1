@@ -3,9 +3,7 @@
 
 自觉忝列Caltech，遂亡羊补牢。
 
-主要根据以下两本参考书记录：
-
-
+持续更新中...
 
 .. toctree::
    :maxdepth: 2
@@ -17,3 +15,10 @@
    多参考态方法 <mcscf>
    耦合簇方法 <cc>
    
+主要参考书目：
+
+* Szabo, A. and Ostlund, N. S. *Modern Quantum Chemistry;* Dover: New York, 1989.
+
+* Helgaker, T.; Jorgensen, P. and Olsen, J. *Molecular Electronic-Structure Theory;* John Wiley: Chichester, 1999.
+
+* 蒋鸿老师的量子化学讲义 (2021年春)
