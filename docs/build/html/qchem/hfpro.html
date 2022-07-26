@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Hartree-Fock方法的进一步认识 &#8212; LyThacHoc  文档</title>
+    <title>2. Hartree-Fock方法 &#8212; LyThacHoc  文档</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -97,7 +97,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../auto/index.html">
-  自编唱段
+  各种整活
  </a>
 </li>
 
@@ -152,7 +152,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   2. Hartree-Fock方法的进一步认识
+   2. Hartree-Fock方法
   </a>
  </li>
  <li class="toctree-l1">
@@ -211,6 +211,55 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   2.2. 正则Hartree-Fock理论
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fock">
+     2.2.1. Fock算符的构建
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     2.2.2. 闭壳层RHF的总能量与轨道能量
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     2.2.3. 原子轨道下的自洽场方程
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   2.3. 二阶优化方法
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     2.3.1. 能量一阶导与广义Fock算符
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     2.3.2. 能量二阶导
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#soscf">
+     2.3.3. SOSCF的实际求解
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scf">
+     2.3.4. SCF和二阶算法的关系
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
 </nav>
@@ -231,10 +280,13 @@
               <article class="bd-article" role="main">
                 
   <section id="hartree-fock">
-<h1><span class="section-number">2. </span>Hartree-Fock方法的进一步认识<a class="headerlink" href="#hartree-fock" title="永久链接至标题">#</a></h1>
-<div class="admonition note">
-<p class="admonition-title">备注</p>
-<p>轨道记号说明：</p>
+<h1><span class="section-number">2. </span>Hartree-Fock方法<a class="headerlink" href="#hartree-fock" title="永久链接至标题">#</a></h1>
+<div class="admonition- admonition">
+<p class="admonition-title">轨道记号说明</p>
+<ul class="simple">
+<li><p>空间轨道用小写字母，自旋-空间轨道用大写字母；</p></li>
+<li><p>不同占据的轨道标记如下：</p></li>
+</ul>
 <table class="table">
 <colgroup>
 <col style="width: 44%" />
@@ -306,7 +358,58 @@
 <p>为何要引入冗余参数呢？因为它的重要性质是， <strong>RHF能量对于它的一阶导为0</strong> 。因为</p>
 <div class="math notranslate nohighlight">
 \[E_{pq}^{(1)} = 2 \langle [\hat E_{pq}, \hat H]  \rangle_{\mathrm{CSF}}  = -2 \langle \hat H \hat E^-_{pq}\rangle_{\mathrm{CSF}} = 0\]</div>
-<p>因此在轨道旋转当中，优化RHF能量仅需要变换非冗余参数即可，换言之， <strong>优化非冗余参数是解决RHF方程的充要条件</strong> 。虽然冗余参数不改变波函数和能量的性质，但是冗余参数的任意性可以服务于获得更有物理意义的正则化分子轨道，这就是下一节要说的，所谓 <strong>正则HF理论(Canonical Hartree-Fock Theory)</strong> 的基础。</p>
+<p>因此在轨道旋转当中，优化RHF能量仅需要变换非冗余参数即可，换言之， <strong>优化非冗余参数是解决RHF方程的充要条件</strong> 。虽然冗余参数不改变波函数和能量的性质，但是冗余参数的任意性是的我们可对其添加额外的限制，在不改变结果的同时获得更有物理意义的正则化分子轨道，这就是下一节要说的，所谓 <strong>正则HF理论(Canonical Hartree-Fock Theory)</strong> 的基础。</p>
+</section>
+</section>
+<section id="id3">
+<h2><span class="section-number">2.2. </span>正则Hartree-Fock理论<a class="headerlink" href="#id3" title="永久链接至标题">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>以下介绍的正则HF理论适用于 <em>闭壳层</em> 条件，而对于开壳层需要用更一般的方法。</p>
+</div>
+<p>由于闭壳层RHF是针对单Slater行列式的，Slater行列式将不同轨道的电子视为独立粒子，因此我们希望通过转化为求解 <em>有效单电子方程</em> 的模式来获得每一个轨道的信息。对于单电子的有效Hamilton量算符称为 <strong>Fock算符 (Fock Operator)</strong> 。</p>
+<section id="fock">
+<h3><span class="section-number">2.2.1. </span>Fock算符的构建<a class="headerlink" href="#fock" title="永久链接至标题">#</a></h3>
+<p>为了构建闭壳层RHF的有效单电子Hamilton量，我们不妨猜测Fock算符满足如下的条件：</p>
+<ul class="simple">
+<li><p>它本身是单电子算符 <span class="math notranslate nohighlight">\(\hat f = \sum\limits_{pq} \hat E_{pq}\)</span> ，且是厄米的；</p></li>
+<li><p>当电子之间无相互作用时，Fock算符应当等于Hamilton算符；</p></li>
+<li><p>我们希望通过对角化Fock算符的方式求解闭壳层RHF，希望Fock算符的非对角元为0时能够导出能量在非冗余参数下的一阶梯度 <a class="reference internal" href="#equation-rhf-e-1deriv">(4)</a> 为0，我们不妨猜测二者之间是倍数关系，即 <span class="math notranslate nohighlight">\(f_{ai} = N_f \langle \mathrm{cs} | [\hat E_{ai}, \hat H] | \mathrm{cs} \rangle\)</span> 。</p></li>
+</ul>
+<p>但是直接用条件3的 <span class="math notranslate nohighlight">\([\hat E_{ai}, \hat H]\)</span> 会得到反对称Fock矩阵。因此为了满足条件(1)的厄米性需求和条件(2)对Hamiltonian的要求，最终将Fock算符对应的矩阵元 <span class="math notranslate nohighlight">\(f_{pq}\)</span> 的形式确定为：</p>
+<div class="math notranslate nohighlight" id="equation-fock">
+<span class="eqno">(8)<a class="headerlink" href="#equation-fock" title="公式的永久链接">#</a></span>\[\begin{split}f_{pq} = \dfrac{1}{2} \langle \mathrm{cs} | [\hat a_{q\sigma}^\dagger, [\hat a_{p\sigma}, \hat H]]_{+} | \mathrm{cs} \rangle \\ = h_{pq} + \sum\limits_i (2g_{pqii} - g_{piiq})\end{split}\]</div>
+<div class="quiz admonition">
+<p class="admonition-title">小练习</p>
+<p>通过Hamiltonian的二次量子化表达式</p>
+<div class="math notranslate nohighlight">
+\[\hat H = \sum\limits_{pq} h_{pq} \hat H_{pq} + \dfrac{1}{2} \sum\limits_{pqrs} g_{pqrs} \hat e_{pqrs} + \hat h_{nuc}\]</div>
+<p>来推导Fock矩阵元 <a class="reference internal" href="#equation-fock">(8)</a> 的第二个等号。</p>
+</div>
+<p>在分子轨道的表象之下，我们可以通过不断对角化Fock矩阵，然后对分子轨道进行变换的方式来迭代求解，直到变换矩阵趋向于单位矩阵。这种迭代方案称为 <strong>自洽场(Self-Consistent Field, SCF)方法</strong> 。它其实是不动点迭代法的一种特例。</p>
+<p>相比于变分条件之下仅需变换非冗余参数而言，对整个Fock算符做对角化的“ <em>正则条件(Canonical Condition)</em> ”其实额外添加了冗余参数的变换，因此在较大体系的RHF求解中使用仅基于变分条件的方法在计算上会更快捷，例如基于密度的HF方法等。该方法见于紫书的10.7一节。</p>
+</section>
+<section id="id4">
+<h3><span class="section-number">2.2.2. </span>闭壳层RHF的总能量与轨道能量<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h3>
+</section>
+<section id="id5">
+<h3><span class="section-number">2.2.3. </span>原子轨道下的自洽场方程<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h3>
+</section>
+</section>
+<section id="id6">
+<h2><span class="section-number">2.3. </span>二阶优化方法<a class="headerlink" href="#id6" title="永久链接至标题">#</a></h2>
+<p>前述的正则HF理论适用于闭壳层体系，但是对于开壳层体系，由于单占据轨道的存在使得所考虑的情形更为复杂。因此我们需要更深入考察HF能量的一阶和二阶梯度性质。</p>
+<section id="id7">
+<h3><span class="section-number">2.3.1. </span>能量一阶导与广义Fock算符<a class="headerlink" href="#id7" title="永久链接至标题">#</a></h3>
+</section>
+<section id="id8">
+<h3><span class="section-number">2.3.2. </span>能量二阶导<a class="headerlink" href="#id8" title="永久链接至标题">#</a></h3>
+</section>
+<section id="soscf">
+<h3><span class="section-number">2.3.3. </span>SOSCF的实际求解<a class="headerlink" href="#soscf" title="永久链接至标题">#</a></h3>
+</section>
+<section id="scf">
+<h3><span class="section-number">2.3.4. </span>SCF和二阶算法的关系<a class="headerlink" href="#scf" title="永久链接至标题">#</a></h3>
 </section>
 </section>
 </section>

@@ -35,10 +35,11 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="4. 多参考态方法" href="mcscf.html" />
-    <link rel="prev" title="2. Hartree-Fock方法的进一步认识" href="hfpro.html" />
+    <link rel="prev" title="2. Hartree-Fock方法" href="hfpro.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="zh_CN">
   </head>
@@ -96,7 +97,7 @@
 
 <li class="toctree-l1 nav-item">
  <a class="reference internal nav-link" href="../auto/index.html">
-  自编唱段
+  各种整活
  </a>
 </li>
 
@@ -151,7 +152,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="hfpro.html">
-   2. Hartree-Fock方法的进一步认识
+   2. Hartree-Fock方法
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -221,7 +222,8 @@
 <h1><span class="section-number">3. </span>组态相互作用方法<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
 <section id="id2">
 <h2><span class="section-number">3.1. </span>引言与若干基本概念<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
-<p>由于不同激发的Slater行列式是完备的，因此在考虑电子关联</p>
+<p>在HF方法当中，自旋相同的电子在同一空间坐标出现的概率为0，而自旋相反电子在同一位置出现概率互相独立，这个不合理的情况是由于单Slater行列式的近似忽略 <strong>电子关联(Electron Correlation)</strong> 导致的。由于不同激发的Slater行列式是完备的，因此在考虑电子关联的问题时，我们自然会想到在波函数中添加更多激发组态的办法，从而形成 <strong>组态相互作用(Configuration-Interaction, CI)</strong> 的波函数。对于每个Slater行列式系数的优化通过变分法来求得，即为CI方法的一般思路。</p>
+<p>考虑所有组态的Full-CI方法需要考虑 <span class="math notranslate nohighlight">\((C_n^k)^2\)</span> 个Slater行列式的贡献，其中 <span class="math notranslate nohighlight">\(n\)</span> 为轨道总数目， <span class="math notranslate nohighlight">\(k\)</span> 为占据轨道总数目。这对于一般分子显然是难以计算的。因此我们需要在Full-CI的基础上去做以截断与近似。</p>
 </section>
 </section>
 
@@ -237,7 +239,7 @@
       <i class="fas fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">上一页</p>
-          <p class="prev-next-title"><span class="section-number">2. </span>Hartree-Fock方法的进一步认识</p>
+          <p class="prev-next-title"><span class="section-number">2. </span>Hartree-Fock方法</p>
       </div>
   </a>
   <a class='right-next' id="next-link" href="mcscf.html" title="下一页 页">

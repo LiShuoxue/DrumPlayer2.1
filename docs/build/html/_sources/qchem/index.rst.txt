@@ -11,7 +11,7 @@
    :numbered:
    
    自旋与二次量子化 <spin2q>
-   Hartree-Fock方法的进一步认识 <hfpro>
+   Hartree-Fock方法 <hfpro>
    组态相互作用方法 <ci>
    多参考态方法 <mcscf>
    耦合簇方法 <cc>
