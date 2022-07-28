@@ -98,10 +98,46 @@ RHF的一般讨论
 为何要引入冗余参数呢？因为它的重要性质是， **RHF能量对于它的一阶导为0** 。因为
 
 .. math::
-    
+    :label: redundant-deriv
+
     E_{pq}^{(1)} = 2 \langle [\hat E_{pq}, \hat H]  \rangle_{\mathrm{CSF}}  = -2 \langle \hat H \hat E^-_{pq}\rangle_{\mathrm{CSF}} = 0
 
 因此在轨道旋转当中，优化RHF能量仅需要变换非冗余参数即可，换言之， **优化非冗余参数是解决RHF方程的充要条件** 。虽然冗余参数不改变波函数和能量的性质，但是冗余参数的任意性是的我们可对其添加额外的限制，在不改变结果的同时获得更有物理意义的正则化分子轨道，这就是下一节要说的，所谓 **正则HF理论(Canonical Hartree-Fock Theory)** 的基础。
+
+布里渊定理
+^^^^^^^^^^^^^^^^^^^^
+
+对变分原理的还可以得到Hartree-Fock波函数满足的重要条件，也就是 **布里渊定理(Brillouin Theorem)** ：
+
+* 对于闭壳层轨道，有
+
+.. math::
+    :label: brillouin-theorem
+
+    \langle \mathrm{cs} | \hat H | i\to a \rangle = 0
+
+.. admonition:: 证明
+    :class: prove
+
+    变分条件式 :eq:`redundant-deriv` 可写成：
+
+    .. math::
+
+        \langle \mathrm{cs} | \hat E_{ai} \hat H - \hat H \hat E_{ai} | \mathrm{cs} \rangle = - \langle \mathrm{cs} | \hat H \hat E_{ai} | \mathrm{cs} \rangle = 0 
+    
+    即得到 :eq:`brillouin-theorem` 。
+
+* 广义Brillouin定理(Generalized Brillouin Theorem, GBT)对于任意HF轨道而言，表示为：
+
+.. math:: 
+    :label: gbt
+
+    \langle \mathrm{HF} | \hat H | p \to q \rangle =   \langle \mathrm{HF} | \hat H | q \to p \rangle
+
+可以通过对变分条件式 :eq:`rhf-e-1deriv-real` 为0的条件导出。
+
+广义Brillouin定理显示了HF轨道在激发和退激发之间的平衡性质。
+
 
 正则Hartree-Fock理论
 ----------------------------

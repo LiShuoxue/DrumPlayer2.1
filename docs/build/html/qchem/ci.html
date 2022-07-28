@@ -196,7 +196,39 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   3.1. 引言与若干基本概念
+   3.1. 电子相关的若干基本概念
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ci">
+   3.2. CI的波函数、能量与方程
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   3.3. CI方程的求解技术
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     3.3.1. 牛顿法与近似牛顿法
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     3.3.2. 行列式信息的存储
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     3.3.3. 直接CI算法
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   3.4. CI方法的性质分析
   </a>
  </li>
 </ul>
@@ -221,9 +253,69 @@
   <section id="id1">
 <h1><span class="section-number">3. </span>组态相互作用方法<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
 <section id="id2">
-<h2><span class="section-number">3.1. </span>引言与若干基本概念<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
-<p>在HF方法当中，自旋相同的电子在同一空间坐标出现的概率为0，而自旋相反电子在同一位置出现概率互相独立，这个不合理的情况是由于单Slater行列式的近似忽略 <strong>电子关联(Electron Correlation)</strong> 导致的。由于不同激发的Slater行列式是完备的，因此在考虑电子关联的问题时，我们自然会想到在波函数中添加更多激发组态的办法，从而形成 <strong>组态相互作用(Configuration-Interaction, CI)</strong> 的波函数。对于每个Slater行列式系数的优化通过变分法来求得，即为CI方法的一般思路。</p>
-<p>考虑所有组态的Full-CI方法需要考虑 <span class="math notranslate nohighlight">\((C_n^k)^2\)</span> 个Slater行列式的贡献，其中 <span class="math notranslate nohighlight">\(n\)</span> 为轨道总数目， <span class="math notranslate nohighlight">\(k\)</span> 为占据轨道总数目。这对于一般分子显然是难以计算的。因此我们需要在Full-CI的基础上去做以截断与近似。</p>
+<h2><span class="section-number">3.1. </span>电子相关的若干基本概念<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
+<p>在HF方法当中，自旋相同的电子在同一空间坐标出现的概率为0，而自旋相反电子在同一位置出现概率互相独立，这个不合理的情况是由于单Slater行列式的近似忽略 <strong>电子关联(Electron Correlation)</strong> 导致的。处理电子关联的量子化学方法在HF之后，统一称作 <em>Post-HF</em> 方法。由于不同激发的Slater行列式是完备的，因此在考虑电子关联的问题时，我们自然会想到在波函数中添加更多激发组态的办法。对于每个Slater行列式系数的优化通过变分法来求得，即为CI方法的一般思路。</p>
+<p>考虑所有组态的Full-CI方法需要添加 <span class="math notranslate nohighlight">\((C_n^k)^2\)</span> 个Slater行列式的贡献，其中 <span class="math notranslate nohighlight">\(n\)</span> 为轨道总数目， <span class="math notranslate nohighlight">\(k\)</span> 为占据轨道总数目。这对于一般分子显然是难以计算的。因此我们需要在Full-CI的基础上去做以近似。最直接的近似就是截断激发组态到一定阶数，这就是 <strong>组态相互作用(Configuration-Interaction, CI)方法</strong> 的理论基础。除了CI方法外，之后会陆续介绍 <strong>耦合簇(Coupled-Cluster, CC)方法</strong> 和 <strong>多体微扰理论(Many-Body Perturbation Theory, MBPT)</strong> 等post-HF方法。</p>
+<p>如何选取所需组态需要涉及 <strong>参考态(Reference State)</strong> 的概念。当我们假定波函数由某一个或某几个Slater行列式主导的时候，它们就是各种Post-HF方法的参考态。根据参考态我们也可以衍生出电子相关的两个重要概念： <strong>静态相关(Static Correlation)</strong> 和 <strong>动态相关(Dynamical Correlation)</strong> ：</p>
+<ul class="simple">
+<li><p><em>静态相关</em> 指单Slater行列式无法对体系给出定性正确描述的情况，也就是多参考态方法解决的问题；</p></li>
+<li><p><em>动态相关</em> 指与电子瞬时相互作用有关的关联效应，表现为参考态之外的每个组态都有很小贡献，但加起来是可观的，它便需要在参考态的基础上，使用CI/CC/MBPT等方法来处理。</p></li>
+</ul>
+</section>
+<section id="ci">
+<h2><span class="section-number">3.2. </span>CI的波函数、能量与方程<a class="headerlink" href="#ci" title="永久链接至标题">#</a></h2>
+<p>全局归一化CI的波函数不利于参数化，因此我们往往采取“中间归一化”措施：</p>
+<div class="math notranslate nohighlight" id="equation-intermediate-norm">
+<span class="eqno">(1)<a class="headerlink" href="#equation-intermediate-norm" title="公式的永久链接">#</a></span>\[\langle \mathrm{CSF} | \mathrm{CI} \rangle = 1\]</div>
+<p>我们定义参考态的函数为 <span class="math notranslate nohighlight">\(| 0 \rangle = \sum\limits_i C_i^{(0)} | i \rangle\)</span> ，参考态之外的波函数为 <span class="math notranslate nohighlight">\(| \pmb c \rangle = \sum\limits_i c_i | i \rangle\)</span> ，则总的波函数写为：</p>
+<div class="math notranslate nohighlight" id="equation-ciwfn-prim">
+<span class="eqno">(2)<a class="headerlink" href="#equation-ciwfn-prim" title="公式的永久链接">#</a></span>\[| \pmb C \rangle = \dfrac{\sum\limits_i (C_i^{(0)} + c_i) | i \rangle}{\sqrt{(\pmb C^{(0)} + \pmb c)^ T (\pmb C^{(0)} + \pmb c)}}\]</div>
+<p>该波函数依然存在多余的参数。考虑 <span class="math notranslate nohighlight">\(\pmb c_\alpha = \pmb c + \alpha (\pmb C^{(0)} + \pmb c)\)</span> ，则会得到相同的波函数。为了去除参数冗余性，定义投影算符</p>
+<div class="math notranslate nohighlight" id="equation-projop">
+<span class="eqno">(3)<a class="headerlink" href="#equation-projop" title="公式的永久链接">#</a></span>\[\hat P = \hat I - | 0 \rangle \langle 0 |\]</div>
+<p>将参数 <span class="math notranslate nohighlight">\(\pmb c \to \hat P \pmb c\)</span> 固定在垂直于 <span class="math notranslate nohighlight">\(\pmb C_0\)</span> 的方向上面，构建的波函数即为：</p>
+<div class="math notranslate nohighlight" id="equation-ciwfn">
+<span class="eqno">(4)<a class="headerlink" href="#equation-ciwfn" title="公式的永久链接">#</a></span>\[| \pmb C \rangle = \dfrac{| 0 \rangle + \hat P | \pmb c \rangle }{\sqrt{1 + \langle \pmb c | \hat P | \pmb c \rangle}}\]</div>
+<p>通过波函数 <a class="reference internal" href="#equation-ciwfn">(4)</a> 定义的CI能量为：</p>
+<div class="math notranslate nohighlight" id="equation-cienergy">
+<span class="eqno">(5)<a class="headerlink" href="#equation-cienergy" title="公式的永久链接">#</a></span>\[E(\pmb c) = \langle \pmb C | \hat H | \pmb C \rangle = \dfrac{E^{(0)} + 2 \pmb c^T \pmb P \pmb H \pmb C^{0} + \pmb c^T \pmb P \pmb H \pmb P \pmb c}{1 + \pmb c^T \pmb P \pmb c}\]</div>
+<p>其中Hamilton矩阵 <span class="math notranslate nohighlight">\(\pmb H\)</span> 是在组态空间上展开的；投影算符矩阵 <span class="math notranslate nohighlight">\(\pmb P = \pmb I - \pmb C{(0)} \pmb C^{(0)T}\)</span></p>
+<p>在 <span class="math notranslate nohighlight">\(\pmb C = 0\)</span> 时，能量的一阶梯度和二阶梯度分别为：</p>
+<div class="math notranslate nohighlight" id="equation-cienergy-1deriv">
+<span class="eqno">(6)<a class="headerlink" href="#equation-cienergy-1deriv" title="公式的永久链接">#</a></span>\[\pmb E^{(1)} = 2 \pmb P \pmb H \pmb C^{(0)} = 2 (\pmb H - E^{(0) \pmb I} \pmb C^{(0)})\]</div>
+<div class="math notranslate nohighlight" id="equation-cienergy-2deriv">
+<span class="eqno">(7)<a class="headerlink" href="#equation-cienergy-2deriv" title="公式的永久链接">#</a></span>\[\pmb E^{(2)} = 2 \pmb P (\pmb H - E^{(0)} \pmb I) \pmb P\]</div>
+<p>一阶梯度为0的条件等价于CI方程</p>
+<div class="math notranslate nohighlight" id="equation-ci-eq">
+<span class="eqno">(8)<a class="headerlink" href="#equation-ci-eq" title="公式的永久链接">#</a></span>\[\pmb H \pmb C^{(0)} = E^{(0)} \pmb C^{(0)}\]</div>
+</section>
+<section id="id3">
+<h2><span class="section-number">3.3. </span>CI方程的求解技术<a class="headerlink" href="#id3" title="永久链接至标题">#</a></h2>
+<section id="id4">
+<h3><span class="section-number">3.3.1. </span>牛顿法与近似牛顿法<a class="headerlink" href="#id4" title="永久链接至标题">#</a></h3>
+<p>在牛顿法中，我们通过方程</p>
+<div class="math notranslate nohighlight">
+\[\pmb E^{(2)} \pmb c = - \pmb E^{(1)}\]</div>
+<p>来更新CI向量的变化量。而由于冗余性的消除导致 <span class="math notranslate nohighlight">\(\pmb c\)</span> 需要满足条件 <span class="math notranslate nohighlight">\(\pmb C^{(0)T} \pmb c = 0\)</span> ，因此在能量二阶梯度上增加如下的额外项也能满足 <span class="math notranslate nohighlight">\(\pmb c\)</span> 的要求：</p>
+<div class="math notranslate nohighlight">
+\[(\pmb E^{(2)} + 2 \alpha \pmb C^{(0)} \pmb C^{(0)T} ) \pmb c = - \pmb E^{(1)}\]</div>
+<p>但是解此方程仍然可以得到和冗余参数 <span class="math notranslate nohighlight">\(\alpha\)</span> 无关的 <span class="math notranslate nohighlight">\(\pmb c\)</span> ：</p>
+<div class="math notranslate nohighlight" id="equation-ci-newton">
+<span class="eqno">(9)<a class="headerlink" href="#equation-ci-newton" title="公式的永久链接">#</a></span>\[\begin{split}\pmb c = - \pmb C^{(0)} + \dfrac{(\pmb H - E^{0} \pmb I)^{-1} \pmb C^{0}}{\pmb C^{(0)T} (\pmb H - E^{0} \pmb I)^{-1} \pmb C^{0}} \\ \pmb C = \dfrac{(\pmb H - E^{0} \pmb I)^{-1} \pmb C^{0}}{\| (\pmb H - E^{0} \pmb I)^{-1} \pmb C^{0} \|}\end{split}\]</div>
+<p>CI的牛顿法是三阶收敛的，但由于 <a class="reference internal" href="#equation-ci-newton">(9)</a> 中存在难求的Hamilton量矩阵逆 <span class="math notranslate nohighlight">\((\pmb H - E^{0} \pmb I)^{-1}\)</span> ，这使得每一步的耗费巨大。因此我们可以通过使用一个近似Hamilton量 <span class="math notranslate nohighlight">\((\pmb H^{(0)} - E^{(0)} \pmb I)^{-1}\)</span> 的方法来获得，该方法便称为准牛顿法。经过进一步简化可以得到下面的 <strong>Davidson方法</strong> 的更新策略：</p>
+<div class="math notranslate nohighlight" id="equation-davidson">
+<span class="eqno">(10)<a class="headerlink" href="#equation-davidson" title="公式的永久链接">#</a></span>\[\pmb c^{\mathrm{dav}} = - (\pmb H_0 - E^{(0)} \pmb I)^{-1} (\pmb H - E^{(0)} \pmb I) \pmb C^{(0)}\]</div>
+<p>在PySCF的CI求解过程中使用了Davidson方法，见 <code class="docutils literal notranslate"><span class="pre">lib.linalg_helper.davidson1</span></code> 函数。其传入了一个名为 <code class="docutils literal notranslate"><span class="pre">precond</span></code> 的函数用以完成 <span class="math notranslate nohighlight">\(\pmb x \to (\pmb H^{(0)} - E^{(0)} \pmb I)^{-1} \pmb x\)</span> 的变换。同理对于 <span class="math notranslate nohighlight">\(\pmb H\)</span> 本身，在CI算法中也没有保存巨大的哈密顿矩阵，而是通过巧妙选取 <span class="math notranslate nohighlight">\(\pmb x \to \pmb H \pmb x\)</span> 的函数，来大幅减小存储空间和时间复杂度。在本节后两个主题会继续讨论CI的计算细节。</p>
+</section>
+<section id="id5">
+<h3><span class="section-number">3.3.2. </span>行列式信息的存储<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h3>
+</section>
+<section id="id6">
+<h3><span class="section-number">3.3.3. </span>直接CI算法<a class="headerlink" href="#id6" title="永久链接至标题">#</a></h3>
+</section>
+</section>
+<section id="id7">
+<h2><span class="section-number">3.4. </span>CI方法的性质分析<a class="headerlink" href="#id7" title="永久链接至标题">#</a></h2>
 </section>
 </section>
 
