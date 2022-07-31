@@ -429,6 +429,34 @@
 <p>前述的正则HF理论适用于闭壳层体系，但是对于开壳层体系，由于单占据轨道的存在使得所考虑的情形更为复杂。因此我们需要更深入考察HF能量的一阶和二阶梯度性质。</p>
 <section id="id8">
 <h3><span class="section-number">2.3.1. </span>能量一阶导与广义Fock算符<a class="headerlink" href="#id8" title="永久链接至标题">#</a></h3>
+<p>对于任何的CSF，能量一阶梯度总能写成</p>
+<div class="math notranslate nohighlight">
+\[E_{mn}^{(1)} = 2(F_{mn} - F_{nm})\]</div>
+<p>其中定义了广义Fock矩阵的矩阵元</p>
+<div class="math notranslate nohighlight" id="equation-general-fock">
+<span class="eqno">(12)<a class="headerlink" href="#equation-general-fock" title="公式的永久链接">#</a></span>\[F_{mn} = \sum\limits_\sigma \langle \mathrm{CSF} | \hat a_{m \sigma}^\dagger [\hat a_{n\sigma}, \hat H] |\mathrm{CSF} \rangle\]</div>
+<p>注意和正则RHF中讨论的Fock算符不同， <span class="math notranslate nohighlight">\(\hat a_{m \sigma}^\dagger [\hat a_{n\sigma}, \hat H]\)</span> 并非单体算符，它等于 <span class="math notranslate nohighlight">\(\sum\limits_{q}  h_{nq} \hat E_{mq} + \sum\limits_{qrs} g_{nqrs} \hat e_{mqrs}\)</span> 。用一阶密度矩阵和二阶密度矩阵元可以写出广义Fock矩阵</p>
+<div class="math notranslate nohighlight" id="equation-general-fock-from-dm">
+<span class="eqno">(13)<a class="headerlink" href="#equation-general-fock-from-dm" title="公式的永久链接">#</a></span>\[F_{mn} = \sum\limits_{q} D_{mq} h_{nq} + \sum\limits_{qrs} d_{mqrs} g_{nqrs}\]</div>
+<p>在 <span class="math notranslate nohighlight">\(F_{mn}\)</span> 的计算当中，对 <span class="math notranslate nohighlight">\(m\)</span> 分不同轨道讨论会大大减小直接用 <a class="reference internal" href="#equation-general-fock-from-dm">(13)</a> 式的计算量。</p>
+<p>对于双占据轨道，有</p>
+<div class="math notranslate nohighlight" id="equation-fock-in">
+<span class="eqno">(14)<a class="headerlink" href="#equation-fock-in" title="公式的永久链接">#</a></span>\[F_{in} = 2 (^I F_{ni} + ^A F_{ni})\]</div>
+<p>其中 <em>非活性Fock矩阵</em> 和 <em>活性Fock矩阵</em> 分别为：</p>
+<div class="math notranslate nohighlight" id="equation-inactive-fock">
+<span class="eqno">(15)<a class="headerlink" href="#equation-inactive-fock" title="公式的永久链接">#</a></span>\[^I F_{mn} = h_{mn} + \sum\limits_i (2 g_{mnii} - g_{miin})\]</div>
+<div class="math notranslate nohighlight" id="equation-active-fock">
+<span class="eqno">(16)<a class="headerlink" href="#equation-active-fock" title="公式的永久链接">#</a></span>\[^A F_{mn} = \sum\limits_{vw} (g_{mnvw} - \dfrac{1}{2} g_{mwvn})\]</div>
+<p>对于单占据轨道，有</p>
+<div class="math notranslate nohighlight" id="equation-fock-vn">
+<span class="eqno">(17)<a class="headerlink" href="#equation-fock-vn" title="公式的永久链接">#</a></span>\[F_{vn} = \sum\limits_w {^I F_{nw}} D_{vw} + Q_{vn}\]</div>
+<p>其中Q矩阵为</p>
+<div class="math notranslate nohighlight" id="equation-q-matrix">
+<span class="eqno">(18)<a class="headerlink" href="#equation-q-matrix" title="公式的永久链接">#</a></span>\[Q_{vm} = \sum\limits_{wxy} d_{vwxy} g_{mwxy}\]</div>
+<p>对于未占据轨道，有</p>
+<div class="math notranslate nohighlight" id="equation-fock-an">
+<span class="eqno">(19)<a class="headerlink" href="#equation-fock-an" title="公式的永久链接">#</a></span>\[F_{an} = 0\]</div>
+<p>这样对于广义Fock矩阵的拆分，方便区别处理各种占据的情况，在二阶SCF乃至之后讨论的多参考态SCF中，它是非常有用的。</p>
 </section>
 <section id="id9">
 <h3><span class="section-number">2.3.2. </span>能量二阶导<a class="headerlink" href="#id9" title="永久链接至标题">#</a></h3>

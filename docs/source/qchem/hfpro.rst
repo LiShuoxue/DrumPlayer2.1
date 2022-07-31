@@ -195,6 +195,70 @@ Fock算符的构建
 能量一阶导与广义Fock算符
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+对于任何的CSF，能量一阶梯度总能写成
+
+.. math::
+
+    E_{mn}^{(1)} = 2(F_{mn} - F_{nm})
+
+其中定义了广义Fock矩阵的矩阵元
+
+.. math::
+    :label: general-fock
+
+    F_{mn} = \sum\limits_\sigma \langle \mathrm{CSF} | \hat a_{m \sigma}^\dagger [\hat a_{n\sigma}, \hat H] |\mathrm{CSF} \rangle
+
+注意和正则RHF中讨论的Fock算符不同， :math:`\hat a_{m \sigma}^\dagger [\hat a_{n\sigma}, \hat H]` 并非单体算符，它等于 :math:`\sum\limits_{q}  h_{nq} \hat E_{mq} + \sum\limits_{qrs} g_{nqrs} \hat e_{mqrs}` 。用一阶密度矩阵和二阶密度矩阵元可以写出广义Fock矩阵
+
+.. math::
+    :label: general-fock-from-dm
+
+    F_{mn} = \sum\limits_{q} D_{mq} h_{nq} + \sum\limits_{qrs} d_{mqrs} g_{nqrs}
+
+在 :math:`F_{mn}` 的计算当中，对 :math:`m` 分不同轨道讨论会大大减小直接用 :eq:`general-fock-from-dm` 式的计算量。
+
+对于双占据轨道，有
+
+.. math::
+    :label: fock-in
+
+    F_{in} = 2 (^I F_{ni} + ^A F_{ni})
+
+其中 *非活性Fock矩阵* 和 *活性Fock矩阵* 分别为：
+
+.. math::
+    :label: inactive-fock
+
+    ^I F_{mn} = h_{mn} + \sum\limits_i (2 g_{mnii} - g_{miin})
+
+.. math::
+    :label: active-fock
+
+    ^A F_{mn} = \sum\limits_{vw} (g_{mnvw} - \dfrac{1}{2} g_{mwvn})
+
+对于单占据轨道，有
+
+.. math::
+    :label: fock-vn
+
+    F_{vn} = \sum\limits_w {^I F_{nw}} D_{vw} + Q_{vn}
+
+其中Q矩阵为
+
+.. math::
+    :label: q-matrix
+
+    Q_{vm} = \sum\limits_{wxy} d_{vwxy} g_{mwxy}
+
+对于未占据轨道，有
+
+.. math::
+    :label: fock-an
+
+    F_{an} = 0
+
+这样对于广义Fock矩阵的拆分，方便区别处理各种占据的情况，在二阶SCF乃至之后讨论的多参考态SCF中，它是非常有用的。
+
 能量二阶导
 ^^^^^^^^^^^^^^^^
 

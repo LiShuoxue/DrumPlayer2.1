@@ -49,6 +49,22 @@
 
     \hat H = \sum\limits_{pq} h_{pq} \hat H_{pq} + \dfrac{1}{2} \sum\limits_{pqrs} g_{pqrs} \hat e_{pqrs} + \hat h_{nuc}
 
+.. important::
+
+    单体算符矩阵元
+
+    .. math::
+        :label: h-element
+
+        h_{pq} = \int \phi^{*}_p(\pmb r) (-\dfrac{1}{2} \nabla^2 - \sum\limits_I \dfrac{Z_I}{r_I} ) \phi_q (\pmb r) \mathrm d \pmb r = (p|q) = \langle p | q \rangle
+
+    二体算符矩阵元
+
+    .. math::
+        :label: g-element
+
+        g_{pqrs} = \iint \dfrac{\phi_p^*(\pmb r_1) \phi_q(\pmb r_1) \phi_r^*(\pmb r_2) \phi_s(\pmb r_2)}{|\pmb r_1 - \pmb r_2|} \mathrm d \pmb r_1 \mathrm d \pmb r_2 = (pq|rs) = \langle pr | qs \rangle
+
 
 纯自旋算符
 ^^^^^^^^^^^^^^^
@@ -90,6 +106,23 @@
     :label: total-spin-op
 
     \hat S^2 = \hat S_- \hat S_+ + \hat S_z (\hat S_z + 1)
+    
+约化密度矩阵
+--------------------------
+
+对于算符期望值的计算往往使用密度矩阵是容易的。我们首先给出单电子和双电子约化密度矩阵(1-rdm & 2-rdm)的定义：
+
+.. math::
+    :label: 1-rdm
+
+    D_{pq} = \langle \hat E_{pq} \rangle
+
+.. math::
+    :label: 2-rdm
+
+    d_{pqrs} = \langle \hat e_{pqrs} \rangle
+
+那么对于
 
 自旋张量算符
 --------------------------
@@ -182,3 +215,4 @@ CSF组合系数的确定
     证明 :eq:`comb-coeff` 的两式。
 
     **提示：** 使用张量算符和自旋升降算符的对易关系 :eq:`spin-ten-op-commute` 可以得到组合系数之间的迭代关系。
+
