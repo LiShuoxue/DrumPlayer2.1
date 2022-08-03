@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>量子化学学习笔记 &#8212; LyThacHoc  文档</title>
+    <title>6. 多体微扰方法 &#8212; LyThacHoc  文档</title>
 <script>
   document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
   document.documentElement.dataset.theme = localStorage.getItem("theme") || "light"
@@ -37,8 +37,8 @@
     <script src="../_static/translations.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="1. 自旋与二次量子化" href="spin2q.html" />
-    <link rel="prev" title="欢迎来到咱家的个人Blog!" href="../index.html" />
+    <link rel="next" title="哗啦啦2.1" href="../drumplayer/index.html" />
+    <link rel="prev" title="5. 耦合簇方法" href="cc.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="zh_CN">
   </head>
@@ -83,7 +83,7 @@
       <div class="navbar-center-item">
         <ul id="navbar-main-elements" class="navbar-nav">
     <li class="toctree-l1 current active nav-item">
- <a class="current reference internal nav-link" href="#">
+ <a class="reference internal nav-link" href="index.html">
   量子化学
  </a>
 </li>
@@ -143,7 +143,7 @@
   Content
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="spin2q.html">
    1. 自旋与二次量子化
@@ -169,8 +169,8 @@
    5. 耦合簇方法
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="mbpt.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    6. 多体微扰方法
   </a>
  </li>
@@ -192,9 +192,24 @@
     
     <div class="toc-item">
       
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
 
 <nav id="bd-toc-nav">
-    
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   6.1. 引言
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   6.2. 瑞利-薛定谔微扰理论
+  </a>
+ </li>
+</ul>
+
 </nav>
     </div>
     
@@ -213,61 +228,13 @@
               <article class="bd-article" role="main">
                 
   <section id="id1">
-<h1>量子化学学习笔记<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
-<p>自觉忝列Caltech，遂亡羊补牢。</p>
-<p>以Szabo书的基础介绍作为引子，主要参考紫书的理论讲解，并且结合PySCF程序的实现重新来构建量子化学知识体系。</p>
-<p>持续更新中…</p>
-<div class="toctree-wrapper compound">
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Content</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="spin2q.html">1. 自旋与二次量子化</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="spin2q.html#id2">1.1. 二次量子化语言对自旋的表达</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spin2q.html#id5">1.2. 约化密度矩阵</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spin2q.html#id6">1.3. 自旋张量算符</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spin2q.html#id7">1.4. 自旋匹配波函数</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="hfpro.html">2. Hartree-Fock方法</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hfpro.html#rhf">2.1. RHF的一般讨论</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hfpro.html#id4">2.2. 正则Hartree-Fock理论</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hfpro.html#id8">2.3. 二阶优化方法</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="ci.html">3. 组态相互作用方法</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ci.html#id2">3.1. 电子相关的若干基本概念</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ci.html#ci">3.2. CI的波函数、能量与方程</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ci.html#id3">3.3. CI方程的求解技术</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ci.html#id7">3.4. CI方法的性质分析</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="mcscf.html">4. 多参考态自洽场方法</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mcscf.html#id2">4.1. 若干基本概念</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mcscf.html#id3">4.2. MCSCF的实际求解</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mcscf.html#id6">4.3. 态平均方法</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="cc.html">5. 耦合簇方法</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cc.html#id2">5.1. 引言</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cc.html#id3">5.2. 指数拟设的波函数</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cc.html#cc">5.3. CC方程的求解</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cc.html#ccsd">5.4. 例子：闭壳层CCSD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cc.html#eom-cc">5.5. EOM-CC方法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cc.html#id5">5.6. 高自旋开壳层CC方法</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="mbpt.html">6. 多体微扰方法</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mbpt.html#id2">6.1. 引言</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mbpt.html#id3">6.2. 瑞利-薛定谔微扰理论</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<p>主要参考书目：</p>
-<ul class="simple">
-<li><p>Szabo, A. and Ostlund, N. S. <em>Modern Quantum Chemistry;</em> Dover: New York, 1989.</p></li>
-<li><p>Helgaker, T.; Jorgensen, P. and Olsen, J. <em>Molecular Electronic-Structure Theory;</em> John Wiley: Chichester, 1999.</p></li>
-<li><p>蒋鸿老师的量子化学讲义 (2021年春)</p></li>
-</ul>
+<h1><span class="section-number">6. </span>多体微扰方法<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
+<section id="id2">
+<h2><span class="section-number">6.1. </span>引言<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
+</section>
+<section id="id3">
+<h2><span class="section-number">6.2. </span>瑞利-薛定谔微扰理论<a class="headerlink" href="#id3" title="永久链接至标题">#</a></h2>
+</section>
 </section>
 
 
@@ -278,17 +245,17 @@
               <footer class="bd-footer-article">
                   <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="../index.html" title="上一页 页">
+  <a class='left-prev' id="prev-link" href="cc.html" title="上一页 页">
       <i class="fas fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">上一页</p>
-          <p class="prev-next-title">欢迎来到咱家的个人Blog!</p>
+          <p class="prev-next-title"><span class="section-number">5. </span>耦合簇方法</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="spin2q.html" title="下一页 页">
+  <a class='right-next' id="next-link" href="../drumplayer/index.html" title="下一页 页">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">下一页</p>
-      <p class="prev-next-title"><span class="section-number">1. </span>自旋与二次量子化</p>
+      <p class="prev-next-title">哗啦啦2.1</p>
   </div>
   <i class="fas fa-angle-right"></i>
   </a>

@@ -152,4 +152,20 @@ CC方程的求解
 
     \pmb \Omega^{(1)} (\pmb t^{(n)}) \Delta \pmb t^{(n)} = - \pmb \Omega(t^{(n)})
 
-来获得。但是它仍然非常复杂。因此我们希望从 :math:`\pmb \Omega^{(1)}` 的结构出发简化迭代步骤。考虑在Hartree-Fock分子轨道表象之下， :math:`\pmb \Omega^{(1)}` 可以表示成
+来获得。但是它仍然非常复杂。因此我们希望从 :math:`\pmb \Omega^{(1)}` 的结构出发简化迭代步骤。考虑在Hartree-Fock分子轨道表象之下， :math:`\pmb \Omega` 可以表示成
+
+.. math::
+    :label: omega-0-in-fock
+
+    \Omega_\mu(\pmb t) = \varepsilon_\mu t_\mu + \langle \mu | \exp(- \hat T ) \hat \Phi \exp^(\hat T) | \mathrm{HF} \rangle
+
+其中的 :math:`\hat \Phi` 为Hartree-Fock波动势。从中可见 :math:`\pmb \Omega^{(1)} \approx \pmb \varepsilon` ，振幅 
+
+例子：闭壳层CCSD
+---------------------
+
+EOM-CC方法
+--------------------
+
+高自旋开壳层CC方法
+--------------------------

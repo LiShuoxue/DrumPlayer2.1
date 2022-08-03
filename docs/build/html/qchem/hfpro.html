@@ -162,12 +162,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="mcscf.html">
-   4. 多参考态方法
+   4. 多参考态自洽场方法
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="cc.html">
    5. 耦合簇方法
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mbpt.html">
+   6. 多体微扰方法
   </a>
  </li>
 </ul>
@@ -233,23 +238,33 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id6">
-     2.2.3. 原子轨道下的自洽场方程
+     2.2.3. 波动势
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#koopmans">
+     2.2.4. Koopmans定理
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     2.2.5. 原子轨道下的自洽场方程
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id7">
+  <a class="reference internal nav-link" href="#id8">
    2.3. 二阶优化方法
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id8">
+    <a class="reference internal nav-link" href="#id9">
      2.3.1. 能量一阶导与广义Fock算符
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id9">
+    <a class="reference internal nav-link" href="#id10">
      2.3.2. 能量二阶导
     </a>
    </li>
@@ -421,45 +436,66 @@
 <h3><span class="section-number">2.2.2. </span>闭壳层RHF的总能量与轨道能量<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h3>
 </section>
 <section id="id6">
-<h3><span class="section-number">2.2.3. </span>原子轨道下的自洽场方程<a class="headerlink" href="#id6" title="永久链接至标题">#</a></h3>
+<h3><span class="section-number">2.2.3. </span>波动势<a class="headerlink" href="#id6" title="永久链接至标题">#</a></h3>
+<p>在引入Fock算符之后，总的Hamilton量可以写成</p>
+<div class="math notranslate nohighlight" id="equation-hamilton-with-fock">
+<span class="eqno">(12)<a class="headerlink" href="#equation-hamilton-with-fock" title="公式的永久链接">#</a></span>\[\hat H = \hat f + \hat \Phi + \hat h_{nuc}\]</div>
+<p>其中 <em>“波动势(Fluctuation Potential)”</em> 定义为：</p>
+<div class="math notranslate nohighlight" id="equation-fluctuation-potential">
+<span class="eqno">(13)<a class="headerlink" href="#equation-fluctuation-potential" title="公式的永久链接">#</a></span>\[\hat \Phi = \hat g - \hat V\]</div>
+<p>为精确的双电子算符和单电子Fock势算符之差，式中的 <span class="math notranslate nohighlight">\(\hat V\)</span> 定义为：</p>
+<div class="math notranslate nohighlight" id="equation-v-operator">
+<span class="eqno">(14)<a class="headerlink" href="#equation-v-operator" title="公式的永久链接">#</a></span>\[\hat V = \sum\limits_{pq} \sum\limits_i (2 g_{pqii} - g_{piiq}) \hat E_{pq}\]</div>
+<p>其在Hartree-Fock轨道的期望值为：</p>
+<div class="math notranslate nohighlight">
+\[\langle \mathrm{HF} | \hat \Phi | \mathrm{HF} \rangle = - \langle \mathrm{HF} | \hat g | \mathrm{HF} \rangle\]</div>
+<p>总的Hartree-Fock能量可以写成分子轨道能量与波动势期望之和：</p>
+<div class="math notranslate nohighlight">
+\[E = 2 \sum\limits_i \varepsilon_i + \langle \mathrm{HF} | \hat \Phi | \mathrm{HF} \rangle + h_{nuc}\]</div>
 </section>
+<section id="koopmans">
+<h3><span class="section-number">2.2.4. </span>Koopmans定理<a class="headerlink" href="#koopmans" title="永久链接至标题">#</a></h3>
 </section>
 <section id="id7">
-<h2><span class="section-number">2.3. </span>二阶优化方法<a class="headerlink" href="#id7" title="永久链接至标题">#</a></h2>
-<p>前述的正则HF理论适用于闭壳层体系，但是对于开壳层体系，由于单占据轨道的存在使得所考虑的情形更为复杂。因此我们需要更深入考察HF能量的一阶和二阶梯度性质。</p>
+<h3><span class="section-number">2.2.5. </span>原子轨道下的自洽场方程<a class="headerlink" href="#id7" title="永久链接至标题">#</a></h3>
+</section>
+</section>
 <section id="id8">
-<h3><span class="section-number">2.3.1. </span>能量一阶导与广义Fock算符<a class="headerlink" href="#id8" title="永久链接至标题">#</a></h3>
+<h2><span class="section-number">2.3. </span>二阶优化方法<a class="headerlink" href="#id8" title="永久链接至标题">#</a></h2>
+<p>前述的正则HF理论适用于闭壳层体系，但是对于开壳层体系，由于单占据轨道的存在使得所考虑的情形更为复杂。因此我们需要更深入考察HF能量的一阶和二阶梯度性质。</p>
+<section id="id9">
+<h3><span class="section-number">2.3.1. </span>能量一阶导与广义Fock算符<a class="headerlink" href="#id9" title="永久链接至标题">#</a></h3>
 <p>对于任何的CSF，能量一阶梯度总能写成</p>
 <div class="math notranslate nohighlight">
 \[E_{mn}^{(1)} = 2(F_{mn} - F_{nm})\]</div>
 <p>其中定义了广义Fock矩阵的矩阵元</p>
 <div class="math notranslate nohighlight" id="equation-general-fock">
-<span class="eqno">(12)<a class="headerlink" href="#equation-general-fock" title="公式的永久链接">#</a></span>\[F_{mn} = \sum\limits_\sigma \langle \mathrm{CSF} | \hat a_{m \sigma}^\dagger [\hat a_{n\sigma}, \hat H] |\mathrm{CSF} \rangle\]</div>
+<span class="eqno">(15)<a class="headerlink" href="#equation-general-fock" title="公式的永久链接">#</a></span>\[F_{mn} = \sum\limits_\sigma \langle \mathrm{CSF} | \hat a_{m \sigma}^\dagger [\hat a_{n\sigma}, \hat H] |\mathrm{CSF} \rangle\]</div>
 <p>注意和正则RHF中讨论的Fock算符不同， <span class="math notranslate nohighlight">\(\hat a_{m \sigma}^\dagger [\hat a_{n\sigma}, \hat H]\)</span> 并非单体算符，它等于 <span class="math notranslate nohighlight">\(\sum\limits_{q}  h_{nq} \hat E_{mq} + \sum\limits_{qrs} g_{nqrs} \hat e_{mqrs}\)</span> 。用一阶密度矩阵和二阶密度矩阵元可以写出广义Fock矩阵</p>
 <div class="math notranslate nohighlight" id="equation-general-fock-from-dm">
-<span class="eqno">(13)<a class="headerlink" href="#equation-general-fock-from-dm" title="公式的永久链接">#</a></span>\[F_{mn} = \sum\limits_{q} D_{mq} h_{nq} + \sum\limits_{qrs} d_{mqrs} g_{nqrs}\]</div>
-<p>在 <span class="math notranslate nohighlight">\(F_{mn}\)</span> 的计算当中，对 <span class="math notranslate nohighlight">\(m\)</span> 分不同轨道讨论会大大减小直接用 <a class="reference internal" href="#equation-general-fock-from-dm">(13)</a> 式的计算量。</p>
+<span class="eqno">(16)<a class="headerlink" href="#equation-general-fock-from-dm" title="公式的永久链接">#</a></span>\[F_{mn} = \sum\limits_{q} D_{mq} h_{nq} + \sum\limits_{qrs} d_{mqrs} g_{nqrs}\]</div>
+<p>在 <span class="math notranslate nohighlight">\(F_{mn}\)</span> 的计算当中，对 <span class="math notranslate nohighlight">\(m\)</span> 分不同轨道讨论会大大减小直接用 <a class="reference internal" href="#equation-general-fock-from-dm">(16)</a> 式的计算量。</p>
 <p>对于双占据轨道，有</p>
 <div class="math notranslate nohighlight" id="equation-fock-in">
-<span class="eqno">(14)<a class="headerlink" href="#equation-fock-in" title="公式的永久链接">#</a></span>\[F_{in} = 2 (^I F_{ni} + ^A F_{ni})\]</div>
+<span class="eqno">(17)<a class="headerlink" href="#equation-fock-in" title="公式的永久链接">#</a></span>\[F_{in} = 2 (^I F_{ni} + ^A F_{ni})\]</div>
 <p>其中 <em>非活性Fock矩阵</em> 和 <em>活性Fock矩阵</em> 分别为：</p>
 <div class="math notranslate nohighlight" id="equation-inactive-fock">
-<span class="eqno">(15)<a class="headerlink" href="#equation-inactive-fock" title="公式的永久链接">#</a></span>\[^I F_{mn} = h_{mn} + \sum\limits_i (2 g_{mnii} - g_{miin})\]</div>
+<span class="eqno">(18)<a class="headerlink" href="#equation-inactive-fock" title="公式的永久链接">#</a></span>\[^I F_{mn} = h_{mn} + \sum\limits_i (2 g_{mnii} - g_{miin})\]</div>
 <div class="math notranslate nohighlight" id="equation-active-fock">
-<span class="eqno">(16)<a class="headerlink" href="#equation-active-fock" title="公式的永久链接">#</a></span>\[^A F_{mn} = \sum\limits_{vw} (g_{mnvw} - \dfrac{1}{2} g_{mwvn})\]</div>
+<span class="eqno">(19)<a class="headerlink" href="#equation-active-fock" title="公式的永久链接">#</a></span>\[^A F_{mn} = \sum\limits_{vw} (g_{mnvw} - \dfrac{1}{2} g_{mwvn})\]</div>
 <p>对于单占据轨道，有</p>
 <div class="math notranslate nohighlight" id="equation-fock-vn">
-<span class="eqno">(17)<a class="headerlink" href="#equation-fock-vn" title="公式的永久链接">#</a></span>\[F_{vn} = \sum\limits_w {^I F_{nw}} D_{vw} + Q_{vn}\]</div>
+<span class="eqno">(20)<a class="headerlink" href="#equation-fock-vn" title="公式的永久链接">#</a></span>\[F_{vn} = \sum\limits_w {^I F_{nw}} D_{vw} + Q_{vn}\]</div>
 <p>其中Q矩阵为</p>
 <div class="math notranslate nohighlight" id="equation-q-matrix">
-<span class="eqno">(18)<a class="headerlink" href="#equation-q-matrix" title="公式的永久链接">#</a></span>\[Q_{vm} = \sum\limits_{wxy} d_{vwxy} g_{mwxy}\]</div>
+<span class="eqno">(21)<a class="headerlink" href="#equation-q-matrix" title="公式的永久链接">#</a></span>\[Q_{vm} = \sum\limits_{wxy} d_{vwxy} g_{mwxy}\]</div>
 <p>对于未占据轨道，有</p>
 <div class="math notranslate nohighlight" id="equation-fock-an">
-<span class="eqno">(19)<a class="headerlink" href="#equation-fock-an" title="公式的永久链接">#</a></span>\[F_{an} = 0\]</div>
+<span class="eqno">(22)<a class="headerlink" href="#equation-fock-an" title="公式的永久链接">#</a></span>\[F_{an} = 0\]</div>
 <p>这样对于广义Fock矩阵的拆分，方便区别处理各种占据的情况，在二阶SCF乃至之后讨论的多参考态SCF中，它是非常有用的。</p>
 </section>
-<section id="id9">
-<h3><span class="section-number">2.3.2. </span>能量二阶导<a class="headerlink" href="#id9" title="永久链接至标题">#</a></h3>
+<section id="id10">
+<h3><span class="section-number">2.3.2. </span>能量二阶导<a class="headerlink" href="#id10" title="永久链接至标题">#</a></h3>
 </section>
 <section id="soscf">
 <h3><span class="section-number">2.3.3. </span>SOSCF的实际求解<a class="headerlink" href="#soscf" title="永久链接至标题">#</a></h3>

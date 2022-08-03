@@ -184,6 +184,47 @@ Fock算符的构建
 闭壳层RHF的总能量与轨道能量
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+波动势
+^^^^^^^^^^^
+
+
+在引入Fock算符之后，总的Hamilton量可以写成
+
+.. math::
+    :label: hamilton-with-fock
+
+    \hat H = \hat f + \hat \Phi + \hat h_{nuc}
+
+其中 *“波动势(Fluctuation Potential)”* 定义为：
+
+.. math::
+    :label: fluctuation-potential
+
+    \hat \Phi = \hat g - \hat V
+
+为精确的双电子算符和单电子Fock势算符之差，式中的 :math:`\hat V` 定义为：
+
+.. math::
+    :label: v-operator
+
+    \hat V = \sum\limits_{pq} \sum\limits_i (2 g_{pqii} - g_{piiq}) \hat E_{pq}
+
+其在Hartree-Fock轨道的期望值为：
+
+.. math::
+
+    \langle \mathrm{HF} | \hat \Phi | \mathrm{HF} \rangle = - \langle \mathrm{HF} | \hat g | \mathrm{HF} \rangle
+
+
+总的Hartree-Fock能量可以写成分子轨道能量与波动势期望之和：
+
+.. math::
+
+    E = 2 \sum\limits_i \varepsilon_i + \langle \mathrm{HF} | \hat \Phi | \mathrm{HF} \rangle + h_{nuc}
+
+Koopmans定理
+^^^^^^^^^^^^^^^^^^^^^
+
 原子轨道下的自洽场方程
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
