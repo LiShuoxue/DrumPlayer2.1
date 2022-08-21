@@ -202,7 +202,7 @@ Fock算符的构建
 
     \hat \Phi = \hat g - \hat V
 
-为精确的双电子算符和单电子Fock势算符之差，式中的 :math:`\hat V` 定义为：
+为精确的双电子算符和单电子Fock算符之差，式中的 :math:`\hat V` 定义为：
 
 .. math::
     :label: v-operator

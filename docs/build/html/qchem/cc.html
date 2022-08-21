@@ -233,7 +233,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#eom-cc">
-   5.5. EOM-CC方法
+   5.5. 激发态：EOM-CC方法
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -346,15 +346,20 @@
 \[\pmb \Omega^{(1)} (\pmb t^{(n)}) \Delta \pmb t^{(n)} = - \pmb \Omega(t^{(n)})\]</div>
 <p>来获得。但是它仍然非常复杂。因此我们希望从 <span class="math notranslate nohighlight">\(\pmb \Omega^{(1)}\)</span> 的结构出发简化迭代步骤。考虑在Hartree-Fock分子轨道表象之下， <span class="math notranslate nohighlight">\(\pmb \Omega\)</span> 可以表示成</p>
 <div class="math notranslate nohighlight" id="equation-omega-0-in-fock">
-<span class="eqno">(10)<a class="headerlink" href="#equation-omega-0-in-fock" title="公式的永久链接">#</a></span>\[\Omega_\mu(\pmb t) = \varepsilon_\mu t_\mu + \langle \mu | \exp(- \hat T ) \hat \Phi \exp^(\hat T) | \mathrm{HF} \rangle\]</div>
-<p>其中的 <span class="math notranslate nohighlight">\(\hat \Phi\)</span> 为Hartree-Fock波动势。从中可见</p>
+<span class="eqno">(10)<a class="headerlink" href="#equation-omega-0-in-fock" title="公式的永久链接">#</a></span>\[\Omega_\mu(\pmb t) = \varepsilon_\mu t_\mu + \langle \mu | \exp(- \hat T ) \hat \Phi \exp(\hat T) | \mathrm{HF} \rangle\]</div>
+<p>其中的 <span class="math notranslate nohighlight">\(\hat \Phi\)</span> 为Hartree-Fock波动势。从中可见 <span class="math notranslate nohighlight">\(\pmb \Omega^{(1)} \approx \pmb \varepsilon\)</span> ，振幅迭代方程由此可简化为：</p>
+<div class="math notranslate nohighlight" id="equation-omega-iter">
+<span class="eqno">(11)<a class="headerlink" href="#equation-omega-iter" title="公式的永久链接">#</a></span>\[\Delta t_\mu^{(n)} = - \varepsilon_\mu^{-1} \Omega_\mu^{(0)} (\pmb t^{(n)})\]</div>
+<p>和Hartree-Fock一样，DIIS程序可以有效加速准牛顿法。</p>
+<p>通过式 <a class="reference internal" href="#equation-omega-iter">(11)</a> 来获得振幅 <span class="math notranslate nohighlight">\(\pmb t\)</span> 的表达式，再将其带入CC的能量方程中，就可以求解出CC的相关能。</p>
 </section>
 </section>
 <section id="ccsd">
 <h2><span class="section-number">5.4. </span>例子：闭壳层CCSD<a class="headerlink" href="#ccsd" title="永久链接至标题">#</a></h2>
+<p>由于我们要求最后的波函数仍然是单重态，自旋对称性的限制会大大减小优化的独立参数。因为HF波函数是单重态，因此算符 <span class="math notranslate nohighlight">\(\exp(\hat T)\)</span> 、 <span class="math notranslate nohighlight">\(\hat T\)</span> 也是单重态，</p>
 </section>
 <section id="eom-cc">
-<h2><span class="section-number">5.5. </span>EOM-CC方法<a class="headerlink" href="#eom-cc" title="永久链接至标题">#</a></h2>
+<h2><span class="section-number">5.5. </span>激发态：EOM-CC方法<a class="headerlink" href="#eom-cc" title="永久链接至标题">#</a></h2>
 </section>
 <section id="id5">
 <h2><span class="section-number">5.6. </span>高自旋开壳层CC方法<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h2>

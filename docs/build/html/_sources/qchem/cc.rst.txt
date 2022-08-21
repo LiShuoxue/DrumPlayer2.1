@@ -157,15 +157,26 @@ CC方程的求解
 .. math::
     :label: omega-0-in-fock
 
-    \Omega_\mu(\pmb t) = \varepsilon_\mu t_\mu + \langle \mu | \exp(- \hat T ) \hat \Phi \exp^(\hat T) | \mathrm{HF} \rangle
+    \Omega_\mu(\pmb t) = \varepsilon_\mu t_\mu + \langle \mu | \exp(- \hat T ) \hat \Phi \exp(\hat T) | \mathrm{HF} \rangle
 
-其中的 :math:`\hat \Phi` 为Hartree-Fock波动势。从中可见
+其中的 :math:`\hat \Phi` 为Hartree-Fock波动势。从中可见 :math:`\pmb \Omega^{(1)} \approx \pmb \varepsilon` ，振幅迭代方程由此可简化为：
+
+.. math::
+    :label: omega-iter
+
+    \Delta t_\mu^{(n)} = - \varepsilon_\mu^{-1} \Omega_\mu^{(0)} (\pmb t^{(n)})
+
+和Hartree-Fock一样，DIIS程序可以有效加速准牛顿法。
+
+通过式 :eq:`omega-iter` 来获得振幅 :math:`\pmb t` 的表达式，再将其带入CC的能量方程中，就可以求解出CC的相关能。
 
 例子：闭壳层CCSD
 ---------------------
 
-EOM-CC方法
---------------------
+由于我们要求最后的波函数仍然是单重态，自旋对称性的限制会大大减小优化的独立参数。因为HF波函数是单重态，因此算符 :math:`\exp(\hat T)` 、 :math:`\hat T` 也是单重态，
 
-高自旋开壳层CC方法
+激发态：EOM-CC方法
+--------------------------
+
+高自旋开壳层CC方法 
 --------------------------

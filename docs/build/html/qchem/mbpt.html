@@ -35,6 +35,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="哗啦啦2.1" href="../drumplayer/index.html" />
@@ -200,12 +201,12 @@
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   6.1. 引言
+   6.1. 瑞利-薛定谔微扰理论
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
-   6.2. 瑞利-薛定谔微扰理论
+  <a class="reference internal nav-link" href="#moller-plesset">
+   6.2. Moller-Plesset 微扰理论
   </a>
  </li>
 </ul>
@@ -229,11 +230,35 @@
                 
   <section id="id1">
 <h1><span class="section-number">6. </span>多体微扰方法<a class="headerlink" href="#id1" title="永久链接至标题">#</a></h1>
+<p>在基于Hartree-Fock方法能够给出合理基态描述的情形下，在此基础上使用微扰展开的手段可以给出有效的修正。此外微扰方法也能在CC、MCSCF波函数的基础上进一步修正结果，得到CCSD(T)、CASPT2等Hybrid Post-HF方法。</p>
 <section id="id2">
-<h2><span class="section-number">6.1. </span>引言<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
+<h2><span class="section-number">6.1. </span>瑞利-薛定谔微扰理论<a class="headerlink" href="#id2" title="永久链接至标题">#</a></h2>
+<p>量子力学之述备矣，故仅列下RSPT的结论：</p>
+<p>对于Hamiltonian <span class="math notranslate nohighlight">\(\hat H = \hat H_0 + \hat U\)</span> ，零级波函数为 <span class="math notranslate nohighlight">\(\hat H_0 | 0^{0}\rangle = E_0 | 0^{(0)} \rangle\)</span> 的本征态，则各阶修正能量表达式：</p>
+<div class="math notranslate nohighlight" id="equation-energy-n-order">
+<span class="eqno">(1)<a class="headerlink" href="#equation-energy-n-order" title="公式的永久链接">#</a></span>\[E^{(n)} = \langle 0^{(0)} | \hat U | \hat 0^{(n-1)} \rangle\]</div>
+<p>一阶和二阶波函数修正：</p>
+<div class="math notranslate nohighlight" id="equation-wfn-1-order">
+<span class="eqno">(2)<a class="headerlink" href="#equation-wfn-1-order" title="公式的永久链接">#</a></span>\[| 0 ^ {(1)} \rangle = - \hat P (\hat H_0 - E^{(0)})^{-1} \hat P \hat U | 0 ^{(0)} \rangle\]</div>
+<div class="math notranslate nohighlight" id="equation-wfn-2-order">
+<span class="eqno">(3)<a class="headerlink" href="#equation-wfn-2-order" title="公式的永久链接">#</a></span>\[| 0^{(2)} \rangle = - \hat P (\hat H_0 - E^{(0)})^{-1} \hat P (\hat U - E^{(1)}) | 0^{(1)} \rangle\]</div>
+<p>其中投影算符 <span class="math notranslate nohighlight">\(\hat P\)</span> 定义为：</p>
+<div class="math notranslate nohighlight" id="equation-proj-op">
+<span class="eqno">(4)<a class="headerlink" href="#equation-proj-op" title="公式的永久链接">#</a></span>\[\hat P = 1 - | 0^{(0)} \rangle \langle 0^{(0)} | = \sum\limits_{k \ne 0} | 0^{(k)} \rangle \langle 0^{(k)} |\]</div>
+<p>其实 <a class="reference internal" href="#equation-energy-n-order">(1)</a> 对应的从(n-1)阶波函数推导n阶微扰能量修正的式子仍很繁琐，根据Wigner 2n+1 规则，n阶修正波函数可以推导出(2n+1)阶修正的能量。(2n+1)规则的严格推导的本质，是通过态矢的中间归一化条件构造能量的Lagrange量，然后通过变分方程的求解简化最终的能量修正表达式。其推导在此不列出，而在之后用耦合簇微扰论(Coupled-Cluster Perturbation Theory, CCPT)语言重述微扰论时，会给出三、四阶修正能量的显式表达式，来体现(2n+1)规则的运用。</p>
 </section>
-<section id="id3">
-<h2><span class="section-number">6.2. </span>瑞利-薛定谔微扰理论<a class="headerlink" href="#id3" title="永久链接至标题">#</a></h2>
+<section id="moller-plesset">
+<h2><span class="section-number">6.2. </span>Moller-Plesset 微扰理论<a class="headerlink" href="#moller-plesset" title="永久链接至标题">#</a></h2>
+<p>作为RSPT的直接推广，Moller-Plesset微扰理论(MPPT)将Fock算符直接作为零阶Hamilton量，而将波动势 <span class="math notranslate nohighlight">\(\hat \Phi\)</span> 作为微扰项。</p>
+<p>零级能量即是占据的分子轨道能量之和。</p>
+<p>一级修正波函数为</p>
+<div class="math notranslate nohighlight" id="equation-mp1-wfn">
+<span class="eqno">(5)<a class="headerlink" href="#equation-mp1-wfn" title="公式的永久链接">#</a></span>\[| \mathrm{MP1} \rangle = - \sum\limits_{\mu_2} \varepsilon_{\mu_2} ^{-1} \langle \mu_2 | \hat H | \mathrm{HF} \rangle\]</div>
+<p>其中 <span class="math notranslate nohighlight">\(\mu_2\)</span> 表示仅包含双激发情况，因为Brillouin定理的限制而得。</p>
+<p>更方便地，我们将MP1波函数写成类似于团簇算符作用在HF基态波函数上的形式：</p>
+<div class="math notranslate nohighlight" id="equation-mp1-wfn-cluster">
+<span class="eqno">(6)<a class="headerlink" href="#equation-mp1-wfn-cluster" title="公式的永久链接">#</a></span>\[\begin{split}| \mathrm{MP1} \rangle = \hat T_2^{(1)} | \mathrm{HF} \rangle \\
+\hat T_2^{(1)} = \sum\limits_{A&gt;B\\I&gt;J} - \dfrac{\langle \mathrm{HF} | [\hat a_J^\dagger \hat a_B \hat a_I^\dagger \hat a_B, \hat H] | \mathrm{HF} \rangle}{\varepsilon_A + \varepsilon_B - \varepsilon_I - \varepsilon_J} \hat a_A^\dagger \hat a_I \hat a_B^\dagger \hat a_J\end{split}\]</div>
 </section>
 </section>
 
