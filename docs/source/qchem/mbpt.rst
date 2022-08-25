@@ -3,6 +3,8 @@
 
 在基于Hartree-Fock方法能够给出合理基态描述的情形下，在此基础上使用微扰展开的手段可以给出有效的修正。此外微扰方法也能在CC、MCSCF波函数的基础上进一步修正结果，得到CCSD(T)、CASPT2等Hybrid Post-HF方法。
 
+微扰论方法和耦合簇方法有千丝万缕的联系。它们分别以波动势 :math:`\hat \Phi` 的阶数和激发算符阶数为近似依据。
+
 瑞利-薛定谔微扰理论
 -----------------------
 
@@ -34,7 +36,7 @@
 
     \hat P = 1 - | 0^{(0)} \rangle \langle 0^{(0)} | = \sum\limits_{k \ne 0} | 0^{(k)} \rangle \langle 0^{(k)} |
 
-其实 :eq:`energy-n-order` 对应的从(n-1)阶波函数推导n阶微扰能量修正的式子仍很繁琐，根据Wigner 2n+1 规则，n阶修正波函数可以推导出(2n+1)阶修正的能量。(2n+1)规则的严格推导的本质，是通过态矢的中间归一化条件构造能量的Lagrange量，然后通过变分方程的求解简化最终的能量修正表达式。其推导在此不列出，而在之后用耦合簇微扰论(Coupled-Cluster Perturbation Theory, CCPT)语言重述微扰论时，会给出三、四阶修正能量的显式表达式，来体现(2n+1)规则的运用。
+其实 :eq:`energy-n-order` 对应的从(n-1)阶波函数推导n阶微扰能量修正的式子仍很繁琐，根据Wigner 2n+1 规则，n阶修正波函数可以推导出(2n+1)阶修正的能量。(2n+1)规则的严格推导的本质，是通过态矢的中间归一化条件构造能量的Lagrange量，然后通过变分方程的求解简化最终的能量修正表达式。
 
 Moller-Plesset 微扰理论
 ---------------------------
@@ -58,4 +60,116 @@ Moller-Plesset 微扰理论
     :label: mp1-wfn-cluster
 
     | \mathrm{MP1} \rangle = \hat T_2^{(1)} | \mathrm{HF} \rangle \\
-    \hat T_2^{(1)} = \sum\limits_{A>B\\I>J} - \dfrac{\langle \mathrm{HF} | [\hat a_J^\dagger \hat a_B \hat a_I^\dagger \hat a_B, \hat H] | \mathrm{HF} \rangle}{\varepsilon_A + \varepsilon_B - \varepsilon_I - \varepsilon_J} \hat a_A^\dagger \hat a_I \hat a_B^\dagger \hat a_J
+    \hat T_2^{(1)} = \sum\limits_{A>B\\I>J} t_{IJ}^{AB^(1)} \hat a_A^\dagger \hat a_I \hat a_B^\dagger \hat a_J \\
+
+    t_{IJ}^{AB^{(1)}} = - \dfrac{\langle \mathrm{HF} | [\hat a_J^\dagger \hat a_B \hat a_I^\dagger \hat a_B, \hat H] | \mathrm{HF} \rangle}{\varepsilon_A + \varepsilon_B - \varepsilon_I - \varepsilon_J} \hat a_A^\dagger = -\dfrac{g_{AIBJ} - g_{AJBI}}{\varepsilon_A + \varepsilon_B - \varepsilon_I - \varepsilon_J}
+
+由此可以得到二阶微扰修正的能量表达式：
+
+.. math::
+    :label: mp2-energy
+
+    E_{MP}^{(2)} = - \sum\limits_{A>B,I>J} \dfrac{|g_{AIBJ} - g_{AJBI}|^2}{\varepsilon_A + \varepsilon_B - \varepsilon_I - \varepsilon_J}
+
+与一阶波函数相比，二阶及以上的波函数形式推导难度则极尽繁琐。
+
+耦合簇微扰理论
+---------------------
+
+相比于RSPT对参数的线性拟设而言， **耦合簇微扰理论(Coupled-Cluster Perturbation Theory, CCPT)** 使用CC的指数拟设参数化特点来处理微扰问题，不仅可以用更简单的方法给出直接求解MPPT方程所得的同样结果，可以产生对易结构的表述，方便大小一致性问题的讨论。
+
+将Hamilton量按照微扰论的方法，分成 :math:`\hat f + \hat \Phi` 两部分。它们在团簇算符的指数变换之下分别即为 :math:`\hat f^T,\,\hat \Phi^T` 。其中 :math:`\hat f^T` 为
+
+.. math::
+    :label: f-T
+
+    \hat f^T = \hat f + [\hat  f , \hat T] = \hat f + \sum\limits_\mu \varepsilon_\mu t_\mu \hat \tau_\mu
+
+因此在CC能量/振幅方程中和Fock算符相关的两项分别为：
+
+.. math::
+    :label: ccfunc-f
+
+    \langle \mathrm{HF} | \hat f^T | \mathrm{HF} \rangle \\ \langle \mu | \hat f^T | \mathrm{HF} \rangle = \varepsilon_\mu t_\mu
+
+将 :eq:`ccfunc-f` 代入CC方程中可得：
+
+.. math::
+    :label: ccfunc
+
+    E = E_0 + \langle \mathrm{HF} | \hat \Phi^T | \mathrm{HF} \rangle + h_{\mathrm{nuc}} \\ \varepsilon_\mu t_\mu = - \langle \mu | \hat\Phi^T | \mathrm{HF} \rangle 
+
+对耦合簇方程的微扰展开基于式 :eq:`ccfunc` 进行。假设团簇算符按微扰阶数（也就是 :math:`\hat Phi` 出现的阶数）展开为
+
+.. math::
+     \hat T = \hat T^{(0)} + \hat T^{(1)} + \hat T^{(2)} + \cdots
+
+则展开 :eq:`ccfunc` 的前三阶为：
+
+.. math::
+    :label: ccpt-3order
+
+    t_\mu^{(0)} = 0 \\
+
+    \varepsilon_\mu t_\mu^{(1)} = - \langle \mu | \hat \Phi | \mathrm{HF} \rangle
+
+    \varepsilon_\mu t_\mu^{(2)} = - \langle \mu | [\hat \Phi, \hat T^{(1)}] | \mathrm{HF} \rangle
+
+    \varepsilon_\mu t_\mu^{(3)} = - \langle \mu | [\hat \Phi, \hat T^{(2)}] | \mathrm{HF} \rangle - \dfrac{1}{2} \langle \mu | [ [\hat \Phi, \hat T^{(1)}], \hat T^{(1)} ] | \mathrm{HF} \rangle
+
+从中可见， :math:`t_\mu^{(n)}` 的求解需要借助于 :math:`t_{\mu}^{(n-1)}` 的信息来递推进行。
+
+CCPT的波函数一般展开式自然就成了
+
+.. math::
+    :label: ccpt-wfn
+
+    | 0^{(n)} \rangle = \exp(\hat T)^{(n)} | \mathrm{HF} \rangle
+
+前两阶的贡献的显式表达式为：
+
+.. math::
+    :label: ccpt-wfn-2order
+
+    | 0^{(1)} \rangle = \hat T^{(1)} | \mathrm{HF} \rangle \\ 
+    | 0^{(2)} \rangle = (\hat T^{(2)} + \frac{1}{2} \hat T^{(1)} \hat T^{(1)} )| \mathrm{HF} \rangle
+
+其中包含 :math:`\hat T^{(1)} \hat T^{(1)}` 的贡献，和MPPT直接推导所得的结论是一致的。但是它的得出非常直观容易，不像MPPT需要使用诸多的技巧变换才能得来。
+
+各阶修正能量可以使用(n+1)规则直接得到，不过我们希望运用CCPT版本的(2n+1)规则来推导CCPT的能量。根据 :eq:`ccfunc` 来定义CCPT的拉格朗日量如下所示，即在CCPT的能量方程的基础上，添加振幅方程作为限制条件。
+
+.. math::
+    :label: ccpt-lag
+
+    L(\pmb t, \bar{\pmb t}) = E_0 + \langle \mathrm{HF} | \hat \Phi^T | \mathrm{HF} \rangle + \sum\limits_\mu \varepsilon_\mu t_\mu \bar t_\mu + \langle \bar t | \hat \Phi^T | \mathrm{HF} \rangle
+
+对Lagrange量 :eq:`ccpt-lag` 求变分：
+
+.. math::
+    :label: pl-pbart
+
+    L_\mu = \dfrac{\partial L}{\partial \bar{t_\mu}} = \varepsilon_\mu t_\mu + \langle \mu | \hat\Phi^T | \mathrm{HF} \rangle = 0
+
+通过Lagrange量的构造，这显然等价于振幅方程。而对 :math:`\bar t_\mu` 求变分则可得到：
+
+.. math::
+    :label: pl-pt
+
+    \bar L_\mu = \dfrac{\partial L}{\partial {t_\mu}} = \varepsilon_\mu \bar t_\mu + \langle \mathrm{HF} | \hat \Phi^T | \mu \rangle + \langle \bar t | [\hat \Phi^T, \hat \tau_\mu] | \mathrm{HF} \rangle = 0
+
+对变分条件 :eq:`pl-pt` 做各阶展开有：
+
+.. math::
+    :label: pl-pt-orders
+
+    \varepsilon_\mu t_\mu^{(0)} = \varepsilon_\mu \bar t_\mu^{(0)} = 0 \\
+
+    \varepsilon_\mu t_\mu^{(1)} = - \langle \mu | \hat \Phi | \mathrm{HF} \rangle \\
+
+    \varepsilon_\mu \bar t_\mu^{(1)} = - \langle \mathrm{HF} | \hat \Phi | \mu \rangle
+
+    \varepsilon_\mu t_\mu^{(2)} = - \langle \mu | [\hat \Phi, \hat T^{(1)} ] | \mathrm{HF} \rangle
+
+    \varepsilon_\mu \bar t_\mu^{(2)} = \varepsilon_\mu t_\mu^{(2)} + \langle \mathrm{HF} | \hat \Phi \hat \tau^\dagger_\mu \hat T^{(1)} - \hat \tau^\dagger_\mu \hat T^{(1)} \hat \Phi | \mathrm{HF} \rangle
+
+最后一式子

@@ -173,10 +173,59 @@ CC方程的求解
 例子：闭壳层CCSD
 ---------------------
 
-由于我们要求最后的波函数仍然是单重态，自旋对称性的限制会大大减小优化的独立参数。因为HF波函数是单重态，因此算符 :math:`\exp(\hat T)` 、 :math:`\hat T` 也是单重态，
+由于我们要求最后的波函数仍然是单重态，自旋对称性的限制会大大减小优化的独立参数。因为HF波函数是单重态，因此算符 :math:`\exp(\hat T)` 、 :math:`\hat T` 也是单重态算符，更一般地， :math:`\hat T_1,\,\hat T_2` 均是单重态算符。经过一些推导可知，自旋对称性的限制使得它们只与轨道激发算符有关：
+
+.. math::
+    :label: t1-cs
+
+    \hat T_1 = \sum\limits_{ai} t_i^a \hat E_{ai} 
+
+.. math::
+    :label: t2-cs
+
+    \hat T_2 = \dfrac{1}{2} \sum\limits_{abij} \hat E_{ai} \hat E_{bj}
+
+
+且双激发算符对应的振幅满足 :math:`t_{ij}^{ab} = t_{ji}^{ba}` 。
+
+.. admonition:: 小练习
+    :class: quiz
+
+    证明式 :eq:`t1-cs` 和 :eq:`t2-cs` 所满足的形式。
 
 激发态：EOM-CC方法
 --------------------------
 
+**运动方程耦合簇方法(Equation-of-Motion Coupled-Cluster, EOM-CC)** 是在CC的基础上非含时处理激发态的方法，其思想在于将团簇算符作用在不同激发（或电离、结合电子）的不同组态上，以这些新的波函数为基函数展开Hamilton矩阵来求解非对称本征值问题，从而求解激发能（或电离能、电子亲和能）。以处理激发能的EOM-CC为例，新基的bra和ket分别定义为：
+
+.. math::
+    :label: eom-cc-basis
+
+    (\mu | = \langle \mu | \exp(-\hat T) = \langle \mathrm{HF} | \hat \tau_\mu^\dagger \exp(-\hat T) \\
+
+    | \mu ) = \exp(\hat T)| \mu \rangle = \exp(\hat T) \hat \tau_\mu | \mathrm{HF} \rangle
+
+由此定义可知 :math:`| \mathrm{HF} ) = | \mathrm{CC} \rangle ,\, ( \mathrm{HF} | = \langle \mathrm{HF} |` ；对于各种激发态， :math:`(\mu | \nu) = \langle \mu | \nu \rangle = \delta_{\mu \nu}` 。
+
+激发态波函数在该基上进行类似于CI的线性组合展开：
+
+.. math::
+    :label: eom-wfn
+
+    ( \bar{\pmb c} | = \sum\limits_\mu \bar c_\mu ( \mu | \\
+
+    | \pmb c ) = \sum\limits_\mu c_\mu | \mu )
+
+其中 :math:`\bar{\pmb c},\, \pmb c` 分别是本征方程 :math:`\mathrm{\pmb H} \pmb c = E \pmb c;\, \bar{\pmb c} \mathrm{\pmb H} = E \bar{\pmb c}` 的解，且二者双正交。其中Hamilton矩阵的矩阵元为：
+
+.. math::
+    :label: eom-h-mn
+
+    H_{\mu\nu} = (\mu | \hat H | \nu) = (\mu | [\hat H, \hat \tau_\nu] | \mathrm{HF} ) + \delta_{\mu\nu} E_0 \\
+
+    (\mu | \hat H | \mathrm{HF}) = 0; \, (\mathrm{HF} | \hat H | \mathrm{HF}) = E_0
+
+
+ 
 高自旋开壳层CC方法 
 --------------------------

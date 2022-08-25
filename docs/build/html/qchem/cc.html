@@ -356,10 +356,29 @@
 </section>
 <section id="ccsd">
 <h2><span class="section-number">5.4. </span>例子：闭壳层CCSD<a class="headerlink" href="#ccsd" title="永久链接至标题">#</a></h2>
-<p>由于我们要求最后的波函数仍然是单重态，自旋对称性的限制会大大减小优化的独立参数。因为HF波函数是单重态，因此算符 <span class="math notranslate nohighlight">\(\exp(\hat T)\)</span> 、 <span class="math notranslate nohighlight">\(\hat T\)</span> 也是单重态，</p>
+<p>由于我们要求最后的波函数仍然是单重态，自旋对称性的限制会大大减小优化的独立参数。因为HF波函数是单重态，因此算符 <span class="math notranslate nohighlight">\(\exp(\hat T)\)</span> 、 <span class="math notranslate nohighlight">\(\hat T\)</span> 也是单重态算符，更一般地， <span class="math notranslate nohighlight">\(\hat T_1,\,\hat T_2\)</span> 均是单重态算符。经过一些推导可知，自旋对称性的限制使得它们只与轨道激发算符有关：</p>
+<div class="math notranslate nohighlight" id="equation-t1-cs">
+<span class="eqno">(12)<a class="headerlink" href="#equation-t1-cs" title="公式的永久链接">#</a></span>\[\hat T_1 = \sum\limits_{ai} t_i^a \hat E_{ai}\]</div>
+<div class="math notranslate nohighlight" id="equation-t2-cs">
+<span class="eqno">(13)<a class="headerlink" href="#equation-t2-cs" title="公式的永久链接">#</a></span>\[\hat T_2 = \dfrac{1}{2} \sum\limits_{abij} \hat E_{ai} \hat E_{bj}\]</div>
+<p>且双激发算符对应的振幅满足 <span class="math notranslate nohighlight">\(t_{ij}^{ab} = t_{ji}^{ba}\)</span> 。</p>
+<div class="quiz admonition">
+<p class="admonition-title">小练习</p>
+<p>证明式 <a class="reference internal" href="#equation-t1-cs">(12)</a> 和 <a class="reference internal" href="#equation-t2-cs">(13)</a> 所满足的形式。</p>
+</div>
 </section>
 <section id="eom-cc">
 <h2><span class="section-number">5.5. </span>激发态：EOM-CC方法<a class="headerlink" href="#eom-cc" title="永久链接至标题">#</a></h2>
+<p><strong>运动方程耦合簇方法(Equation-of-Motion Coupled-Cluster, EOM-CC)</strong> 是在CC的基础上非含时处理激发态的方法，其思想在于将团簇算符作用在不同激发（或电离、结合电子）的不同组态上，以这些新的波函数为基函数展开Hamilton矩阵来求解非对称本征值问题，从而求解激发能（或电离能、电子亲和能）。以处理激发能的EOM-CC为例，新基的bra和ket分别定义为：</p>
+<div class="math notranslate nohighlight" id="equation-eom-cc-basis">
+<span class="eqno">(14)<a class="headerlink" href="#equation-eom-cc-basis" title="公式的永久链接">#</a></span>\[ \begin{align}\begin{aligned}\begin{split}(\mu | = \langle \mu | \exp(-\hat T) = \langle \mathrm{HF} | \hat \tau_\mu^\dagger \exp(-\hat T) \\\end{split}\\| \mu ) = \exp(\hat T)| \mu \rangle = \exp(\hat T) \hat \tau_\mu | \mathrm{HF} \rangle\end{aligned}\end{align} \]</div>
+<p>由此定义可知 <span class="math notranslate nohighlight">\(| \mathrm{HF} ) = | \mathrm{CC} \rangle ,\, ( \mathrm{HF} | = \langle \mathrm{HF} |\)</span> ；对于各种激发态， <span class="math notranslate nohighlight">\((\mu | \nu) = \langle \mu | \nu \rangle = \delta_{\mu \nu}\)</span> 。</p>
+<p>激发态波函数在该基上进行类似于CI的线性组合展开：</p>
+<div class="math notranslate nohighlight" id="equation-eom-wfn">
+<span class="eqno">(15)<a class="headerlink" href="#equation-eom-wfn" title="公式的永久链接">#</a></span>\[ \begin{align}\begin{aligned}\begin{split}( \bar{\pmb c} | = \sum\limits_\mu \bar c_\mu ( \mu | \\\end{split}\\| \pmb c ) = \sum\limits_\mu c_\mu | \mu )\end{aligned}\end{align} \]</div>
+<p>其中 <span class="math notranslate nohighlight">\(\bar{\pmb c},\, \pmb c\)</span> 分别是本征方程 <span class="math notranslate nohighlight">\(\mathrm{\pmb H} \pmb c = E \pmb c;\, \bar{\pmb c} \mathrm{\pmb H} = E \bar{\pmb c}\)</span> 的解，且二者双正交。其中Hamilton矩阵的矩阵元为：</p>
+<div class="math notranslate nohighlight" id="equation-eom-h-mn">
+<span class="eqno">(16)<a class="headerlink" href="#equation-eom-h-mn" title="公式的永久链接">#</a></span>\[ \begin{align}\begin{aligned}\begin{split}H_{\mu\nu} = (\mu | \hat H | \nu) = (\mu | [\hat H, \hat \tau_\nu] | \mathrm{HF} ) + \delta_{\mu\nu} E_0 \\\end{split}\\(\mu | \hat H | \mathrm{HF}) = 0; \, (\mathrm{HF} | \hat H | \mathrm{HF}) = E_0\end{aligned}\end{align} \]</div>
 </section>
 <section id="id5">
 <h2><span class="section-number">5.6. </span>高自旋开壳层CC方法<a class="headerlink" href="#id5" title="永久链接至标题">#</a></h2>
