@@ -3,7 +3,7 @@
 
 在基于Hartree-Fock方法能够给出合理基态描述的情形下，在此基础上使用微扰展开的手段可以给出有效的修正。此外微扰方法也能在CC、MCSCF波函数的基础上进一步修正结果，得到CCSD(T)、CASPT2等Hybrid Post-HF方法。
 
-微扰论方法和耦合簇方法有千丝万缕的联系。它们分别以波动势 :math:`\hat \Phi` 的阶数和激发算符阶数为近似依据。用Goldstone图表示法可更方便地展示微扰的性质，但是紫
+微扰论方法和耦合簇方法有千丝万缕的联系。它们分别以波动势 :math:`\hat \Phi` 的阶数和激发算符阶数为近似依据。
 
 瑞利-薛定谔微扰理论
 -----------------------
@@ -171,3 +171,5 @@ CCPT的波函数一般展开式自然就成了
     \varepsilon_\mu t_\mu^{(2)} = - \langle \mu | [\hat \Phi, \hat T^{(1)} ] | \mathrm{HF} \rangle
 
     \varepsilon_\mu \bar t_\mu^{(2)} = \varepsilon_\mu t_\mu^{(2)} + \langle \mathrm{HF} | \hat \Phi \hat \tau^\dagger_\mu \hat T^{(1)} - \hat \tau^\dagger_\mu \hat T^{(1)} \hat \Phi | \mathrm{HF} \rangle
+
+最后一式子
