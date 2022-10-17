@@ -35,10 +35,12 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="4. 多参考态方法" href="mcscf.html" />
+    <link rel="next" title="4. 多参考态自洽场方法" href="mcscf.html" />
     <link rel="prev" title="2. Hartree-Fock方法" href="hfpro.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="docsearch:language" content="zh_CN">
@@ -86,6 +88,12 @@
     <li class="toctree-l1 current active nav-item">
  <a class="reference internal nav-link" href="index.html">
   量子化学
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../test.html">
+  Jupyter功能测试
  </a>
 </li>
 
@@ -162,12 +170,17 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="mcscf.html">
-   4. 多参考态方法
+   4. 多参考态自洽场方法
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="cc.html">
    5. 耦合簇方法
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mbpt.html">
+   6. 多体微扰方法
   </a>
  </li>
 </ul>
@@ -337,7 +350,7 @@
   <a class='right-next' id="next-link" href="mcscf.html" title="下一页 页">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">下一页</p>
-      <p class="prev-next-title"><span class="section-number">4. </span>多参考态方法</p>
+      <p class="prev-next-title"><span class="section-number">4. </span>多参考态自洽场方法</p>
   </div>
   <i class="fas fa-angle-right"></i>
   </a>

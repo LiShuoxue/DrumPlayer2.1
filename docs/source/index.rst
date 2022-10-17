@@ -40,6 +40,7 @@ Curriculum Vitae
    :maxdepth: 2
 
    量子化学 <qchem/index>
+   Jupyter功能测试 <test>
 
 氍毹寄意
 -------------------
