@@ -39,8 +39,9 @@ Curriculum Vitae
 .. toctree::
    :maxdepth: 2
 
-   量子化学 <qchem/index>
-   Jupyter功能测试 <test>
+   紫书 <qchem/index>
+   图解方法 <diag/index>
+   张量网络 <tensor-network/index>
 
 氍毹寄意
 -------------------
