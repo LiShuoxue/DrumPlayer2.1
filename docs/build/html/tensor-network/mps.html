@@ -194,8 +194,18 @@
 <nav id="bd-toc-nav">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#form-of-mps">
-   1.1. Form of MPS
+  <a class="reference internal nav-link" href="#construction-of-mps">
+   1.1. Construction of MPS
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gauge-freedom-and-canonicalization">
+   1.2. Gauge Freedom and Canonicalization
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matrix-product-operator-mpo">
+   1.3. Matrix Product Operator (MPO)
   </a>
  </li>
 </ul>
@@ -219,16 +229,63 @@
                 
   <section id="matrix-product-states">
 <h1><span class="section-number">1. </span>Matrix Product States<a class="headerlink" href="#matrix-product-states" title="永久链接至标题">#</a></h1>
-<section id="form-of-mps">
-<h2><span class="section-number">1.1. </span>Form of MPS<a class="headerlink" href="#form-of-mps" title="永久链接至标题">#</a></h2>
+<section id="construction-of-mps">
+<h2><span class="section-number">1.1. </span>Construction of MPS<a class="headerlink" href="#construction-of-mps" title="永久链接至标题">#</a></h2>
 <p>Any quantum many-body states of N sites can be written as</p>
 <div class="math notranslate nohighlight" id="equation-general-mb">
-<span class="eqno">(1)<a class="headerlink" href="#equation-general-mb" title="公式的永久链接">#</a></span>\[| \psi \rangle = \sum\limits_{\sigma_1, \cdots. \sigma_L} c_{\sigma_1, \cdots, \sigma_L} | \sigma_1 \rangle \otimes | \sigma_2 \rangle \otimes \cdots \otimes | \sigma_L \rangle\]</div>
-<p>where <span class="math notranslate nohighlight">\(\sigma_i\)</span> denotes the indices of electronic state of each sites. Each <span class="math notranslate nohighlight">\(\sigma_i\)</span> has <span class="math notranslate nohighlight">\(d\)</span> choices, and we call <span class="math notranslate nohighlight">\(d\)</span> as <strong>Physical Dimension</strong>.</p>
-<p>Exact singular value decomposition will give L blocks for each site, and the many-body state can be written as:</p>
+<span class="eqno">(1)<a class="headerlink" href="#equation-general-mb" title="公式的永久链接">#</a></span>\[| \psi \rangle = \sum\limits_{\sigma_1, \cdots. \sigma_N} c_{\sigma_1, \cdots, \sigma_N} | \sigma_1 \rangle \otimes | \sigma_2 \rangle \otimes \cdots \otimes | \sigma_N \rangle\]</div>
+<p>where <span class="math notranslate nohighlight">\(\sigma_i\)</span> denotes the indices of electronic state of each sites. Each <span class="math notranslate nohighlight">\(\sigma_i\)</span> has <span class="math notranslate nohighlight">\(d\)</span> choices, and we call <span class="math notranslate nohighlight">\(d\)</span> as <strong>Physical Dimension</strong>, and <span class="math notranslate nohighlight">\(i\)</span> are <strong>physical indices</strong>.</p>
+<p>Exact singular value decomposition will give N blocks for each site, and the many-body state can be written as:</p>
 <div class="math notranslate nohighlight" id="equation-general-mps">
-<span class="eqno">(2)<a class="headerlink" href="#equation-general-mps" title="公式的永久链接">#</a></span>\[\sum\limits_{a_1, \cdots, a_{L-1}} \sum\limits_{\sigma_1, \cdots, \sigma_{L}} M_{1, a_1}^{\sigma_1} | \sigma_1 \rangle \otimes M_{a_1, a_2}^{\sigma_2} | \sigma_2 \rangle \otimes \cdots \otimes M_{a_{L-1}, 1}^{\sigma_L} | \sigma_L \rangle\]</div>
-<p>If SVD takes place in sequence, the dimension of each <span class="math notranslate nohighlight">\(M\)</span> matrix will be at least <span class="math notranslate nohighlight">\(d, d^2, \cdots, d^{L/2}\)</span>, which increases exponentially! So approximation should be taken that</p>
+<span class="eqno">(2)<a class="headerlink" href="#equation-general-mps" title="公式的永久链接">#</a></span>\[\sum\limits_{a_1, \cdots, a_{N-1}} \sum\limits_{\sigma_1, \cdots, \sigma_{N}} M_{1, a_1}^{\sigma_1} | \sigma_1 \rangle \otimes M_{a_1, a_2}^{\sigma_2} | \sigma_2 \rangle \otimes \cdots \otimes M_{a_{N-1}, 1}^{\sigma_N} | \sigma_N \rangle\]</div>
+<p>If SVD takes place in sequence, the dimension of each <span class="math notranslate nohighlight">\(M\)</span> matrix will be at least <span class="math notranslate nohighlight">\(d, d^2, \cdots, d^{L/2}\)</span>, which increases exponentially! So approximation should be taken that the dimension of each <span class="math notranslate nohighlight">\(M\)</span> are truncated to a fixed value <span class="math notranslate nohighlight">\(D\)</span>, the <strong>bond dimension</strong> or <strong>virtual dimension</strong>. Correspondetly, :math:<a href="#id1"><span class="problematic" id="id2">`</span></a>a_1, a_2 cdots ` are called <strong>virtual indices</strong>.</p>
+<p>Generally, an arbitrary MPS can be generated randomly.</p>
+</section>
+<section id="gauge-freedom-and-canonicalization">
+<h2><span class="section-number">1.2. </span>Gauge Freedom and Canonicalization<a class="headerlink" href="#gauge-freedom-and-canonicalization" title="永久链接至标题">#</a></h2>
+<p>If we insert arbitrary <span class="math notranslate nohighlight">\(X X^{-1}\)</span> between two <span class="math notranslate nohighlight">\(M\)</span>, then the product <span class="math notranslate nohighlight">\(MX\)</span> and <span class="math notranslate nohighlight">\(X^{-1}M\)</span> lead to a different construction of MPS which gives the same result of <span class="math notranslate nohighlight">\(| \psi \rangle\)</span>. Hence to remove the <strong>gauge freedom</strong>, we can add restrictions such as left-canonical or right-canonical:</p>
+<ul>
+<li><p>Left Canonical Gauge:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\sum\limits_\sigma A^{\sigma\dagger} A^{\sigma} = I\]</div>
+</div></blockquote>
+</li>
+<li><p>Right Canonical Gauge:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\sum\limits_\sigma B^{\sigma} B^{\sigma \dagger} = I\]</div>
+</div></blockquote>
+</li>
+</ul>
+<p>Then using SVD, the MPS can be written as:</p>
+<div class="math notranslate nohighlight">
+\[| \Psi \rangle = \sum\limits_\sigma A^{\sigma_1} \cdots A^{\sigma_l} M^{\sigma_{l+1}} B^{\sigma_{l+2}} \cdots B^{\sigma_N} | \sigma_1 \cdots \sigma_N \rangle\]</div>
+<p>in which the freedom can be restricted only to the choice of <span class="math notranslate nohighlight">\(l\)</span>. Also this gauge restriction will bring out numerical convenience.</p>
+</section>
+<section id="matrix-product-operator-mpo">
+<h2><span class="section-number">1.3. </span>Matrix Product Operator (MPO)<a class="headerlink" href="#matrix-product-operator-mpo" title="永久链接至标题">#</a></h2>
+<p>For a general operator <span class="math notranslate nohighlight">\(\hat O\)</span> on the hilbert space of <span class="math notranslate nohighlight">\(N\)</span> sites, it can be written as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\hat O = \sum\limits_{\sigma_1, \cdots, \sigma_N \\ \sigma'_1, \cdots, \sigma'_N} c^{(\sigma_1, \cdots, \sigma_N)(\sigma'_1, \cdots \sigma'_N)} |\sigma_1, \cdots \sigma_N \rangle \langle \sigma'_1, \cdots, \sigma'_N |\end{split}\]</div>
+<p>As the construction of MPS, MPO can also be written as the form:</p>
+<div class="math notranslate nohighlight" id="equation-mpo">
+<span class="eqno">(3)<a class="headerlink" href="#equation-mpo" title="公式的永久链接">#</a></span>\[\hat O = \sum\limits_{\sigma, \sigma'} W^{\sigma_1, \sigma'_1} \cdots W^{\sigma_L, \sigma'_L} | \sigma \rangle \langle \sigma' |\]</div>
+<p>in which the <span class="math notranslate nohighlight">\(W^{\sigma \sigma'}\)</span> is a matrix with two bond dimensions. The representation of MPO can be simplified as:</p>
+<div class="math notranslate nohighlight" id="equation-mpo-hamilt">
+<span class="eqno">(4)<a class="headerlink" href="#equation-mpo-hamilt" title="公式的永久链接">#</a></span>\[\hat O = \hat W^{[1]} \hat W^{[2]} \cdots \hat W^{[N]}\]</div>
+<p>in which each matrix element of operator matrix <span class="math notranslate nohighlight">\(\hat W^{[l]}\)</span> is defined as:</p>
+<div class="math notranslate nohighlight">
+\[\hat W^{[l]}_{bb'} = \sum\limits_{\sigma\sigma'}{W^{\sigma\sigma'}_{bb'}} | \sigma_l \rangle \langle \sigma_l' |\]</div>
+<p>For the neighbor-interaction Hamiltonians, the operator matrices are usually sparse. For instance, in the Heisenberg model:</p>
+<div class="math notranslate nohighlight">
+\[\hat H = - J_x \sum \hat X_j \hat X_{j+1} - J_Y \sum \hat Y_j \hat Y_{j+1} - J_Z \sum \hat Z_j \hat Z_{j+1} - h \sum Z_j\]</div>
+<p>then for the MPO matrix not on the left or right</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\hat W = \begin{bmatrix} \hat I \\ \hat X \\ \hat Y \\ \hat Z \\ -h\hat Z &amp; - J_X \hat X &amp; J_Y \hat Y &amp; - \hat J_Z \hat Z &amp; I \end{bmatrix}\end{split}\]</div>
+<p>and for left and right:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\begin{split}\hat W_{L} = \begin{bmatrix} -h \hat Z &amp; -J_X \hat X &amp; - J_Y \hat Y &amp; - J_Z \hat Z &amp; \hat I \end{bmatrix} \\\end{split}\\\begin{split}\hat W_{R} = \begin{bmatrix} \hat I \\ \hat X \\ \hat Y \\ \hat Z \\ - h \hat Z \end{bmatrix}\end{split}\end{aligned}\end{align} \]</div>
 </section>
 </section>
 

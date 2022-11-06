@@ -67,7 +67,7 @@ where
 
 * *Auxiliary* or *virtual* states are denoted by Greek alphabet :math:`\alpha, \beta, \gamma, \delta` for left, right, up and down directions in each site.
 
-The entangled-pair states between two sites are written as:
+The entangled-pair states between two sites (should be normalized) are written as:
 
 .. math::
     :label: eps
@@ -85,3 +85,46 @@ in the notation of wave function, we denote :math:`| abc \cdots \rangle \equiv \
         \mathcal P = | 0 \rangle \langle 0000 | + | 1 \rangle \langle 1111|
 
     Then if one of the virtual state is chosen to :math:`0` or :math:`1`, then all of the physical indices and virtual indices should be identical. So this PEPS defines a GHZ state.
+
+.. admonition:: Example: Classical Partition Function
+    :class: example
+
+    Let a Hamiltonian :math:`H[s] = \sum\limits_{\langle ij \rangle} h[s_i, s_j]`, where :math:`i, j` are indices of site position. Then if we define the projection coefficient
+
+    .. math::
+        [A_i]^k_{lrud} = \exp[-\dfrac{\beta}{4} (h[s_i,s_l] + h[s_i,s_r] + h[s_i,s_u] + h[s_i,s_d])]
+
+    Then it defines a PEPS
+    
+    .. math::
+        | \Psi \rangle = \exp(-\dfrac{\beta \hat H}{2}) (| \uparrow \rangle + | \downarrow\rangle)^{\otimes N}
+
+    and the inner product of :math:`| \Psi \rangle` is proportional to partition function :math:`Z(\beta)`. The PEPS therefore defines a *classical thermal state*.
+
+    Also since at critical temperature, the 2D spin correlation function has a :math:`-\dfrac{1}{4}` polynominal decay behavior, therefore PEPS can handle polynominally-decaying correlations of system.
+
+Calculating Properties
+---------------------------
+
+Recall that in MPS, we implement left or right normalization procedure, and then calcualting ground states become a common eigenvalue problem. However, due to the loop property of PEPS, we cannot exactly use the left/right canonical algorithm. Although we can directly calculate the overlap and expectation value by a general eigenvalue problem:
+
+.. math::
+    \langle \Psi | \Psi \rangle = A^\dagger \mathcal N A \\
+    \langle \Psi | \hat H | \Psi \rangle = A^\dagger \mathcal H A \\
+    \mathcal H v = \lambda \mathcal N v
+
+However, the coefficient matrix of :math:`\mathcal H` and :math:`\mathcal N` will grow exponentially, and the well-definition of :math:`\mathcal N` is not clear. Hence approximate method of property calculation about PEPS should be developed.
+
+Fermion PEPS
+---------------------------------
+
+Before expanding PEPS formalism into fermion, we should note that the major difference between fermion and boson is that fermion has exchange antisymmetry so that for two sites :math:`i` and :math:`j`, the direct product will change sign: 
+
+.. math::
+    | i \rangle \otimes | j \rangle = (-1)^{P_i \cdot P_j} |j \rangle \otimes | i \rangle
+
+in which :math:`P_i` is the **Parity** of state :math:`i`. Parity, in this context, can be primitively understood as whether or not the partical number of a certain state is odd or even. If partical number is odd, parity is :math:`1`; else, it is :math:`0`.
+
+More mathematically, for a Fock space :math:`V`, it has a direct sum decomposition to :math:`V^0 \oplus V^1` according to the parity, so does its dual space :math:`V^* = V^{*0} \oplus V^{*1}`.
+
+Apart from electronic state, we can also define parity for a *tensor* in the space :math:`V \otimes W^*`
