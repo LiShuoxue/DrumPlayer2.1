@@ -3,9 +3,9 @@
 }
 
 html[data-theme="light"] {
-    --pst-color-primary: #8b0012;
+    --pst-color-primary: #FF6A13;
 }
 
 html[data-theme="dark"] {
-    --pst-color-primary: #FF6A13;
+    --pst-color-primary: #ff4444;
 }

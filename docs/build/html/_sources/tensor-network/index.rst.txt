@@ -1,7 +1,7 @@
 张量网络(Tensor Network)
 =====================================================
 
-Notes for learning tensor network.
+学习张量网络相关基础知识的笔记。
 
 开坑计划：
 
@@ -14,4 +14,5 @@ PEPS基础 -> Fermionic PEPS
    :caption: Content
    :numbered:
    
-   投影纠缠对态(PEPS) <peps>
+   Matrix Product States (MPS) <mps>
+   Projected Entangled-Pair States (PEPS) <peps>

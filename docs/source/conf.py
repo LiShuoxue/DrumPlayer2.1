@@ -75,7 +75,7 @@ html_css_files = [
 source_suffix = ['.rst', '.md']
 html_theme_options = {
    "logo": {
-      "image_light": "logo_white.png",
+      "image_light": "logo_black.png",
       "image_dark": "logo_black.png",
    }
 }
