@@ -35,9 +35,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/translations.js"></script>
-    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="哗啦啦2.1" href="../drumplayer/index.html" />
@@ -302,8 +300,13 @@
 <div class="math notranslate nohighlight">
 \[| i \rangle \otimes | j \rangle = (-1)^{P_i \cdot P_j} |j \rangle \otimes | i \rangle\]</div>
 <p>in which <span class="math notranslate nohighlight">\(P_i\)</span> is the <strong>Parity</strong> of state <span class="math notranslate nohighlight">\(i\)</span>. Parity, in this context, can be primitively understood as whether or not the partical number of a certain state is odd or even. If partical number is odd, parity is <span class="math notranslate nohighlight">\(1\)</span>; else, it is <span class="math notranslate nohighlight">\(0\)</span>.</p>
-<p>More mathematically, for a Fock space <span class="math notranslate nohighlight">\(V\)</span>, it has a direct sum decomposition to <span class="math notranslate nohighlight">\(V^0 \oplus V^1\)</span> according to the parity, so does its dual space <span class="math notranslate nohighlight">\(V^* = V^{*0} \oplus V^{*1}\)</span>.</p>
-<p>Apart from electronic state, we can also define parity for a <em>tensor</em> in the space <span class="math notranslate nohighlight">\(V \otimes W^*\)</span></p>
+<p>More mathematically, for a <strong>super vector space</strong> <span class="math notranslate nohighlight">\(V\)</span>, it has a direct sum decomposition to <span class="math notranslate nohighlight">\(V^0 \oplus V^1\)</span> according to the parity, so does its dual space <span class="math notranslate nohighlight">\(V^* = V^{*0} \oplus V^{*1}\)</span>.</p>
+<p>Apart from electronic state, we can also define parity for a general <em>tensor</em>. Consider the tensor at space <span class="math notranslate nohighlight">\(V \otimes \cdots\)</span>, then the parity is just that added from the vectors in each space.</p>
+<p><strong>References:</strong></p>
+<p><a class="reference external" href="https://iopscience.iop.org/article/10.1088/1751-8121/aa6dc3">[1]</a> , <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0003491614001596">[2]</a> : Introductory Review</p>
+<p><a class="reference external" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.75.033605">[3]</a> : PEPS Construction</p>
+<p><a class="reference external" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.95.075108">[4]</a> : Fermionic MPS, more mathematically.</p>
+<p><a class="reference external" href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.81.245110">[5]</a> , <a class="reference external" href="https://journals.aps.org/pra/abstract/10.1103/PhysRevA.81.052338">[6]</a>: Fermionic PEPS</p>
 </section>
 </section>
 

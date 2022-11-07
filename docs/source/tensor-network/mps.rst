@@ -89,3 +89,11 @@ and for left and right:
     \hat W_{L} = \begin{bmatrix} -h \hat Z & -J_X \hat X & - J_Y \hat Y & - J_Z \hat Z & \hat I \end{bmatrix} \\
 
     \hat W_{R} = \begin{bmatrix} \hat I \\ \hat X \\ \hat Y \\ \hat Z \\ - h \hat Z \end{bmatrix}
+
+Contraction and Property Calculation
+-------------------------------------------
+
+**References:**
+
+Reviews: `[1] <https://www.sciencedirect.com/book/9780323856942/density-matrix-renormalization-group-dmrg-based-approaches-in-computational-chemistry>`_ , `[2] <https://iopscience.iop.org/article/10.1088/1751-8121/aa6dc3>`_ , `[3] <https://www.sciencedirect.com/science/article/pii/S0003491614001596>`_
+

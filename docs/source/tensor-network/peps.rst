@@ -125,6 +125,16 @@ Before expanding PEPS formalism into fermion, we should note that the major diff
 
 in which :math:`P_i` is the **Parity** of state :math:`i`. Parity, in this context, can be primitively understood as whether or not the partical number of a certain state is odd or even. If partical number is odd, parity is :math:`1`; else, it is :math:`0`.
 
-More mathematically, for a Fock space :math:`V`, it has a direct sum decomposition to :math:`V^0 \oplus V^1` according to the parity, so does its dual space :math:`V^* = V^{*0} \oplus V^{*1}`.
+More mathematically, for a **super vector space** :math:`V`, it has a direct sum decomposition to :math:`V^0 \oplus V^1` according to the parity, so does its dual space :math:`V^* = V^{*0} \oplus V^{*1}`.
 
-Apart from electronic state, we can also define parity for a *tensor* in the space :math:`V \otimes W^*`
+Apart from electronic state, we can also define parity for a general *tensor*. Consider the tensor at space :math:`V \otimes \cdots`, then the parity is just that added from the vectors in each space. 
+
+**References:**
+
+`[1] <https://iopscience.iop.org/article/10.1088/1751-8121/aa6dc3>`_ , `[2] <https://www.sciencedirect.com/science/article/pii/S0003491614001596>`_ : Introductory Review
+
+`[3] <https://journals.aps.org/pra/abstract/10.1103/PhysRevA.75.033605>`_ : PEPS Construction
+
+`[4] <https://journals.aps.org/prb/abstract/10.1103/PhysRevB.95.075108>`_ : Fermionic MPS, more mathematically.
+
+`[5] <https://journals.aps.org/prb/abstract/10.1103/PhysRevB.81.245110>`_ , `[6] <https://journals.aps.org/pra/abstract/10.1103/PhysRevA.81.052338>`_: Fermionic PEPS
