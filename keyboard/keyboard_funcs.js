@@ -1,6 +1,8 @@
 /* Functions for Keyboard Control */
 /* Author: Shuoxue Li <1620480103@qq.com> */
 
+var keyPressed = new Array(500).fill(false);
+
 function AddAudio() {
     var lenkb = drumconfig.Keyboard.length
         //var audio_content = document.getElementById("audio").innerHTML
@@ -153,6 +155,10 @@ function ResponseKeyDown(e) {
     if(ev.keyCode == 27){PoolActOnEsc()}
     if(ev.keyCode == 46){PoolActOnDelete()}
 
+    if(keyPressed[ev.keyCode])
+        return
+    keyPressed[ev.keyCode] = true
+
     kb = document.getElementById('Keyboard')
     notekb = document.getElementById('NoteKeyboard')
 
@@ -174,6 +180,8 @@ function ResponseKeyUp(e) {
     ev = e || window.event
     kb = document.getElementById('Keyboard')
     notekb = document.getElementById('NoteKeyboard')
+
+    keyPressed[ev.keyCode] = false
 
     if(kb.className == "ActivatedKeyboard"){
         var eventindex = drumconfig.Keyboard.indexOf(ev.keyCode)
